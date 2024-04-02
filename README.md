@@ -10,7 +10,7 @@ Kikaraのホームページ用のリポジトリです。
 ## 開発環境構築
 1. リポジトリをクローンする
 ```
-git clone http://hoge.com
+git clone https://github.com/sanpicule/kikara.git
 ```
 
 2. VSCode起動
