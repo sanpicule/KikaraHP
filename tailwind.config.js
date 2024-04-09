@@ -26,14 +26,14 @@ module.exports = {
         'text-color': '#5D5046',
         'main-color': '#FDFDFD',
         'news-color': '#FFF2ED',
-        'Instagram': '#C13584',
-        'Facebook': '#4267B2'
+        Instagram: '#C13584',
+        Facebook: '#4267B2',
       },
       height: {
-        '0.1': '0.1rem',
-        '0.25': '0.25rem',
-        '0.5': '0.5rem',
-        '0.75': '0.75rem',
+        0.1: '0.1rem',
+        0.25: '0.25rem',
+        0.5: '0.5rem',
+        0.75: '0.75rem',
       },
       letterSpacing: {
         wide: '.25em',
@@ -41,7 +41,44 @@ module.exports = {
       fontFamily: {
         sans: ['Hiragino Mincho Pro', 'sans-serif'],
       },
+      animation: {
+        slideInFromBottom: 'slideInFromBottom 1s ease-in forwards',
+        slideInFromRight: 'slideInFromRight 1s ease-in forwards',
+        slideInFromLeft: 'slideInFromLeft 1s ease-in forwards',
+      },
+      keyframes: {
+        slideInFromBottom: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        slideInFromRight: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        slideInFromLeft: {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+      },
     },
   },
   plugins: [],
-}
+};
