@@ -22,10 +22,20 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'button-color': '#D2B48C',
+        'accent-color': '#D2B48C',
+        'sub-color': '#F0DFD9',
+        'feature-border': '#DDC1B7',
         'text-color': '#5D5046',
+        'main-color': '#FDFDFD',
+        'news-color': '#FFF2ED',
         'Instagram': '#C13584',
         'Facebook': '#4267B2'
+      },
+      height: {
+        '0.1': '0.1rem',
+        '0.25': '0.25rem',
+        '0.5': '0.5rem',
+        '0.75': '0.75rem',
       },
       letterSpacing: {
         wide: '.25em',
