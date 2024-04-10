@@ -25,7 +25,11 @@ code .
 git branch
 
 ↓ブランチの切り替え
-git checkout develop
+git checkout -b develop
+
+git fetch origin develop
+
+git pull origin develop
 ```
 
 3. パッケージインストール ※好きなもので実行
