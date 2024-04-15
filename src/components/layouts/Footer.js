@@ -34,13 +34,20 @@ const Footer = () => {
       <div className="text-center pt-12">
         <div className="sm:flex flex-col sm:flex-row justify-center gap-12 text-sm">
           <div>
-            プライバシーポリシー
+            <a href="https://totonou-kikara.com/index.php?Law" target="_blank" rel="noopener noreferrer">
+              プライバシーポリシー
+            </a>
           </div>
           <div>
-            特定商取引法
+            <a href="https://totonou-kikara.com/index.php?Privacypolicy" target="_blank" rel="noopener noreferrer">
+              特定商取引法
+            </a>
           </div>
           <div>
-            サイトマップ
+            {/* TODO: 適切なURLを設定 */}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              サイトマップ
+            </a>
           </div>
         </div>
         <div className="text-xs mt-4">
