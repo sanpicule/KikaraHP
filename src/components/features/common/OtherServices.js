@@ -10,7 +10,7 @@ const OtherServices = () => {
         <h2 className="text-2xl md:text-3xl">その他のサービス</h2>
         <div className="w-12 h-0.1 bg-text-color"></div>
       </div>
-      <div className="mt-24 max-w-[90%] md:max-w-5xl mx-auto">
+      <div className="mt-24 max-w-[90%] md:w-[1040px] mx-auto">
         <div className='flex flex-col gap-8 grow md:flex-row'>
           {otherServices.map((service) => (
             <ServiceCard

@@ -11,7 +11,7 @@ import OtherServices from '@/components/features/common/OtherServices'
 const MineralPage = () => {
   return (
     <>
-      <div className='py-24 text-center max-w-[90%] mx-auto md:max-w-5xl md:tracking-wide'>
+      <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm">concept</p>
           <h2 className="text-2xl md:text-3xl">ミネラル酵素ドリンクについて</h2>
@@ -42,7 +42,7 @@ const MineralPage = () => {
           <h2 className="text-2xl tracking-wide md:text-3xl">3つの特徴</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className="mt-24 max-w-[90%] md:max-w-5xl mx-auto">
+        <div className="mt-24 max-w-[90%] md:w-[1040px] mx-auto">
           <div className='flex flex-col gap-8 grow md:flex-row'>
             {featureList.map((feature, index) => (
               <FeatureCard
@@ -55,7 +55,7 @@ const MineralPage = () => {
           </div>
         </div>
       </div>
-      <div className='py-24 text-center max-w-[90%] mx-auto md:max-w-5xl md:tracking-wide'>
+      <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <h3 className='text-xl font-bold md:text-3xl'>\一緒にドリンク作りませんか？/</h3>
         <p className='mt-12 leading-8 md:leading-8'>Kikaraではミネラル酵素ドリンク教室を<br></br>定期的に開催しています！</p>
         <div className='mx-auto mt-12 flex flex-col gap-4 grow md:flex-row max-w-sm md:max-w-5xl'>

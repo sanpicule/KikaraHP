@@ -2,14 +2,14 @@ import React from 'react'
 
 const ConceptSection = () => {
   return (
-    <div className="flex justify-around p-20">
+    <div className="flex justify-between p-20">
       <div>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
           <p className='text-sm tracking-wide'>concept</p>
           <div className="w-16 h-0.1 bg-text-color"></div>
         </div>
       </div>
-      <div>
+      <div className='max-w-[1040px]'>
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm tracking-wider">concept</p>
           <h1 className="tracking-wide text-3xl">コンセプト</h1>
