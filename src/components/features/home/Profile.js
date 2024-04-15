@@ -4,14 +4,14 @@ import profileImage from '../../../public/images/profile.png'
 
 const ProfileSection = () => {
   return (
-    <div className="flex justify-around p-20">
+    <div className="flex justify-between p-20">
       <div>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
           <p className='text-sm tracking-wide'>profile</p>
           <div className="w-16 h-0.1 bg-text-color"></div>
         </div>
       </div>
-      <div className='w-full'>
+      <div className='w-[1040px]'>
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm tracking-wider">profile</p>
           <h1 className="tracking-wide text-3xl">プロフィール</h1>
