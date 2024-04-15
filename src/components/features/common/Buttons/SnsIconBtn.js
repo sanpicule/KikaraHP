@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import InstagramIcon from './InstagramIcon'
 import FacebookIcon from './FacebookIcon'
-import colors from './BtnColors'
+import SnsConfigs from './SnsConfigs'
 
 const SnsIconBtn = ({
   snsId,
@@ -11,13 +11,17 @@ const SnsIconBtn = ({
 }) => {
   const [isActive, setIsActive] = useState(false)
 
+  const handleClick = () => {
+    window.open(SnsConfigs[snsId].url, '_blank');
+  };
   const handleTouchStart = () => setIsActive(true)
   const handleTouchEnd = () => setIsActive(false)
 
-  const fillColor = isActive ? colors.default[snsId] : colors.touched[snsId]
+  const fillColor = isActive ? SnsConfigs[snsId].touchedColor : SnsConfigs[snsId].defaultColor
 
   return (
     <button
+      onClick={handleClick}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
