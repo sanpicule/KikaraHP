@@ -6,18 +6,26 @@ const Header = () => {
   return (
     <div className="flex items-center sticky top-0 bg-white z-50">
       <div className="px-8 text-center">
-        <p className="text-sm tracking-tighter">くらし・ととのう・さろん</p>
-        <h1 className="text-3xl tracking-wide text-center">kikara</h1>
+        <Link href={'/'}>
+          <p className="text-sm tracking-tighter">くらし・ととのう・さろん</p>
+          <h1 className="text-3xl tracking-wide text-center">kikara</h1>
+        </Link>
       </div>
       <p className="text-sm">熊本市東区三郎で<br></br>心とカラダを整える</p>
-      <div className='flex gap-9 p-6 ml-auto mr-3 text-xl'>
-        {menuItemsList.map((menuItems, index) => (
-          <ul key={index}>
-            <li><Link href={menuItems.url}>{menuItems.menuTitle}</Link></li> 
-          </ul>
-        ))}  
-      </div>
-      <button className="p-6 text-white bg-accent-color text-xl"><Link href={'/contact'}>お問い合わせ</Link></button> 
+      <ul className='flex gap-10 ml-auto mr-10 text-xl tracking-wide'>
+        {menuItemsList.map((menuItem, index) => (
+          <li key={index}>
+            <Link href={menuItem.url}>
+              {menuItem.menuTitle}
+            </Link>
+          </li>          
+        ))}
+      </ul>         
+      <button className="px-6 py-8 text-white bg-accent-color text-xl tracking-wide">
+        <Link href={'/contact'}>
+          お問い合わせ
+        </Link>
+      </button> 
     </div>
   )
 }
