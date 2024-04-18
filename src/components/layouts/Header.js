@@ -21,11 +21,9 @@ const Header = () => {
           </li>          
         ))}
       </ul>         
-      <button className="px-6 py-8 text-white bg-accent-color text-xl tracking-wide">
-        <Link href={'/contact'}>
-          お問い合わせ
-        </Link>
-      </button> 
+      <Link href={'/contact'} className="px-6 py-8 text-white bg-accent-color text-xl tracking-wide">
+        お問い合わせ
+      </Link> 
     </div>
   )
 }
