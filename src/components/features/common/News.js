@@ -6,14 +6,14 @@ const NewsSection = () => {
     <div className="flex justify-between p-20 bg-news-color">
       <div>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
-          <p className='text-sm tracking-wide'>News</p>
+          <p className='section_sub'>News</p>
           <div className="w-16 h-0.1 bg-text-color"></div>
         </div>
       </div>
       <div className='w-[1040px]'>
         <div className="flex flex-col items-center gap-2">
-          <p className="text-sm tracking-wider">News</p>
-          <h1 className="tracking-wide text-3xl">お知らせ</h1>
+          <p className="section_sub">News</p>
+          <h2>お知らせ</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
         <div className='my-10 mx-auto p-10 bg-main-color max-w-4xl'>
@@ -29,7 +29,7 @@ const NewsSection = () => {
       </div>
       <div className='mt-auto -translate-y-full'>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
-          <p className='text-sm tracking-wide'>News</p>
+          <p className='section_sub'>News</p>
           <div className="w-16 h-0.1 bg-text-color"></div>
         </div>
       </div>

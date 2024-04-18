@@ -35,7 +35,7 @@ const ServiceCard = ({ service, title }) => {
         }}
       />
       <div className='mx-auto'>
-        <h4 className='mt-12 md:tracking-wide md:text-xl'>{title}</h4>
+        <h4 className='mt-12'>{title}</h4>
         <Link href={`/${service}`}>
           <button className="mt-12 border py-4 px-12 btn relative inline-flex items-center justify-start overflow-hidden transition-all  group shadow-md bg-white hover:bg-white hover:shadow-none">
             <span className="w-0 h-0 bg-accent-color absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full"></span>

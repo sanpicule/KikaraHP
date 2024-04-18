@@ -6,8 +6,8 @@ const OtherServices = () => {
   return (
     <div className='py-24 bg-sub-color md:tracking-wider'>
       <div className="flex flex-col items-center gap-2">
-        <p className="text-sm">others</p>
-        <h2 className="text-2xl md:text-3xl">その他のサービス</h2>
+        <p className="section-sub">others</p>
+        <h2>その他のサービス</h2>
         <div className="w-12 h-0.1 bg-text-color"></div>
       </div>
       <div className="mt-24 max-w-[90%] md:w-[1040px] mx-auto">
