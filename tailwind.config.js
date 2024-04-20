@@ -26,8 +26,8 @@ module.exports = {
         'text-color': '#5D5046',
         'main-color': '#FDFDFD',
         'news-color': '#FFF2ED',
-        Instagram: '#C13584',
-        Facebook: '#4267B2',
+        'Instagram': '#C13584',
+        'Facebook': '#4267B2',
       },
       height: {
         0.1: '0.1rem',
@@ -81,4 +81,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}
