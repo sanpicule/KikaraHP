@@ -1,16 +1,18 @@
 import React from 'react'
 import NewsList from '../../../data/news.json'
 
-const NewsSection = () => {
+const NewsSection = ({ decoration = true }) => {
   return (
     <div className="flex justify-between p-20 bg-news-color">
-      <div>
-        <div className='flex items-center -rotate-90 translate-y-full gap-2'>
-          <p className='section_sub'>News</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+      {decoration &&
+        <div>
+          <div className='flex items-center -rotate-90 translate-y-full gap-2'>
+            <p className='section_sub'>News</p>
+            <div className="w-16 h-0.1 bg-text-color"></div>
+          </div>
         </div>
-      </div>
-      <div className='w-[1040px]'>
+      }
+      <div className='w-[1040px] mx-auto'>
         <div className="flex flex-col items-center gap-2">
           <p className="section_sub">News</p>
           <h2>お知らせ</h2>
@@ -27,12 +29,14 @@ const NewsSection = () => {
           ))}    
         </div>
       </div>
-      <div className='mt-auto -translate-y-full'>
-        <div className='flex items-center -rotate-90 translate-y-full gap-2'>
-          <p className='section_sub'>News</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+      {decoration &&
+        <div className='mt-auto -translate-y-full'>
+          <div className='flex items-center -rotate-90 translate-y-full gap-2'>
+            <p className='section_sub'>News</p>
+            <div className="w-16 h-0.1 bg-text-color"></div>
+          </div>
         </div>
-      </div>
+      }
     </div>
   )
 }

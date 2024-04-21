@@ -71,7 +71,7 @@ const MineralPage = () => {
           <div className='w-full'>
             <Image
               src={throw2}
-              alt="教室の様子１"
+              alt="教室の様子２"
               style={{
                 objectFit: 'cover'
               }}

@@ -1,12 +1,12 @@
 import React from 'react'
-import hereImage from '@/public/images/hero.png'
+import heroImage from '@/public/images/hero.png'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 
 const MineralHero = () => {
   return (
     <div>
       <ServicePageHero
-        serviceImage={hereImage}
+        serviceImage={heroImage}
         serviceTitle={'ミネラル酵素ドリンク'}
       />
     </div>
