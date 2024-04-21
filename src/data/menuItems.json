@@ -1,14 +1,14 @@
 [
   {
     "menuTitle": "ミネラル水",
-    "url": "mineral"
+    "url": "/mineral"
   },
   {
     "menuTitle": "片付け",
-    "url": "tidying"
+    "url": "/tidying"
   },
   {
     "menuTitle": "直伝霊気",
-    "url": "reiki"
+    "url": "/reiki"
   }
 ]
