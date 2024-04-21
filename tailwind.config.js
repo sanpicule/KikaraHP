@@ -25,9 +25,11 @@ module.exports = {
         'accent-color': '#D2B48C',
         'sub-color': '#F0DFD9',
         'feature-border': '#DDC1B7',
+        'menu-border': '#FFD4C7',
         'text-color': '#5D5046',
         'main-color': '#FDFDFD',
         'news-color': '#FFF2ED',
+        'menuItem-color': '#F86767',
         'Instagram': '#C13584',
         'Facebook': '#4267B2'
       },
