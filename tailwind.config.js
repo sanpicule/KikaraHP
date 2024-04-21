@@ -32,13 +32,13 @@ module.exports = {
         'Facebook': '#4267B2',
       },
       height: {
-        0.1: '0.1rem',
-        0.25: '0.25rem',
-        0.5: '0.5rem',
-        0.75: '0.75rem',
+        '0.1': '0.1rem',
+        '0.25': '0.25rem',
+        '0.5': '0.5rem',
+        '0.75': '0.75rem',
       },
       letterSpacing: {
-        wide: '.25em',
+        'wide': '.25em',
       },
       fontFamily: {
         sans: ['Hiragino Mincho Pro', 'sans-serif'],
