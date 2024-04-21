@@ -41,15 +41,15 @@ module.exports = {
         'wide': '.25em',
       },
       fontFamily: {
-        sans: ['Hiragino Mincho Pro', 'sans-serif'],
+        'sans': ['Hiragino Mincho Pro', 'sans-serif'],
       },
       animation: {
-        slideInFromBottom: 'slideInFromBottom 1s ease-in forwards',
-        slideInFromRight: 'slideInFromRight 1s ease-in forwards',
-        slideInFromLeft: 'slideInFromLeft 1s ease-in forwards',
+        'slideInFromBottom': 'slideInFromBottom 1s ease-in forwards',
+        'slideInFromRight': 'slideInFromRight 1s ease-in forwards',
+        'slideInFromLeft': 'slideInFromLeft 1s ease-in forwards',
       },
       keyframes: {
-        slideInFromBottom: {
+        'slideInFromBottom': {
           '0%': {
             opacity: 0,
             transform: 'translateY(60px)',
@@ -59,7 +59,7 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
-        slideInFromRight: {
+        'slideInFromRight': {
           '0%': {
             opacity: 0,
             transform: 'translateX(60px)',
@@ -69,7 +69,7 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
-        slideInFromLeft: {
+        'slideInFromLeft': {
           '0%': {
             opacity: 0,
             transform: 'translateX(-60px)',
