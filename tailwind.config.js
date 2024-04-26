@@ -7,10 +7,10 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      xs: '0.6rem',
-      sm: '0.8rem',
-      base: '1rem',
-      xl: '1.25rem',
+      'xs': '0.6rem',
+      'sm': '0.8rem',
+      'base': '1rem',
+      'xl': '1.25rem',
       '2xl': '1.563rem',
       '3xl': '1.953rem',
       '4xl': '3rem',
@@ -26,9 +26,11 @@ module.exports = {
         'accent-color': '#D2B48C',
         'sub-color': '#F0DFD9',
         'feature-border': '#DDC1B7',
+        'menu-border': '#FFD4C7',
         'text-color': '#5D5046',
         'main-color': '#FDFDFD',
         'news-color': '#FFF2ED',
+        'menuItem-color': '#F86767',
         'Instagram': '#C13584',
         'Instagram-hover': '#991861',
         'Facebook': '#4267B2',
@@ -41,10 +43,47 @@ module.exports = {
         '0.75': '0.75rem',
       },
       letterSpacing: {
-        wide: '.25em',
+        'wide': '.25em',
       },
       fontFamily: {
-        sans: ['Hiragino Mincho Pro', 'sans-serif'],
+        'sans': ['Hiragino Mincho Pro', 'sans-serif'],
+      },
+      animation: {
+        'slideInFromBottom': 'slideInFromBottom 1s ease-in forwards',
+        'slideInFromRight': 'slideInFromRight 1s ease-in forwards',
+        'slideInFromLeft': 'slideInFromLeft 1s ease-in forwards',
+      },
+      keyframes: {
+        'slideInFromBottom': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        'slideInFromRight': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
+        'slideInFromLeft': {
+          '0%': {
+            opacity: 0,
+            transform: 'translateX(-60px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateX(0)',
+          },
+        },
       },
     },
   },
