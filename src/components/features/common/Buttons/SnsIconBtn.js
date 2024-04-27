@@ -1,6 +1,4 @@
-"use client"
-
-import React, { useState } from 'react'
+import React from 'react'
 import InstagramIcon from './InstagramIcon'
 import FacebookIcon from './FacebookIcon'
 import SnsConfigs from './SnsConfigs'
@@ -9,25 +7,11 @@ const SnsIconBtn = ({
   snsId,
   size = 64,
 }) => {
-  const [isActive, setIsActive] = useState(false)
-
-  const handleClick = () => {
-    window.open(SnsConfigs[snsId].url, '_blank');
-  };
-  const handleTouchStart = () => setIsActive(true)
-  const handleTouchEnd = () => setIsActive(false)
-
-  const fillColor = isActive ? SnsConfigs[snsId].touchedColor : SnsConfigs[snsId].defaultColor
-
   return (
-    <button
-      onClick={handleClick}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-    {snsId === 'instagram' ? <InstagramIcon size={size} color={fillColor} /> : null}
-    {snsId === 'facebook' ? <FacebookIcon size={size} color={fillColor} /> : null}
-    </button>
+    <a href={SnsConfigs[snsId].url} target='_blank'>
+      {snsId === 'instagram' && <InstagramIcon size={size} color={'fill-Instagram active:fill-Instagram-hover'} />}
+      {snsId === 'facebook' && <FacebookIcon size={size} color={'fill-Facebook active:fill-Facebook-hover'} />}
+    </a>
   )
 }
 

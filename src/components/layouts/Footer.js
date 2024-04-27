@@ -1,6 +1,6 @@
-import React from 'react';
-import SnsIconBtn from '../features/common/Buttons/SnsIconBtn';
-import SnsLongBtn from '../features/common/Buttons/SnsLongBtn';
+import React from 'react'
+import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
+import SnsLongBtn from '../features/common/Buttons/SnsLongBtn'
 
 
 const Footer = () => {
@@ -8,14 +8,14 @@ const Footer = () => {
     <div className="py-12">
       <div className="sm:flex justify-between items-center mx-auto max-w-7xl sm:px-10">
         <div className="">
-          <div className="flex justify-center">
+          <div className="flex justify-center sm:justify-start">
             <div className="inline-block">
-              <div className="text-xs tracking-wider">くらし・ととのう・さろん</div>
-              <div className="tracking-wide text-3xl">Kikara</div>
-              <div className="text-sm tracking-wider">熊本県熊本市東区三郎1-13-38</div>
-              <div className="text-sm tracking-wider">〒862-0922</div>
-              <div className="text-sm tracking-wider">000-0000-0000</div>
-              <div className="text-sm tracking-wider">@gmail.com</div>
+              <p className="text-xs tracking-wider">くらし・ととのう・さろん</p>
+              <h3 className="tracking-wide text-3xl">Kikara</h3>
+              <p className="text-sm tracking-wider">熊本県熊本市東区三郎1-13-38</p>
+              <p className="text-sm tracking-wider">〒862-0922</p>
+              <p className="text-sm tracking-wider">070-5414-3874</p>
+              <p className="text-sm tracking-wider">chiisonoblog@gmail.com</p>
             </div>
           </div>
           <div className="flex justify-center sm:justify-start mt-4">
