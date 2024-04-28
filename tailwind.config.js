@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     fontSize: {
+      'xs': '0.6rem',
       'sm': '0.8rem',
       'base': '1rem',
       'xl': '1.25rem',
@@ -31,7 +32,9 @@ module.exports = {
         'news-color': '#FFF2ED',
         'menuItem-color': '#F86767',
         'Instagram': '#C13584',
+        'Instagram-hover': '#991861',
         'Facebook': '#4267B2',
+        'Facebook-hover': '#183b80',
       },
       height: {
         '0.1': '0.1rem',
