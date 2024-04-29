@@ -18,7 +18,7 @@ import OtherServices from '@/components/features/common/OtherServices'
 const ReikiPage = () => {
   return (
     <div>
-      <ServicePageHero serviceImage={reikiHero} serviceTitle={'直伝霊気について'} />
+      <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
       <NewsSection decoration={false} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">

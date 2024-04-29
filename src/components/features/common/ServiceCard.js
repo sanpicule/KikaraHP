@@ -9,8 +9,9 @@ import serviceTidying from '@/public/images/serviceTidying.png'
 import { usePathname } from 'next/navigation'
 
 const ServiceCard = ({ service, title }) => {
-  const pathname = usePathname()
-  const sanitizedPathname = pathname.replace(/^\/|\/$/g, '');
+  const pathname = usePathname();
+let sanitizedPathname = pathname.replace(/^\/|\/$/g, '')
+sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
   let serviceImage;
   switch (service) {
     case 'mineral':

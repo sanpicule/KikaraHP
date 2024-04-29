@@ -137,7 +137,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              直伝霊気
+              直傳靈氣
             </h3>
             <div className="relative py-20">
               <Image

@@ -39,11 +39,11 @@ const tidyingPage = () => {
           </div>
           <div className='flex items-center gap-4 mx-auto'>
             <h2>02</h2>
-            <h4 className='text-start'>ごちゃごちゃした部屋を見て<br></br>疲れが酷くなっていると感じる</h4>
+            <h4 className='text-start'>人を呼びたいけれど<br></br>呼べるような状態ではない</h4>
           </div>
           <div className='flex items-center gap-4 ml-auto'>
             <h2>03</h2>
-            <h4 className='text-start'>ごちゃごちゃした部屋を見て<br></br>疲れが酷くなっていると感じる</h4>
+            <h4 className='text-start'>片付けたいけれど、どこから<br></br>手をつけていいかわからない</h4>
           </div>
         </div>
       </div>
@@ -53,62 +53,30 @@ const tidyingPage = () => {
           <h2>片付けまでの流れ</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className='flex mt-12 w-[1040px]'>
-          <div className='flex items-center'>
-            <div className='flex flex-col gap-8 border-4 rounded-2xl border-sub-color p-4'>
+        <div className='flex flex-col justify-center gap-4 items-center mt-12 h-full'>
+          <div className='flex justify-around w-full h-full'>
+            <div className='flex flex-col items-center flex-1 gap-4 border-4 rounded-2xl border-sub-color p-4'>
               <h3>1.申込</h3>
-              <div className='w-[80%] mx-auto'>
-                <Image
-                  src={tidyingApplication}
-                  alt=""
-                  style={{
-                    objectFit: 'cover'
-                  }}
-                />
-              </div>
+              <Image src={tidyingApplication} alt="" width={150} height={150} />
               <p>こちらより申込をしていただけます。片付けを手伝って欲しい場所とだいたいの畳数を教えて下さい 例）キッチン4畳</p>
             </div>
-            <div className="w-0 h-0 border-accent-color border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-          </div>
-          <div className='flex items-center'>
-            <div className='flex flex-col gap-8 border-4 rounded-2xl border-sub-color p-4'>
+            <div className="my-auto w-0 h-0 border-accent-color border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
+            <div className='flex flex-col items-center flex-1 gap-4 border-4 rounded-2xl border-sub-color p-4'>
               <h3>2.返信</h3>
-              <div className='w-[80%] mx-auto'>
-                <Image
-                  src={tidyingReply}
-                  alt=""
-                  style={{
-                    objectFit: 'cover'
-                  }}
-                />
-              </div>
-              <p>こちらより申込をしていただけます。片付けを手伝って欲しい場所とだいたいの畳数を教えて下さい 例）キッチン4畳</p>
+              <Image src={tidyingReply} alt="" width={150} height={150} />
+              <p>ショートメールにて返信いたします。片付けたい場所の写真を２, 3枚送信して頂けるとありがたいです。</p>
             </div>
-            <div className="w-0 h-0 border-accent-color border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-          </div>
-          <div className='flex items-center'>
-            <div className='flex flex-col gap-8 border-4 rounded-2xl border-sub-color p-4'>
+            <div className="my-auto w-0 h-0 border-accent-color border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
+            <div className='flex flex-col items-center flex-1 gap-4 border-4 rounded-2xl border-sub-color p-4'>
               <h3>3.片付け</h3>
-              <div className='w-[80%] mx-auto'>
-                <Image
-                  src={tidyingDo}
-                  alt=""
-                  style={{
-                    objectFit: 'cover'
-                  }}
-                />
-              </div>
-              <p>こちらより申込をしていただけます。片付けを手伝って欲しい場所とだいたいの畳数を教えて下さい 例）キッチン4畳</p>
+              <Image src={tidyingDo} alt="" width={150} height={150} />
+              <p>予定をあわせ、ご自宅へ伺います。※料金は当日現金にてお支払い下さい</p>
             </div>
-            <div className="w-0 h-0 border-main-color border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
           </div>
         </div>
         <Link href={'/tidying/detail'}>
-          <button className="mt-12 border py-4 px-24 btn relative inline-flex items-center justify-start overflow-hidden transition-all bg-accent-color group hover:shadow-xl">
-            <span className="w-0 h-0 bg-main-color absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-            <span className="w-full text-main-color transition-colors duration-300 ease-in-out group-hover:text-text-color z-10">
-                <p className="tracking-wide">詳細を確認</p>
-            </span>
+          <button className='py-4 px-24 mt-12 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+            <p className='text-md'>詳細を確認する</p>
           </button>
         </Link>
       </div>

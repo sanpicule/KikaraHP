@@ -79,11 +79,8 @@ const MineralPage = () => {
           </div>
         </div>
         <Link href={'/mineral/detail'}>
-          <button className="mt-12 border py-4 px-24 btn relative inline-flex items-center justify-start overflow-hidden transition-all bg-accent-color group hover:shadow-xl">
-            <span className="w-0 h-0 bg-main-color absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full -z-1"></span>
-            <span className="w-full text-main-color transition-colors duration-300 ease-in-out group-hover:text-text-color z-10">
-                <p className="tracking-wide">詳細を確認</p>
-            </span>
+          <button className='py-4 px-24 mt-12 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+            <p className='text-md'>詳細を確認する</p>
           </button>
         </Link>
       </div>
