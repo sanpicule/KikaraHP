@@ -12,7 +12,7 @@ const NewsSection = ({ decoration = true }) => {
           </div>
         </div>
       }
-      <div className='w-[1040px]'>
+      <div className='w-[1040px] mx-auto'>
         <div className="flex flex-col items-center gap-2">
           <p className="section_sub">News</p>
           <h2>お知らせ</h2>
