@@ -17,7 +17,7 @@ const ProfileSection = () => {
           <h2>プロフィール</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className="mt-12 mx-auto w-5/6 h-96 bg-black relative">
+        <div className="mt-12 mx-auto h-96 bg-black relative">
           <Image
             src={profileImage}
             alt="profile_image"
