@@ -12,13 +12,13 @@ const NewsSection = ({ decoration = true }) => {
           </div>
         </div>
       }
-      <div className='w-[1040px] mx-auto'>
+      <div className='w-[1040px]'>
         <div className="flex flex-col items-center gap-2">
           <p className="section_sub">News</p>
           <h2>お知らせ</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className='my-10 mx-auto p-10 bg-main-color max-w-4xl'>
+        <div className='my-10 mx-auto p-10 bg-main-color'>
           {NewsList.map((news, index) => (
             <div key={index} className='cursor-pointer py-4 border-b'>
               <div className='border-l-4 border-feature-border p-2 text-start  transition duration-500 ease-in-out hover:text-accent-color'>
