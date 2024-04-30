@@ -6,8 +6,12 @@ import React from 'react'
 import serviceMineral from '@/public/images/serviceMineral.png'
 import serviceReiki from '@/public/images/serviceReiki.png'
 import serviceTidying from '@/public/images/serviceTidying.png'
+import { usePathname } from 'next/navigation'
 
 const ServiceCard = ({ service, title }) => {
+  const pathname = usePathname();
+let sanitizedPathname = pathname.replace(/^\/|\/$/g, '')
+sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
   let serviceImage;
   switch (service) {
     case 'mineral':
@@ -35,15 +39,18 @@ const ServiceCard = ({ service, title }) => {
         }}
       />
       <div className='mx-auto'>
-        <h4 className='mt-12 md:tracking-wide md:text-xl'>{title}</h4>
-        <Link href={`/${service}`}>
-          <button className="mt-12 border py-4 px-12 btn relative inline-flex items-center justify-start overflow-hidden transition-all  group shadow-md bg-white hover:bg-white hover:shadow-none">
-            <span className="w-0 h-0 bg-accent-color absolute top-0 left-0 ease-out duration-500 transition-all group-hover:w-full group-hover:h-full"></span>
-            <span className="w-full text-text-color transition-colors duration-300 ease-in-out group-hover:text-white z-10">
-              <p className="md:tracking-wide text-sm">詳細を確認</p>
-            </span>
-          </button>
-        </Link>
+        <h4 className='mt-12'>{title}</h4>
+        {service !== sanitizedPathname ? (
+            <Link href={`/${service}`}>
+              <button className='py-2 px-12 mt-12 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+                <p>詳しく見る</p>
+              </button>
+            </Link>
+          ) : (
+            <button disabled className='py-2 px-12 mt-12 bg-gray-300 text-main-color'>
+              <p>詳しく見る</p>
+            </button>
+          )}
       </div>
     </div>
   )
