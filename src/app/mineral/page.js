@@ -1,19 +1,23 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
+
+import FeatureCard from '@/components/features/mineral/FeatureCard'
+import featureList from '@/data/features.json'
+import OtherServices from '@/components/features/common/OtherServices'
+import ServicePageHero from '@/components/features/common/ServicePageHero'
+
 import mineral from '@/public/images/mineral.png'
 import throw1 from '@/public/images/throw1.png'
 import throw2 from '@/public/images/throw2.png'
-import FeatureCard from '@/components/features/mineral/FeatureCard'
-import featureList from '@/data/features.json'
-import Link from 'next/link'
-import OtherServices from '@/components/features/common/OtherServices'
 
 const MineralPage = () => {
   return (
     <>
+      <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル酵素ドリンク'} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
-          <p className='section_sub'>concept</p>
+          <p className='section_sub'>about</p>
           <h2>ミネラル酵素ドリンクについて</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
@@ -56,7 +60,7 @@ const MineralPage = () => {
         </div>
       </div>
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
-        <h3>\一緒にドリンク作りませんか？/</h3>
+        <h2>\一緒にドリンク作りませんか？/</h2>
         <p className='mt-12 leading-8'>Kikaraではミネラル酵素ドリンク教室を<br></br>定期的に開催しています！</p>
         <div className='mx-auto mt-12 flex flex-col gap-4 grow md:flex-row max-w-sm md:max-w-5xl'>
           <div className='w-full'>

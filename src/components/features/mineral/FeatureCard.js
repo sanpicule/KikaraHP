@@ -25,7 +25,7 @@ const FeatureCard = ({ feature, number, content }) => {
         <div className="w-10 h-10 rounded-full bg-accent-color flex justify-center items-center text-white text-lg font-bold">
           {number}
         </div>
-        <h4>{feature}</h4>
+        <h4 className='tracking-normal'>{feature}</h4>
       </div>
       <Image
         src={featureImage}

@@ -9,11 +9,6 @@ import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 
 const Header = () => {
   const [ isClick, setIsClick ] = useState(false)
-  if (isClick) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'auto';
-  }
   return (
     <div className='fixed top-0 left-0 w-screen bg-main-color z-50'>
       <div className="h-[85px] py-2 px-4 md:pr-0 md:py-0 flex items-center top-0 bg-main-color shadow-sm">
