@@ -47,7 +47,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              ミネラル発酵ドリンク教室
+              ミネラル醗酵ドリンク教室
             </h3>
             <div className="relative py-20">
               <Image
@@ -62,7 +62,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-left">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル発酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
                 <Link href="/mineral" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
                   詳しく見る
@@ -107,7 +107,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-right">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル発酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
                 <Link href="/tidying" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
                   詳しく見る
@@ -152,7 +152,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-left">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル発酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
                 <Link href="/reiki" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
                   詳しく見る

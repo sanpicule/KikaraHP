@@ -20,7 +20,6 @@ const ReikiPage = () => {
   return (
     <div>
       <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
-      <NewsSection decoration={false} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>about</p>
@@ -159,7 +158,7 @@ const ReikiPage = () => {
               <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>場所</p>
             </div>
             <div className='text-center'>
-              <h4 className='mt-12'>Kikaraで行っています。熊本市東区三郎／県立大学近く</h4>
+              <h4 className='mt-12'>Kikaraで行っています。熊本市東区／県立大学近く</h4>
               <p className='mt-4'>※ご予約を頂いた方には詳細な住所をお知らせします</p>
               <p>※駐車場完備</p>
             </div>

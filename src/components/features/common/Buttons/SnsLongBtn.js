@@ -10,7 +10,7 @@ const SnsLongBtn = ({
     <a
       href={SnsConfigs[snsId].url}
       target="_blank"
-      className={`text-white font-bold py-4 px-4 w-36 md:w-64 flex items-center justify-center gap-4 transition duration-300 ease-in-out ${
+      className={`text-white font-bold py-2 px-2 w-24 md:w-64 flex items-center justify-center gap-4 transition duration-300 ease-in-out ${
         snsId === 'instagram' && 'bg-Instagram hover:bg-Instagram-hover' ||
         snsId === 'facebook' && 'bg-Facebook hover:bg-Facebook-hover'
       }`

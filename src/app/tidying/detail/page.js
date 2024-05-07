@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 
-import NewsSection from '@/components/features/common/News'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 import OtherServices from '@/components/features/common/OtherServices'
 
@@ -17,7 +16,6 @@ const TidyingDetail = () => {
   return (
     <div>
       <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝いについて'} />
-      <NewsSection decoration={false} />
       <div className='py-24 max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>detail</p>

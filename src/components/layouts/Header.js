@@ -14,11 +14,11 @@ const Header = () => {
       <div className="h-[85px] py-2 px-4 md:pr-0 md:py-0 flex items-center top-0 bg-main-color shadow-sm">
         <div className="text-center" onClick={() => setIsClick(false)}>
           <Link href={'/'}>
-            <p className="text-sm tracking-tighter">くらし・ととのう・さろん</p>
+            <p className="text-sm tracking-tighter">わたし・ととのう・さろん</p>
             <h2>kikara</h2>
           </Link>
         </div>
-        <p className="hidden md:block text-sm tracking-wide ml-4">熊本市東区三郎で<br></br>心とカラダを整える</p>
+        <p className="hidden md:block text-sm tracking-wide ml-4">熊本市東区で<br></br>心とカラダを整える</p>
         <ul className='hidden md:flex gap-10 ml-auto mr-10 text-xl tracking-wide'>
           {menuItemsList.map((menuItem, index) => (
             <li key={index} className='transition duration-300 hover:opacity-35'>
