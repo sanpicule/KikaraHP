@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-import NewsSection from '@/components/features/common/News'
 import EmblaCarousel from '@/components/features/mineral/EmblaCarousel'
 import OtherServices from '@/components/features/common/OtherServices'
 import SnsLongBtn from '@/components/features/common/Buttons/SnsLongBtn'
@@ -30,16 +29,15 @@ const MineralDetail = () => {
   const SLIDES = [slideImage1, slideImage2, slideImage3, slideImage4]
   return (
     <div>
-      <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル酵素ドリンク'} />
-      <NewsSection decoration={false} />
+      <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
-          <p className='section_sub'>concept</p>
-          <h2>ミネラル酵素ドリンクについて</h2>
+          <p className='section_sub'>about</p>
+          <h2>ミネラル醗酵ドリンクについて</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
         <div className="mt-24 text-center flex flex-col gap-8">
-          <p>Kikaraではみなさまと一緒にミネラル酵素ドリンクの</p>
+          <p>Kikaraではみなさまと一緒にミネラル醗酵ドリンクの</p>
           <Image
             src={decoration}
             alt=''
@@ -105,35 +103,44 @@ const MineralDetail = () => {
               </div>
             </div>
             <div className='flex justify-between items-center p-4 border-b border-gray-300'>
-              <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>開催場所</p>
+              <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>場所</p>
               <div className='w-1/2'>
                 <p><span className='text-2xl'>Kikara</span>で行っています。</p>
-                <p className='mt-4'>※ご予約を頂いた方には詳細な住所をお知らせします</p>
-                <p>※駐車場完備</p>
+                <p className='mt-2'>※ご予約を頂いた方には詳細な住所をお知らせします</p>
+                <p className='mt-4'><span className='text-xl text-accent-color'>出張教室</span>も承ってます！ </p>
               </div>
             </div>
             <div className='flex justify-between items-center p-4 border-b border-gray-300'>
               <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>持ち物</p>
               <ul className='text-xl w-1/2'>
-                <li>・包丁</li>
-                <li>・まな板</li>
-                <li>・エプロン</li>
+                <li>包丁</li>
+                <li>まな板</li>
+                <li>エプロン</li>
+                <li>はかり</li>
               </ul>
             </div>
             <div className='flex justify-between items-center p-4 border-b border-gray-300'>
-              <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>料金</p>
+              <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>参加費</p>
               <div className='ml-8 w-1/2'>
                 <h4>
                   <span className='text-menuItem-color text-4xl tracking-normal'>4,000円</span>/1回(税込)
                 </h4>
                 <p className='mt-2 tracking-normal'>※当日現金払いとなります</p>
+                <p className='mt-2 tracking-normal'>※出張教室も同じ参加費です</p>
               </div>
             </div>
-            <a className='flex justify-center mt-12' href='https://totonou-kikara.com/index.php?Form' target="_blank">
-              <button className='py-4 px-24 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
-                <p className='text-md'>予約はこちらから</p>
-              </button>
-            </a>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+              <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>申込方法</p>
+              <div className='ml-8 w-1/2'>
+                <div className='flex flex-col items-start justify-start'>
+                  <p>InstagramもしくはFacebookのダイレクトメッセージにてご連絡ください。</p>
+                  <div className="flex flex-col gap-2 justify-start mt-8">
+                    <SnsLongBtn snsId="facebook" iconSize={18} />
+                    <SnsLongBtn snsId="instagram" iconSize={18} />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>  
@@ -170,20 +177,6 @@ const MineralDetail = () => {
             <h3>教室に参加</h3>
             <Image src={classImage} alt="" width={150} height={150} />
             <p className='h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
-          </div>
-        </div>
-      </div>
-      <div className='py-24 bg-news-color md:tracking-wide'>
-        <div className="flex flex-col items-center gap-2">
-          <p className='section_sub'>flow</p>
-          <h2>申込方法</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
-        </div>
-        <div className='flex flex-col items-center justify-center mt-12'>
-          <p>InstagramもしくはFacebookのダイレクトメッセージにてご連絡ください。</p>
-          <div className="flex gap-8 items-center justify-center mt-8">
-            <SnsLongBtn snsId="facebook" iconSize={18} />
-            <SnsLongBtn snsId="instagram" iconSize={18} />
           </div>
         </div>
       </div>

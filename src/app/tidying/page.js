@@ -13,7 +13,6 @@ const tidyingPage = () => {
   return (
     <div>
       <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・手伝い'} />
-      <NewsSection decoration={false} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>about</p>
