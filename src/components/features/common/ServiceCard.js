@@ -28,30 +28,19 @@ sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
   }
 
   return (
-    <div className='flex grow gap-2 text-center py-4 px-4 bg-main-color shadow-[0_0_15px_0_rgba(0,0,0,0.2)] md:flex-col'>
-      <Image
-        src={serviceImage}
-        alt="特徴番号"
-        className='w-1/3 md:w-full'
-        style={{
-          objectFit: 'cover',
-          filter: "brightness(0.9)"
-        }}
-      />
-      <div className='mx-auto'>
-        <h4 className='mt-12'>{title}</h4>
-        {service !== sanitizedPathname ? (
-            <Link href={`/${service}`}>
-              <button className='py-2 px-12 mt-12 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
-                <p>詳しく見る</p>
-              </button>
-            </Link>
-          ) : (
-            <button disabled className='py-2 px-12 mt-12 bg-gray-300 text-main-color'>
-              <p>詳しく見る</p>
-            </button>
-          )}
-      </div>
+    <div className='relative md:w-1/3 shadow-[0_0_20px_0_rgba(0,0,0,0.4)] md:flex-col overflow-hidden rounded-md'>
+      <Link href={`/${service}`}>
+        <Image
+          src={serviceImage}
+          alt={`${title}の背景画像`}
+          className='transition duration-500 w-full h-full md:hover:scale-125'
+          style={{
+            objectFit: 'cover',
+            filter: "brightness(0.6)"
+          }}
+        />
+        <h4 className='absolute top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 text-main-color text-2xl text-center'>{title}</h4>
+      </Link>
     </div>
   )
 }
