@@ -1,10 +1,13 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import EmblaCarousel from '@/components/features/mineral/EmblaCarousel'
 import OtherServices from '@/components/features/common/OtherServices'
 import SnsLongBtn from '@/components/features/common/Buttons/SnsLongBtn'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
+import useScrollFadeIn from '@/components/features/home/useScrollFadeIn'
 
 import decoration from '@/public/images/decoration.png'
 import slideImage1 from '@/public/images/throw1.png'
@@ -23,20 +26,29 @@ import four from '@/public/images/4.png'
 import userWoman from '@/public/images/userWoman.png'
 import userMan from '@/public/images/userMan.png'
 import mineral from '@/public/images/mineral.png'
+import cooking1 from '@/public/images/cooking1.png'
+import cooking2 from '@/public/images/cooking2.png'
 
 const MineralDetail = () => {
   const OPTIONS = { loop: true }
   const SLIDES = [slideImage1, slideImage2, slideImage3, slideImage4]
+
+  const scroll = useScrollFadeIn()
+  useEffect(() => {
+    scroll.scrollFadeInFromBottom()
+    scroll.scrollFadeInFromRight()
+    scroll.scrollFadeInFromLeft()
+  }, [scroll]);
   return (
     <div>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
       <div className='py-24 text-center max-w-[90%] mx-auto md:tracking-wide'>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 js-show-on-scroll-from-bottom">
           <p className='section_sub'>about</p>
           <h2>ミネラル醗酵ドリンクについて</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className="mt-24 text-center flex flex-col gap-8">
+        <div className="mt-24 text-center flex flex-col gap-8 js-show-on-scroll-from-bottom">
           <p>Kikaraではみなさまと一緒にミネラル醗酵ドリンクの</p>
           <Image
             src={decoration}
@@ -46,16 +58,18 @@ const MineralDetail = () => {
             className='mx-auto'
           />
           <p>を学べる教室を開催しています！</p>
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          <div className='js-show-on-scroll-from-right'>
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          </div>
         </div>
       </div>
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 js-show-on-scroll-from-bottom">
           <p className='section_sub'>voice</p>
           <h2>お客様の声</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className='flex mt-12 w-[1040px] gap-4'>
+        <div className='flex mt-12 w-[1040px] gap-4 js-show-on-scroll-from-bottom'>
           <div className='flex flex-col items-center border-4 border-menu-border rounded-3xl p-4'>
             <Image src={userMan} alt="" width={60} height={60}/>
             <h4 className='mt-4'>ハンドルネーム</h4>
@@ -84,13 +98,13 @@ const MineralDetail = () => {
       </div>
       <div className='py-24 bg-news-color'>
         <div className='max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
-          <div className="flex flex-col items-center gap-2">
+          <div className="flex flex-col items-center gap-2 js-show-on-scroll-from-bottom">
             <p className='section_sub'>detail</p>
             <h2>ドリンク教室詳細</h2>
             <div className="w-12 h-0.1 bg-text-color"></div>
           </div>
-          <div className='border mt-12 py-12 px-44 bg-main-color'>
-            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+          <div className='border mt-12 py-12 px-44 bg-main-color js-show-on-scroll-from-bottom'>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-left'>
               <p className='py-2 px-8 bg-text-color rounded-full text-main-color'>講師</p>
               <div className='w-1/2 flex justify-center flex-col items-start'>
                 <Image
@@ -102,7 +116,7 @@ const MineralDetail = () => {
                 <h2 className='mt-4'>檜皮 園江</h2>
               </div>
             </div>
-            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-right'>
               <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>場所</p>
               <div className='w-1/2'>
                 <p><span className='text-2xl'>Kikara</span>で行っています。</p>
@@ -110,7 +124,7 @@ const MineralDetail = () => {
                 <p className='mt-4'><span className='text-xl text-accent-color'>出張教室</span>も承ってます！ </p>
               </div>
             </div>
-            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-left'>
               <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>持ち物</p>
               <ul className='text-xl w-1/2'>
                 <li>包丁</li>
@@ -119,7 +133,7 @@ const MineralDetail = () => {
                 <li>はかり</li>
               </ul>
             </div>
-            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-right'>
               <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>参加費</p>
               <div className='ml-8 w-1/2'>
                 <h4>
@@ -129,7 +143,7 @@ const MineralDetail = () => {
                 <p className='mt-2 tracking-normal'>※出張教室も同じ参加費です</p>
               </div>
             </div>
-            <div className='flex justify-between items-center p-4 border-b border-gray-300'>
+            <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-left'>
               <p className='py-2 px-8 bg-text-color inline-block rounded-full text-main-color'>申込方法</p>
               <div className='ml-8 w-1/2'>
                 <div className='flex flex-col items-start justify-start'>
@@ -143,14 +157,41 @@ const MineralDetail = () => {
             </div>
           </div>
         </div>
-      </div>  
+      </div>
+      <div className='py-24 md:tracking-wide'>
+        <div className="flex flex-col items-center gap-2 js-show-on-scroll-from-bottom">
+          <p className='section_sub'>cooking</p>
+          <h2>料理教室</h2>
+          <div className="w-12 h-0.1 bg-text-color"></div>
+        </div>
+        <div className='relative mt-56 h-96 flex items-end'>
+          <div className='absolute left-1/2 -translate-x-1/2 w-full bottom-10 flex items-center justify-between z-10 text-center max-w-[90%] mx-auto md:w-[1040px] '>
+            <div className='text-start js-show-on-scroll-from-left'>
+              <h4>ミネラルで作る</h4>
+              <h2 className='ml-8 mt-2'>自家製味噌教室</h2>
+            </div>
+            <Image src={cooking1} alt="" width={700} height={500} className='js-show-on-scroll-from-right' />
+          </div>
+          <div className='w-1/2 h-32 bg-kikara-bar-color js-show-on-scroll-from-left'></div>
+        </div>
+        <div className='relative mt-56 h-96 flex items-end justify-end'>
+          <div className='absolute right-1/2 translate-x-1/2 w-full bottom-10 flex items-center justify-between z-10 text-center max-w-[90%] mx-auto md:w-[1040px] '>
+            <Image src={cooking2} alt="" width={700} height={500} className='js-show-on-scroll-from-left' />
+            <div className='text-start js-show-on-scroll-from-right'>
+              <h4 className='ml-24'>ミネラルたっぷり</h4>
+              <h2 className='mt-2'>米粉うどん教室</h2>
+            </div>
+          </div>
+          <div className='w-1/2 h-32 bg-kikara-bar-color js-show-on-scroll-from-right'></div>
+        </div>
+      </div>
       <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2 js-show-on-scroll-from-bottom">
           <p className='section_sub'>flow</p>
           <h2>参加までの流れ</h2>
           <div className="w-12 h-0.1 bg-text-color"></div>
         </div>
-        <div className='flex justify-around w-full h-full mt-24 tracking-normal'>
+        <div className='flex justify-around w-full h-full mt-24 tracking-normal js-show-on-scroll-from-bottom'>
           <div className='relative flex flex-col items-center justify-center flex-1 gap-4 border-4 rounded-3xl border-menu-border px-4 py-12'>
             <Image src={one} alt="" width={80} height={80} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
             <h3>開催情報</h3>
