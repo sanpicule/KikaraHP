@@ -28,12 +28,12 @@ sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
   }
 
   return (
-    <div className='relative w-1/3 shadow-[0_0_20px_0_rgba(0,0,0,0.4)] md:flex-col overflow-hidden rounded-md'>
+    <div className='relative md:w-1/3 shadow-[0_0_20px_0_rgba(0,0,0,0.4)] md:flex-col overflow-hidden rounded-md'>
       <Link href={`/${service}`}>
         <Image
           src={serviceImage}
           alt={`${title}の背景画像`}
-          className='transition duration-500 w-full h-full hover:scale-125'
+          className='transition duration-500 w-full h-full md:hover:scale-125'
           style={{
             objectFit: 'cover',
             filter: "brightness(0.6)"
