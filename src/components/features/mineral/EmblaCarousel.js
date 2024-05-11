@@ -29,7 +29,8 @@ const EmblaCarousel = ({ slides, options }) => {
                 alt=''
                 className='h-full'
                 style={{
-                  objectFit: 'cover'
+                  objectFit: 'cover',
+                  filter: "brightness(0.8)"
                 }} 
               />
             </div>

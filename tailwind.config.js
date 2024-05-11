@@ -35,6 +35,7 @@ module.exports = {
         'Instagram-hover': '#991861',
         'Facebook': '#4267B2',
         'Facebook-hover': '#183b80',
+        'kikara-bar-color': '#E2CFB5'
       },
       height: {
         '0.1': '0.1rem',

@@ -4,7 +4,7 @@ import React from 'react'
 const ServicePageHero = ({ serviceImage, serviceTitle }) => {
   return (
     <div>
-      <div className="w-full h-96 relative">
+      <div className="w-full h-4/5 relative">
         <Image
           src={serviceImage}
           alt="hero_image"
