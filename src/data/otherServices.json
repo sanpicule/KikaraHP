@@ -1,7 +1,7 @@
 [
   {
     "service": "mineral",
-    "title": "ミネラル醗酵ドリンク"
+    "title": "ミネラル水"
   },
   {
     "service": "reiki",
@@ -9,6 +9,6 @@
   },
   {
     "service": "tidying",
-    "title": "片付け・お手伝い"
+    "title": "お片付け"
   }
 ]

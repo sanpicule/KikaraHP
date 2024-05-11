@@ -11,7 +11,7 @@ const OtherServices = () => {
         <div className="w-12 h-0.1 bg-text-color"></div>
       </div>
       <div className="mt-24 max-w-[90%] md:w-[1040px] mx-auto">
-        <div className='flex flex-col gap-8 grow md:flex-row'>
+        <div className='flex flex-col gap-4 grow md:flex-row'>
           {otherServices.map((service) => (
             <ServiceCard
               key={service.service}
