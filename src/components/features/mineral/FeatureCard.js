@@ -20,9 +20,9 @@ const FeatureCard = ({ feature, number, content }) => {
       featureImage = featureOne;
   }
   return (
-    <div className='border-4 border-feature-border rounded-md py-4 px-8 bg-main-color'>
+    <div className='rounded-xl py-4 px-8 bg-kikara-white shadow-2xl'>
       <div className='flex items-center justify-center gap-4'>
-        <div className="w-10 h-10 rounded-full bg-accent-color flex justify-center items-center text-white text-lg font-bold">
+        <div className="w-10 h-10 rounded-full bg-secondary-brown-light flex justify-center items-center text-white text-lg font-bold">
           {number}
         </div>
         <h4 className='tracking-normal'>{feature}</h4>

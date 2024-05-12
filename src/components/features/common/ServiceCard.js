@@ -39,7 +39,7 @@ sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
             filter: "brightness(0.6)"
           }}
         />
-        <h4 className='absolute top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 text-main-color text-2xl text-center'>{title}</h4>
+        <h4 className='absolute top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2 text-kikara-white text-2xl text-center'>{title}</h4>
       </Link>
     </div>
   )

@@ -11,6 +11,9 @@ import favoImage from '@/public/images/favo.png'
 import beforeImage from '@/public/images/tidyingBefore.png'
 import afterImage from '@/public/images/tidyingAfter.png'
 import arrowImage from '@/public/images/tidyingArrow.png'
+import tidyingApplication from '@/public/images/tidyingApplication.png'
+import tidyingDo from '@/public/images/tidyingDo.png'
+import tidyingReply from '@/public/images/tidyingReply.png'
 
 const TidyingDetail = () => {
   return (
@@ -20,15 +23,15 @@ const TidyingDetail = () => {
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>detail</p>
           <h2>片付け・お手伝い</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='mt-12'>
           <div className='pb-12'>
             <div className='flex justify-center'>
-              <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>メニュー</p>
+              <p className='py-2 px-8 bg-secondary-brown-light inline-block rounded-full text-kikara-white'>メニュー</p>
             </div>
             <div className='grid grid-cols-2 gap-12 mt-12'>
-              <div className='relative border-4 border-menu-border rounded-xl p-8'>
+              <div className='relative border-2 border-secondary-brown rounded-xl p-8'>
                 <Image
                   src={favoImage}
                   alt=""
@@ -38,24 +41,24 @@ const TidyingDetail = () => {
                 />
                 <h3>単発利用</h3>
                 <div className='mt-8'>
-                  <p className='bg-text-color inline-block py-2 px-8 text-main-color rounded-full'>料金</p>
+                  <p className='bg-secondary-brown inline-block py-2 px-8 text-kikara-white rounded-full'>料金</p>
                   <div className='flex flex-col gap-4 ml-8'>
                     <h4 className='mt-2'>
-                      <span className='text-accent-color text-4xl tracking-normal'>15,000円</span>/180分<br></br>(出張費・税込)
+                      <span className='text-secondary-brown-light text-4xl tracking-normal'>15,000円</span>/180分<br></br>(出張費・税込)
                     </h4>
                     <p className='tracking-normal'>※３時間の範囲でしたら、２ヶ所でも可能です</p>
                     <p className='tracking-normal'>※1日で終わらない場合</p>
-                    <p className='tracking-normal ml-4'><span className='text-accent-color'>6,000円</span>/120分（延長料金／1時間3,000円）</p>
+                    <p className='tracking-normal ml-4'><span className='text-secondary-brown-light'>6,000円</span>/120分（延長料金／1時間3,000円）</p>
                   </div>
                 </div>
               </div>
-              <div className='border-4 border-menu-border rounded-xl p-8'>
+              <div className='border-2 border-secondary-brown rounded-xl p-8'>
                 <h3>長期利用</h3>
                 <div className='mt-8'>
-                  <p className='bg-text-color inline-block py-2 px-8 text-main-color rounded-full'>料金</p>
+                  <p className='bg-secondary-brown inline-block py-2 px-8 text-kikara-white rounded-full'>料金</p>
                   <div className='flex flex-col gap-4 ml-8'>
                     <h4>
-                      <span className='text-accent-color text-4xl tracking-normal'>8,000円</span>/90分<br></br>(出張費・税込)
+                      <span className='text-secondary-brown-light text-4xl tracking-normal'>8,000円</span>/90分<br></br>(出張費・税込)
                     </h4>
                     <p className='tracking-normal'>片付けをご自身でできるようになりたい方向け</p>
                     <p className='tracking-normal'>※ 定期的にお伺いし、片付けのサポートをさせていただきます</p>
@@ -66,7 +69,7 @@ const TidyingDetail = () => {
           </div>
           <div className='mt-12'>
             <div className='flex justify-center'>
-              <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>準備していただくもの</p>
+              <p className='py-2 px-8 bg-secondary-brown-light inline-block rounded-full text-kikara-white'>準備していただくもの</p>
             </div>
             <div className='mt-12 pl-8'>
               <ul className='flex flex-col gap-2 text-xl'>
@@ -84,7 +87,7 @@ const TidyingDetail = () => {
           </div>
           <div className='mt-12'>
             <div className='flex justify-center'>
-              <p className='py-2 px-8 bg-menuItem-color inline-block rounded-full text-main-color'>注意事項</p>
+              <p className='py-2 px-8 bg-kikara-chip-red inline-block rounded-full text-kikara-white'>注意事項</p>
             </div>
             <div className='mt-12 pl-8'>
               <ul className='flex flex-col gap-2 text-xl mt-4'>
@@ -105,7 +108,7 @@ const TidyingDetail = () => {
           </div>
           <div className='mt-12'>
             <div className='flex justify-center'>
-              <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>片付け手伝い例</p>
+              <p className='py-2 px-8 bg-secondary-brown-light inline-block rounded-full text-kikara-white'>片付け手伝い例</p>
             </div>
             <div className='mt-12 flex items-center justify-between'>
               <div className='flex flex-col items-center gap-4'>
@@ -134,8 +137,36 @@ const TidyingDetail = () => {
               </div>
             </div>
           </div>
+          <div className='py-24 text-center max-w-[90%] mx-auto md:w-[1040px] md:tracking-wide'>
+            <div className="flex flex-col items-center gap-2">
+              <p className='section_sub'>flow</p>
+              <h2>片付けまでの流れ</h2>
+              <div className="w-12 h-0.1 bg-secondary-brown"></div>
+            </div>
+            <div className='flex flex-col justify-center gap-4 items-center mt-12 h-full'>
+              <div className='flex justify-around w-full h-full'>
+                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
+                  <h3>1.申込</h3>
+                  <Image src={tidyingApplication} alt="" width={150} height={150} />
+                  <p>こちらより申込をしていただけます。片付けを手伝って欲しい場所とだいたいの畳数を教えて下さい 例）キッチン4畳</p>
+                </div>
+                <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
+                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
+                  <h3>2.返信</h3>
+                  <Image src={tidyingReply} alt="" width={150} height={150} />
+                  <p>ショートメールにて返信いたします。片付けたい場所の写真を２, 3枚送信して頂けるとありがたいです。</p>
+                </div>
+                <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
+                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
+                  <h3>3.片付け</h3>
+                  <Image src={tidyingDo} alt="" width={150} height={150} />
+                  <p>予定をあわせ、ご自宅へ伺います。※料金は当日現金にてお支払い下さい</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <a className='flex justify-center mt-12' href='https://totonou-kikara.com/index.php?Form' target="_blank">
-            <button className='py-4 px-24 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
               <p className='text-md'>予約はこちらから</p>
             </button>
           </a>

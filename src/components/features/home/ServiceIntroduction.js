@@ -25,14 +25,14 @@ const ServiceIntroductionPages = () => {
       <div>
         <div className="flex items-center -rotate-90 translate-y-full gap-2">
           <p className="text-sm tracking-wide">concept</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+          <div className="w-16 h-0.1 bg-secondary-brown"></div>
         </div>
       </div>
       <div className="w-[1040px]">
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm tracking-wider">service</p>
           <h1 className="tracking-wide text-3xl">サービス紹介</h1>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className="pt-32">
           <div>
@@ -64,7 +64,7 @@ const ServiceIntroductionPages = () => {
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/mineral" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
+                <Link href="/mineral" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
                   詳しく見る
                   <Image
                     src={chevronRight}
@@ -109,7 +109,7 @@ const ServiceIntroductionPages = () => {
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/tidying" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
+                <Link href="/tidying" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
                   詳しく見る
                   <Image
                     src={chevronRight}
@@ -154,7 +154,7 @@ const ServiceIntroductionPages = () => {
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/reiki" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-accent-color text-white">
+                <Link href="/reiki" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
                   詳しく見る
                   <Image
                     src={chevronRight}
@@ -175,7 +175,7 @@ const ServiceIntroductionPages = () => {
       <div className="mt-auto -translate-y-full">
         <div className="flex items-center -rotate-90 translate-y-full gap-2">
           <p className="text-sm tracking-wide">concept</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+          <div className="w-16 h-0.1 bg-secondary-brown"></div>
         </div>
       </div>
     </div>

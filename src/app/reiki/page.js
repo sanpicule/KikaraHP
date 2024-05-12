@@ -24,7 +24,7 @@ const ReikiPage = () => {
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>about</p>
           <h2>直傳靈氣について</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className="mt-24 text-center">
           <h3>直傳靈氣とは</h3>
@@ -50,14 +50,14 @@ const ReikiPage = () => {
           </div>
         </div>
       </div>
-      <div className='bg-sub-color py-24 text-center w-full md:tracking-wide'>
+      <div className='bg-primary-pink py-24 text-center w-full md:tracking-wide'>
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>target</p>
           <h2>このような方へ</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='grid grid-cols-2 md:w-[1040px] mx-auto mt-12 gap-12'>
-          <div className='flex justify-center items-center gap-8 bg-main-color py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
             <Image
               src={targetOneImage}
               alt='このような方へ1'
@@ -66,7 +66,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-main-color py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
             <Image
               src={targetTwoImage}
               alt='このような方へ1'
@@ -75,7 +75,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-main-color py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
             <Image
               src={targetThreeImage}
               alt='このような方へ1'
@@ -84,7 +84,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-main-color py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
             <Image
               src={targetFourImage}
               alt='このような方へ1'
@@ -99,14 +99,14 @@ const ReikiPage = () => {
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>detail</p>
           <h2>施術詳細</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='mt-12'>
           <div className='flex justify-center'>
-            <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>メニュー</p>
+            <p className='py-2 px-8 bg-secondary-brown-light inline-block rounded-full text-kikara-white'>メニュー</p>
           </div>
           <div className='grid grid-cols-2 gap-12 mt-12'>
-            <div className='relative border-4 border-menu-border rounded-xl p-8'>
+            <div className='relative border-2 border-secondary-brown rounded-xl p-8'>
               <Image
                 src={favoImage}
                 alt=""
@@ -116,10 +116,10 @@ const ReikiPage = () => {
               />
               <h3>通常施術</h3>
               <div className='mt-8'>
-                <p className='bg-text-color inline-block py-2 px-8 text-main-color rounded-full'>料金</p>
+                <p className='bg-secondary-brown inline-block py-2 px-8 text-kikara-white rounded-full'>料金</p>
                 <div className='flex flex-col gap-4 ml-8'>
                   <h4 className='mt-2'>
-                    <span className='text-accent-color text-4xl tracking-normal'>3,000円</span>/60分(税込)
+                    <span className='text-secondary-brown-light text-4xl tracking-normal'>3,000円</span>/60分(税込)
                   </h4>
                   <p>お申込みフォームに第一希望、第二希望をお書き下さい</p>
                   <p>①10時～ ②13時～ ③15時～</p>
@@ -127,21 +127,21 @@ const ReikiPage = () => {
                 </div>
               </div>
             </div>
-            <div className='border-4 border-menu-border rounded-xl p-8'>
+            <div className='border-2 border-secondary-brown rounded-xl p-8'>
               <h3>遠隔施術</h3>
               <div className='mt-8'>
                 <div>
-                  <p className='bg-text-color inline-block py-2 px-8 text-main-color rounded-full'>料金</p>
+                  <p className='bg-secondary-brown inline-block py-2 px-8 text-kikara-white rounded-full'>料金</p>
                   <div className='flex flex-col gap-4 ml-8'>
                     <h4>
-                      <span className='text-accent-color text-4xl tracking-normal'>8,000円</span>/3夜連続(税込)
+                      <span className='text-secondary-brown-light text-4xl tracking-normal'>8,000円</span>/3夜連続(税込)
                     </h4>
                     <p className='tracking-normal'>片付けをご自身でできるようになりたい方向け</p>
                     <p className='tracking-normal'>※ 定期的にお伺いし、片付けのサポートをさせていただきます</p>
                   </div>
                 </div>
                 <div className='mt-8'>
-                  <p className='bg-text-color inline-block py-2 px-8 text-main-color rounded-full'>内容</p>
+                  <p className='bg-secondary-brown inline-block py-2 px-8 text-kikara-white rounded-full'>内容</p>
                   <div className='flex flex-col gap-4 ml-8 mt-4'>
                     <p className='tracking-normal'>1日目: お話しと施術</p>
                     <p className='tracking-normal'>2日目: 施術</p>
@@ -155,7 +155,7 @@ const ReikiPage = () => {
           </div>
           <div className='mt-12'>
             <div className='flex justify-center'>
-              <p className='py-2 px-8 bg-accent-color inline-block rounded-full text-main-color'>場所</p>
+              <p className='py-2 px-8 bg-secondary-brown-light inline-block rounded-full text-kikara-white'>場所</p>
             </div>
             <div className='text-center'>
               <h4 className='mt-12'>Kikaraで行っています。熊本市東区／県立大学近く</h4>
@@ -184,7 +184,7 @@ const ReikiPage = () => {
             </div>
           </div>
           <a className='flex justify-center mt-12' href='https://totonou-kikara.com/index.php?Form' target="_blank">
-            <button className='py-4 px-24 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
               <p className='text-md'>予約はこちらから</p>
             </button>
           </a>
