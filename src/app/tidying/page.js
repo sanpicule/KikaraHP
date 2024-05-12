@@ -75,10 +75,10 @@ const tidyingPage = () => {
           </div>
         </div>
         <div>
-          <Link href={'/tidying/detail'} className='mx-auto'>
-            <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50 rounded-md'>
-              <p className='text-md'>詳細を確認する</p>
-            </button>
+          <Link href={'/tidying/detail'} className="mt-12 bg-secondary-brown-light relative inline-block text-kikara-white border py-4 px-24 no-underline outline-none transition-all duration-300 group hover:bg-secondary-brown">
+            詳細を確認する
+            <span className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary-brown-light transition-all duration-300 group-hover:w-[104.5%] group-hover:h-[129%] group-hover:border-secondary-brown"></span>
+            <span className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary-brown-light transition-all duration-300 group-hover:w-[104.5%] group-hover:h-[129%] group-hover:border-secondary-brown"></span>
           </Link>
         </div>
       </div>

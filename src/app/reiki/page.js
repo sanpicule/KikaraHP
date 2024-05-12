@@ -186,9 +186,11 @@ const ReikiPage = () => {
             </div>
           </div>
           <div className='text-center mt-12'>
-            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50 rounded-md'>
-              <a className='text-md' href='https://totonou-kikara.com/index.php?Form' target="_blank">予約はこちらから</a>
-            </button>
+            <a href='https://totonou-kikara.com/index.php?Form' target="_blank" className="mt-12 bg-secondary-brown-light relative inline-block text-kikara-white border py-4 px-24 no-underline outline-none transition-all duration-300 group hover:bg-secondary-brown">
+              予約はこちらから
+              <span className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-secondary-brown-light transition-all duration-300 group-hover:w-[104.5%] group-hover:h-[129%] group-hover:border-secondary-brown"></span>
+              <span className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-secondary-brown-light transition-all duration-300 group-hover:w-[104.5%] group-hover:h-[129%] group-hover:border-secondary-brown"></span>
+            </a>
           </div>
         </div>     
       </div>
