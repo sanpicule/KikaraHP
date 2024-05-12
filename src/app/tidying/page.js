@@ -76,7 +76,7 @@ const tidyingPage = () => {
         </div>
         <div>
           <Link href={'/tidying/detail'} className='mx-auto'>
-            <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
+            <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50 rounded-md'>
               <p className='text-md'>詳細を確認する</p>
             </button>
           </Link>

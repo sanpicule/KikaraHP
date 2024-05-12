@@ -18,7 +18,7 @@ const NewsSection = ({ decoration = true }) => {
           <h2>お知らせ</h2>
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
-        <div className='my-10 mx-auto p-10 bg-kikara-white'>
+        <div className='my-10 mx-auto p-10 bg-kikara-white rounded-xl shadow-2xl'>
           {NewsList.map((news, index) => (
             <div key={index} className='cursor-pointer py-4 border-b'>
               <div className='border-l-4 border-secondary-brown p-2 text-start  transition duration-500 ease-in-out hover:text-secondary-brown-light'>

@@ -103,7 +103,7 @@ const MineralDetail = () => {
             <h2>ドリンク教室詳細</h2>
             <div className="w-12 h-0.1 bg-secondary-brown"></div>
           </div>
-          <div className='border mt-12 py-12 px-44 bg-kikara-white js-show-on-scroll-from-bottom'>
+          <div className='mt-12 py-12 px-44 bg-kikara-white js-show-on-scroll-from-bottom rounded-xl shadow-2xl'>
             <div className='flex justify-between items-center p-4 border-b border-gray-300 js-show-on-scroll-from-left'>
               <p className='py-2 px-8 bg-secondary-brown rounded-full text-kikara-white'>講師</p>
               <div className='w-1/2 flex justify-center flex-col items-start'>

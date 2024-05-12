@@ -28,7 +28,7 @@ sanitizedPathname = sanitizedPathname.replace(/\/detail$/i, '')
   }
 
   return (
-    <div className='relative md:w-1/3 shadow-[0_0_20px_0_rgba(0,0,0,0.4)] md:flex-col overflow-hidden rounded-md'>
+    <div className='relative md:w-1/3 shadow-2xl md:flex-col overflow-hidden rounded-xl'>
       <Link href={`/${service}`}>
         <Image
           src={serviceImage}

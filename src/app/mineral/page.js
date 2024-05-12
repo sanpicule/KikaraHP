@@ -32,7 +32,7 @@ const MineralPage = () => {
             <Image
               src={mineral}
               alt="hero_image"
-              className="w-full"
+              className="w-full rounded-xl shadow-2xl"
               style={{
                 objectFit: 'cover',
               }}
@@ -67,6 +67,7 @@ const MineralPage = () => {
             <Image
               src={throw1}
               alt="教室の様子１"
+              className='rounded-xl shadow-2xl'
               style={{
                 objectFit: 'cover'
               }}
@@ -76,6 +77,7 @@ const MineralPage = () => {
             <Image
               src={throw2}
               alt="教室の様子２"
+              className='rounded-xl shadow-2xl'
               style={{
                 objectFit: 'cover'
               }}
@@ -83,7 +85,7 @@ const MineralPage = () => {
           </div>
         </div>
         <Link href={'/mineral/detail'}>
-          <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
+          <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50 rounded-md'>
             <p className='text-md'>詳細を確認する</p>
           </button>
         </Link>
