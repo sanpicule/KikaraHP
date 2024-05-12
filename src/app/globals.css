@@ -19,7 +19,7 @@ h4 {
 }
 
 body {
-  @apply text-text-color;
+  @apply text-secondary-brown;
 }
 
 *,

@@ -19,7 +19,7 @@ const MineralPage = () => {
         <div className="flex flex-col items-center gap-2">
           <p className='section_sub'>about</p>
           <h2>ミネラル醗酵ドリンクについて</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className="mt-24 text-center">
           <h3>ミネラルとは</h3>
@@ -40,11 +40,11 @@ const MineralPage = () => {
           </div>
         </div>
       </div>
-      <div className='py-24 bg-sub-color'>
+      <div className='py-24 bg-primary-pink'>
         <div className="flex flex-col items-center gap-2 md:tracking-wide">
           <p className="section_sub">features</p>
           <h2>3つの特徴</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className="mt-24 max-w-[90%] md:w-[1040px] mx-auto">
           <div className='flex flex-col gap-8 grow md:flex-row'>
@@ -83,7 +83,7 @@ const MineralPage = () => {
           </div>
         </div>
         <Link href={'/mineral/detail'}>
-          <button className='py-4 px-24 mt-12 bg-accent-color text-main-color transition duration-300 hover:opacity-50'>
+          <button className='py-4 px-24 mt-12 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
             <p className='text-md'>詳細を確認する</p>
           </button>
         </Link>

@@ -10,8 +10,8 @@ import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 const Header = () => {
   const [ isClick, setIsClick ] = useState(false)
   return (
-    <div className='fixed top-0 left-0 w-screen bg-main-color z-50'>
-      <div className="h-[85px] py-2 px-4 md:pr-0 md:py-0 flex items-center top-0 bg-main-color shadow-sm">
+    <div className='fixed top-0 left-0 w-screen bg-primary-pink-light z-50'>
+      <div className="h-[85px] py-2 px-4 md:pr-0 md:py-0 flex items-center top-0 shadow-sm">
         <div className="text-center" onClick={() => setIsClick(false)}>
           <Link href={'/'}>
             <p className="text-sm tracking-tighter">わたし・ととのう・さろん</p>
@@ -28,18 +28,18 @@ const Header = () => {
             </li>          
           ))}
         </ul>         
-        <Link href={'/contact'} className="h-[85px] hidden px-4 py-8 text-white bg-accent-color text-xl tracking-wide md:flex items-center transition duration-300 hover:opacity-50">
+        <Link href={'/contact'} className="h-[85px] hidden px-4 py-8 text-white bg-secondary-brown-light text-xl tracking-wide md:flex items-center transition duration-300 hover:opacity-50">
           お問い合わせ
         </Link> 
         <div className='ml-auto flex flex-col gap-2 md:hidden' onClick={() => setIsClick(!isClick)}>
-          <span className={`h-[2px] w-8 bg-text-color block ${isClick ? 'transition duration-300 transform translate-y-[10px] rotate-45' : 'transition duration-500'}`}></span>
-          <span className={`h-[2px] w-8 bg-text-color block ${isClick ? 'transition duration-300 translate-x-full opacity-0' : 'transition duration-500'}`}></span>
-          <span className={`h-[2px] w-8 bg-text-color block ${isClick ? 'transition duration-300 transform -translate-y-[10px] -rotate-45' : 'transition duration-500'}`}></span>
+          <span className={`h-[2px] w-8 bg-secondary-brown block ${isClick ? 'transition duration-300 transform translate-y-[10px] rotate-45' : 'transition duration-500'}`}></span>
+          <span className={`h-[2px] w-8 bg-secondary-brown block ${isClick ? 'transition duration-300 translate-x-full opacity-0' : 'transition duration-500'}`}></span>
+          <span className={`h-[2px] w-8 bg-secondary-brown block ${isClick ? 'transition duration-300 transform -translate-y-[10px] -rotate-45' : 'transition duration-500'}`}></span>
         </div>
       </div>
       <div className={`p-4 absolute h-screen bg-white left-full w-screen transition duration-500 ${isClick && '-translate-x-full'}`}>
         <div className='w-[90%] mx-auto'>
-          <h4 className='text-accent-color'>サービス</h4>
+          <h4 className='text-secondary-brown-light'>サービス</h4>
           <div className='pl-2'>
             <ul className='ml-auto mr-10 tracking-wide w-full'>
               {menuItemsList.map((menuItem, index) => (
@@ -56,7 +56,7 @@ const Header = () => {
               ))}
             </ul>  
           </div>
-          <h4 className='text-accent-color mt-8'>予約</h4>
+          <h4 className='text-secondary-brown-light mt-8'>予約</h4>
           <div className='pl-2'>
             <ul className='ml-auto mr-10 tracking-wide w-full'>
               {menuItemsList.map((menuItem, index) => (
@@ -68,9 +68,9 @@ const Header = () => {
                       <SnsIconBtn snsId={'facebook'} size={40} />
                     </div>
                   ) : (
-                    <button className='py-1 px-4 bg-accent-color'>
+                    <button className='py-1 px-4 bg-secondary-brown-light'>
                       <a href={menuItem.reserveUrl} target="_blank">
-                        <p className='text-main-color'>申込へ</p>
+                        <p className='text-kikara-white'>申込へ</p>
                       </a>
                     </button>
                   )}

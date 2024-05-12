@@ -8,14 +8,14 @@ const ProfileSection = () => {
       <div>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
           <p className='section_sub'>profile</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+          <div className="w-16 h-0.1 bg-secondary-brown"></div>
         </div>
       </div>
       <div className='w-[1040px]'>
         <div className="flex flex-col items-center gap-2">
           <p className="section_sub">profile</p>
           <h2>プロフィール</h2>
-          <div className="w-12 h-0.1 bg-text-color"></div>
+          <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className="mt-12 mx-auto h-96 bg-black relative">
           <Image
@@ -51,7 +51,7 @@ const ProfileSection = () => {
       <div className='mt-auto -translate-y-full'>
         <div className='flex items-center -rotate-90 translate-y-full gap-2'>
           <p className='section_sub'>profile</p>
-          <div className="w-16 h-0.1 bg-text-color"></div>
+          <div className="w-16 h-0.1 bg-secondary-brown"></div>
         </div>
       </div>
     </div>

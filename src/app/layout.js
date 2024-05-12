@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <html lang="ja">
         <body className="font-sans">
           <Header />
-            <main className='pt-[85px]'>{children}</main>
+            <main className='pt-[85px] bg-kikara-white'>{children}</main>
           <Footer />
         </body>
       </html>

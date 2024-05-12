@@ -23,19 +23,17 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'accent-color': '#D2B48C',
-        'sub-color': '#F0DFD9',
-        'feature-border': '#DDC1B7',
-        'menu-border': '#FFD4C7',
-        'text-color': '#5D5046',
-        'main-color': '#FDFDFD',
-        'news-color': '#FFF2ED',
-        'menuItem-color': '#F86767',
+        'primary-pink': '#FFE1D7',
+        'primary-pink-light': '#FFF2ED',
+        'secondary-brown': '#5D5046',
+        'secondary-brown-light': '#D2B48C',
+        'kikara-white': '#FDFDFD',
+        'kikara-chip-red': '#F86767',
         'Instagram': '#C13584',
         'Instagram-hover': '#991861',
         'Facebook': '#4267B2',
         'Facebook-hover': '#183b80',
-        'kikara-bar-color': '#E2CFB5'
+        'kikara-gray': '#F3F3F3'
       },
       height: {
         '0.1': '0.1rem',
