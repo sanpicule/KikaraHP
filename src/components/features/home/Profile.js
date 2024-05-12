@@ -17,11 +17,11 @@ const ProfileSection = () => {
           <h2>プロフィール</h2>
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
-        <div className="mt-12 mx-auto h-96 bg-black relative">
+        <div className="mt-12 mx-auto h-96 bg-black relative rounded-xl shadow-2xl">
           <Image
             src={profileImage}
             alt="profile_image"
-            className="w-full h-full"
+            className="w-full h-full rounded-xl shadow-2xl"
             style={{
               objectFit: 'cover',
               filter: "brightness(0.3)"

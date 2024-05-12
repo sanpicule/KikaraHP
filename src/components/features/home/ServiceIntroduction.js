@@ -19,7 +19,8 @@ const ServiceIntroductionPages = () => {
     scroll.scrollFadeInFromBottom()
     scroll.scrollFadeInFromRight()
     scroll.scrollFadeInFromLeft()
-  }, [scroll]);
+  }, [scroll])
+
   return (
     <div className="flex justify-around p-20">
       <div>
@@ -36,7 +37,7 @@ const ServiceIntroductionPages = () => {
         </div>
         <div className="pt-32">
           <div>
-            <h3 className="flex items-center text-3xl js-show-on-scroll-from-right">
+            <div className="flex items-center text-3xl js-show-on-scroll-from-right">
               <Image
                 src={serviceHeadNumber1}
                 alt="1"
@@ -47,24 +48,24 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              ミネラル醗酵ドリンク教室
-            </h3>
+              <h3>ミネラル醗酵ドリンク教室</h3>
+            </div>
             <div className="relative py-20">
               <Image
                 src={service1bg}
                 alt=""
                 width={780}
                 height={460}
-                className="shadow js-show-on-scroll-from-bottom"
+                className="shadow-2xl rounded-xl js-show-on-scroll-from-bottom"
                 style={{
                   objectFit: 'cover',
                 }}
               />
-              <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-left">
+              <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 js-show-on-scroll-from-left rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/mineral" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
+                <Link href="/mineral" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white rounded-md">
                   詳しく見る
                   <Image
                     src={chevronRight}
@@ -81,7 +82,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className="mt-40">
-            <h3 className="flex justify-end items-center text-3xl js-show-on-scroll-from-left">
+            <div className="flex justify-end items-center text-3xl js-show-on-scroll-from-left">
               <Image
                 src={serviceHeadNumber2}
                 alt="2"
@@ -92,24 +93,24 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              片付け・お手伝い
-            </h3>
+              <h3>片付け・お手伝い</h3>
+            </div>
             <div className="relative py-20">
               <Image
                 src={service2bg}
                 alt=""
                 width={780}
                 height={460}
-                className="ml-auto shadow js-show-on-scroll-from-bottom"
+                className="ml-auto shadow-2xl rounded-xl js-show-on-scroll-from-bottom"
                 style={{
                   objectFit: 'cover',
                 }}
               />
-              <div className="bg-white absolute top-1/2 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-right">
+              <div className="bg-white absolute top-1/2 w-[600px] px-10 py-6 js-show-on-scroll-from-right rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/tidying" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
+                <Link href="/tidying" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white rounded-md">
                   詳しく見る
                   <Image
                     src={chevronRight}
@@ -145,16 +146,16 @@ const ServiceIntroductionPages = () => {
                 alt=""
                 width={780}
                 height={460}
-                className="shadow js-show-on-scroll-from-bottom"
+                className="shadow-2xl rounded-xl js-show-on-scroll-from-bottom"
                 style={{
                   objectFit: 'cover',
                 }}
               />
-              <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 shadow js-show-on-scroll-from-left">
+              <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 js-show-on-scroll-from-left rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
                   Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
                 </p>
-                <Link href="/reiki" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white">
+                <Link href="/reiki" className="flex w-[200px] mt-6 ml-auto px-6 py-2 items-center justify-center bg-secondary-brown-light text-white rounded-md">
                   詳しく見る
                   <Image
                     src={chevronRight}

@@ -42,7 +42,7 @@ const ReikiPage = () => {
             <Image
               src={reikiAboutImage}
               alt="hero_image"
-              className="w-full"
+              className="w-full rounded-xl shadow-2xl"
               style={{
                 objectFit: 'cover',
               }}
@@ -57,7 +57,7 @@ const ReikiPage = () => {
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='grid grid-cols-2 md:w-[1040px] mx-auto mt-12 gap-12'>
-          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8 rounded-xl shadow-xl'>
             <Image
               src={targetOneImage}
               alt='このような方へ1'
@@ -66,7 +66,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8 rounded-xl shadow-xl'>
             <Image
               src={targetTwoImage}
               alt='このような方へ1'
@@ -75,7 +75,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8 rounded-xl shadow-xl'>
             <Image
               src={targetThreeImage}
               alt='このような方へ1'
@@ -84,7 +84,7 @@ const ReikiPage = () => {
             />
             <p className='text-start'>日常の生活からリラックスし<br></br>深い癒しを求めている</p>
           </div>
-          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8'>
+          <div className='flex justify-center items-center gap-8 bg-kikara-white py-8 rounded-xl shadow-xl'>
             <Image
               src={targetFourImage}
               alt='このような方へ1'
@@ -168,6 +168,7 @@ const ReikiPage = () => {
               <Image
                 src={reikiDetailImageLeft}
                 alt=""
+                className='rounded-xl shadow-2xl'
                 style={{
                   objectFit: 'cover'
                 }}
@@ -177,17 +178,18 @@ const ReikiPage = () => {
               <Image
                 src={reikiDetailImageRight}
                 alt=""
+                className='rounded-xl shadow-2xl'
                 style={{
                   objectFit: 'cover'
                 }}
               />
             </div>
           </div>
-          <a className='flex justify-center mt-12' href='https://totonou-kikara.com/index.php?Form' target="_blank">
-            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
-              <p className='text-md'>予約はこちらから</p>
+          <div className='text-center mt-12'>
+            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50 rounded-md'>
+              <a className='text-md' href='https://totonou-kikara.com/index.php?Form' target="_blank">予約はこちらから</a>
             </button>
-          </a>
+          </div>
         </div>     
       </div>
       <OtherServices />

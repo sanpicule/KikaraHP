@@ -116,8 +116,9 @@ const TidyingDetail = () => {
                 <Image
                   src={beforeImage}
                   alt="片付け・お手伝い実施前の写真"
+                  className='rounded-xl shadow-2xl'
                   width={450}
-                  height={800}
+                  height={700}
                 />
               </div>
               <Image
@@ -131,8 +132,9 @@ const TidyingDetail = () => {
                 <Image
                   src={afterImage}
                   alt="片付け・お手伝い実施後の写真"
+                  className='rounded-xl shadow-2xl'
                   width={450}
-                  height={800}
+                  height={700}
                 />
               </div>
             </div>
@@ -165,11 +167,11 @@ const TidyingDetail = () => {
               </div>
             </div>
           </div>
-          <a className='flex justify-center mt-12' href='https://totonou-kikara.com/index.php?Form' target="_blank">
-            <button className='py-4 px-24 bg-secondary-brown-light text-kikara-white transition duration-300 hover:opacity-50'>
-              <p className='text-md'>予約はこちらから</p>
+          <div className='text-center'>
+            <button className='py-4 px-24 bg-secondary-brown-light rounded-xl text-kikara-white transition duration-300 hover:opacity-50'>
+              <a className='text-md' href='https://totonou-kikara.com/index.php?Form' target="_blank">予約はこちらから</a>
             </button>
-          </a>
+          </div>
         </div>
       </div>
       <OtherServices></OtherServices>
