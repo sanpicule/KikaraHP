@@ -64,7 +64,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 js-show-on-scroll-from-left rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  野菜や果物が持つ酵母菌にミネラルを入れてフレッシュなものとはまた違う栄養価のあるドリンクを手作りします。
                 </p>
                 <HomeDetailButton url={'/mineral'} />
               </div>
@@ -97,7 +97,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 w-[600px] px-10 py-6 js-show-on-scroll-from-right rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  暮らしの空間を心地良く、物の存在が意識できる生活に。あなたの理想を現実にしていく最初の一歩を一緒に歩んでいきましょう。
                 </p>
                 <HomeDetailButton url={'/tidying'} />
               </div>
@@ -130,7 +130,7 @@ const ServiceIntroductionPages = () => {
               />
               <div className="bg-white absolute top-1/2 right-0 w-[600px] px-10 py-6 js-show-on-scroll-from-left rounded-xl shadow-2xl">
                 <p className="text-lg text-left leading-10">
-                  Kikaraが今一番力を入れて取り組んでいるのが、ミネラル後素ドリンクです。そもそもミネラルって何だっけ？そんな方でも大丈夫です。ミネラル醗酵ドリンクを一緒に作りながら、ミネラルや、健康について一緒に勉強していけます！
+                  人間には自然浄化力があります。手を当てて天からのエネルギーを身体を通して流し本来持っている自然治癒力を目覚めさせていきます。
                 </p>
                 <HomeDetailButton url={'/reiki'} />
               </div>
