@@ -1,8 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
+
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 import SnsLongBtn from '../features/common/Buttons/SnsLongBtn'
 import menuItemsList from '@/data/menuItems.json'
-import Link from 'next/link'
 
 const Footer = () => {
   return (

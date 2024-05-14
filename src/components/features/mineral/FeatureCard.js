@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+
 import featureOne from '@/public/images/orange.png'
 import featureTwo from '@/public/images/beauty.png'
 import featureThree from '@/public/images/meal.png'

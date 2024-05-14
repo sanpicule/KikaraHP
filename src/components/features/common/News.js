@@ -1,4 +1,5 @@
 import React from 'react'
+
 import NewsList from '../../../data/news.json'
 
 const NewsSection = ({ decoration = true }) => {

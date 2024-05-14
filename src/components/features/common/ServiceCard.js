@@ -3,10 +3,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { usePathname } from 'next/navigation'
+
 import serviceMineral from '@/public/images/serviceMineral.png'
 import serviceReiki from '@/public/images/serviceReiki.png'
 import serviceTidying from '@/public/images/serviceTidying.png'
-import { usePathname } from 'next/navigation'
 
 const ServiceCard = ({ service, title }) => {
   const pathname = usePathname();
