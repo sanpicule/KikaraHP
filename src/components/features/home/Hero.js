@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from "next/image";
+
 import mainHeroImage from '@/public/images/mainHeroImage.png'
 
 const HeroSection = () => {

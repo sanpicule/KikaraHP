@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { useEffect } from 'react';
-import useScrollFadeIn from './useScrollFadeIn';
 import Image from 'next/image';
-import Link from 'next/link'
+import { useEffect } from 'react';
+
+import useScrollFadeIn from './useScrollFadeIn';
+import HomeDetailButton from './HomeDetailButton';
+
 import serviceHeadNumber1 from '@/public/images/serviceHeadNumber1.png';
 import serviceHeadNumber2 from '@/public/images/serviceHeadNumber2.png';
 import serviceHeadNumber3 from '@/public/images/serviceHeadNumber3.png';
 import service1bg from '@/public/images/service1bg.png';
 import service2bg from '@/public/images/service2bg.png';
 import service3bg from '@/public/images/service3bg.png';
-import chevronRight from '@/public/images/chevronRight.png';
-import HomeDetailButton from './HomeDetailButton';
 
 const ServiceIntroductionPages = () => {
   const scroll = useScrollFadeIn()

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from "next/image";
-import profileImage from '../../../public/images/profile.png'
+
+import profileImage from '@/public/images/profile.png'
 
 const ProfileSection = () => {
   return (

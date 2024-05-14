@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 
-import NewsSection from '@/components/features/common/News'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 
 import reikiHero from '@/public/images/reikiHero.png'

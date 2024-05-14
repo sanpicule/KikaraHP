@@ -1,9 +1,9 @@
-import NewsSection from '@/components/features/common/News'
+import React from 'react'
+import Link from 'next/link'
+
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 import tidyingHeroImage from '@/public/images/tidyingHero.png'
-import React from 'react'
-import Link from 'next/link'
 
 const tidyingPage = () => {
   return (

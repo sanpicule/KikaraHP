@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React from 'react'
 
-import FeatureCard from '@/components/features/mineral/FeatureCard'
 import featureList from '@/data/features.json'
+import FeatureCard from '@/components/features/mineral/FeatureCard'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 
