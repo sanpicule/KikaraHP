@@ -19,29 +19,21 @@ git clone https://github.com/sanpicule/kikara.git
 code .
 ```
 
-3. VSCodeのターミナルを起動し、ブランチをdevelopに切り替える
+3. VSCodeのターミナルを起動し、developをフェッチ
 ```
-↓ブランチの確認(必要に応じて)
-git branch
-
-↓ブランチの切り替え
-git checkout -b develop
-
 git fetch origin develop
 
-git pull origin develop
+git checkout develop
 ```
 
-3. パッケージインストール ※好きなもので実行
+3. パッケージインストール
 ```
 npm install
-yarn install
 ```
 
-3. 開発環境の立ち上げ ※好きなもので実行
+3. 開発環境の立ち上げ
 ```
 npm run dev
-yarn dev
 ```
 
 4. ローカルサーバにアクセス
@@ -110,5 +102,5 @@ layout.jsで使用するコンポーネント
 3. **data**
 ヘッダーのメニュー一覧などフロントで保持するデータを格納しています。
 
-4. **public**
-写真のデータを格納してます
+4. **public/images**
+写真を格納してます
