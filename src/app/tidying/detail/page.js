@@ -14,6 +14,9 @@ import arrowImage from '@/public/images/tidyingArrow.png'
 import tidyingApplication from '@/public/images/tidyingApplication.png'
 import tidyingDo from '@/public/images/tidyingDo.png'
 import tidyingReply from '@/public/images/tidyingReply.png'
+import one from '@/public/images/1.png'
+import two from '@/public/images/2.png'
+import three from '@/public/images/3.png'
 
 const TidyingDetail = () => {
   return (
@@ -146,23 +149,26 @@ const TidyingDetail = () => {
               <div className="w-12 h-0.1 bg-secondary-brown"></div>
             </div>
             <div className='flex flex-col justify-center gap-4 items-center mt-12 h-full'>
-              <div className='flex justify-around w-full h-full'>
-                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
-                  <h3>1.申込</h3>
+              <div className='flex justify-around w-full h-full mt-24 tracking-normal js-show-on-scroll-from-bottom'>
+                <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+                  <Image src={one} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+                  <h3>申込</h3>
                   <Image src={tidyingApplication} alt="" width={150} height={150} />
-                  <p>こちらより申込をしていただけます。片付けを手伝って欲しい場所とだいたいの畳数を教えて下さい 例）キッチン4畳</p>
+                  <p className='h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
                 </div>
                 <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
-                  <h3>2.返信</h3>
+                <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+                  <Image src={two} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+                  <h3>返信</h3>
                   <Image src={tidyingReply} alt="" width={150} height={150} />
-                  <p>ショートメールにて返信いたします。片付けたい場所の写真を２, 3枚送信して頂けるとありがたいです。</p>
+                  <p className='h-full'>Facebook、Instagramからお申し込みいただけます。</p>
                 </div>
                 <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-                <div className='flex flex-col items-center flex-1 gap-4 border-2 rounded-2xl border-secondary-brown p-4'>
-                  <h3>3.片付け</h3>
+                <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+                  <Image src={three} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+                  <h3>片付け</h3>
                   <Image src={tidyingDo} alt="" width={150} height={150} />
-                  <p>予定をあわせ、ご自宅へ伺います。※料金は当日現金にてお支払い下さい</p>
+                  <p className='h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
                 </div>
               </div>
             </div>

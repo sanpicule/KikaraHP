@@ -1,9 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 import tidyingHeroImage from '@/public/images/tidyingHero.png'
+import userWoman from '@/public/images/userWoman.png'
+import userMan from '@/public/images/userMan.png'
 
 const tidyingPage = () => {
   return (
@@ -48,27 +51,27 @@ const tidyingPage = () => {
           <h2>お客様の声</h2>
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
-        <div className='flex mt-12 w-[1040px] gap-4'>
-          <div className='border-2 border-secondary-brown rounded-2xl p-4'>
-            <div className='w-14 h-14 rounded-full mx-auto bg-slate-400'></div>
+        <div className='flex mt-12 w-[1040px] gap-4 js-show-on-scroll-from-bottom'>
+          <div className='flex flex-col items-center shadow-2xl rounded-xl p-4'>
+            <Image src={userMan} alt="" width={60} height={60}/>
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='border-2 border-secondary-brown rounded-2xl p-4'>
-            <div className='w-14 h-14 rounded-full mx-auto bg-slate-400'></div>
+          <div className='flex flex-col items-center shadow-2xl rounded-xl p-4'>
+            <Image src={userWoman} alt="" width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='border-2 border-secondary-brown rounded-2xl p-4'>
-            <div className='w-14 h-14 rounded-full mx-auto bg-slate-400'></div>
+          <div className='flex flex-col items-center shadow-2xl rounded-xl p-4'>
+            <Image src={userMan} alt="" width={60} height={60}/>
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='border-2 border-secondary-brown rounded-2xl p-4'>
-            <div className='w-14 h-14 rounded-full mx-auto bg-slate-400'></div>
+          <div className='flex flex-col items-center shadow-2xl rounded-xl p-4'>
+            <Image src={userWoman} alt="" width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
