@@ -38,7 +38,8 @@ const MineralDetail = () => {
     scroll.scrollFadeInFromBottom()
     scroll.scrollFadeInFromRight()
     scroll.scrollFadeInFromLeft()
-  }, [scroll]);
+  }, [scroll])
+
   return (
     <div>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
@@ -70,25 +71,25 @@ const MineralDetail = () => {
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='flex mt-12 w-[1040px] gap-4 js-show-on-scroll-from-bottom'>
-          <div className='flex flex-col items-center border-2 border-secondary-brown rounded-3xl p-4'>
+          <div className='flex flex-col items-center rounded-xl bg-kikara-white shadow-2xl p-4'>
             <Image src={userMan} alt="" width={60} height={60}/>
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='flex flex-col items-center border-2 border-secondary-brown rounded-3xl p-4'>
+          <div className='flex flex-col items-center rounded-xl bg-kikara-white shadow-2xl p-4'>
             <Image src={userWoman} alt="" width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='flex flex-col items-center border-2 border-secondary-brown rounded-3xl p-4'>
+          <div className='flex flex-col items-center rounded-xl bg-kikara-white shadow-2xl p-4'>
             <Image src={userMan} alt="" width={60} height={60}/>
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
             <p className='mt-8'>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて</p>
           </div>
-          <div className='flex flex-col items-center border-2 border-secondary-brown rounded-3xl p-4'>
+          <div className='flex flex-col items-center rounded-xl bg-kikara-white shadow-2xl p-4'>
             <Image src={userWoman} alt="" width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
@@ -192,29 +193,29 @@ const MineralDetail = () => {
           <div className="w-12 h-0.1 bg-secondary-brown"></div>
         </div>
         <div className='flex justify-around w-full h-full mt-24 tracking-normal js-show-on-scroll-from-bottom'>
-          <div className='relative flex flex-col items-center justify-center flex-1 gap-4 border-2 rounded-3xl border-secondary-brown px-4 py-12'>
-            <Image src={one} alt="" width={80} height={80} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+          <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+            <Image src={one} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
             <h3>開催情報</h3>
             <Image src={infoImage} alt="" width={150} height={150} />
             <p className='h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
           </div>
           <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-          <div className='relative flex flex-col items-center justify-center flex-1 gap-4 border-2 rounded-3xl border-secondary-brown px-4 py-12'>
-            <Image src={two} alt="" width={80} height={80} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+          <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+            <Image src={two} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
             <h3>お申し込み</h3>
             <Image src={replyImage} alt="" width={150} height={150} />
             <p className='h-full'>Facebook、Instagramからお申し込みいただけます。</p>
           </div>
           <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-          <div className='relative flex flex-col items-center justify-center flex-1 gap-4 border-2 rounded-3xl border-secondary-brown px-4 py-12'>
-            <Image src={three} alt="" width={80} height={80} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+          <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+            <Image src={three} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
             <h3>持ち物準備</h3>
             <Image src={preparationImage} alt="" width={150} height={150} />
             <p className='h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
           </div>
           <div className="my-auto w-0 h-0 border-secondary-brown border-t-[30px] border-b-[30px] border-l-[30px] border-t-transparent border-b-transparent border-solid" />
-          <div className='relative flex flex-col items-center justify-center flex-1 gap-4 border-2 rounded-3xl border-secondary-brown px-4 py-12'>
-            <Image src={four} alt="" width={80} height={80} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
+          <div className='relative flex flex-col items-center justify-center flex-1 gap-8 rounded-3xl px-4 py-12'>
+            <Image src={four} alt="" width={60} height={60} className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2' />
             <h3>教室に参加</h3>
             <Image src={classImage} alt="" width={150} height={150} />
             <p className='h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
