@@ -7,7 +7,7 @@ const config = {
   semi: false,
   singleQuote: true,
   jsxSingleQuote: true,
-  arrowParens: 'never',
+  arrowParens: 'always',
 }
 
 export default config

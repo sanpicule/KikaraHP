@@ -1,20 +1,19 @@
 import Image from 'next/image'
-import React from 'react'
 
 const ServicePageHero = ({ serviceImage, serviceTitle }) => {
   return (
     <div>
-      <div className="w-full h-4/5 relative">
+      <div className='relative h-4/5 w-full'>
         <Image
           src={serviceImage}
-          alt="hero_image"
-          className="w-full h-full"
+          alt='hero_image'
+          className='h-full w-full'
           style={{
             objectFit: 'cover',
-            filter: "brightness(0.3)"
+            filter: 'brightness(0.3)',
           }}
         />
-        <div className="w-full text-white text-center md:text-left md:pl-24 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
+        <div className='absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center text-white md:pl-24 md:text-left'>
           <h2>{serviceTitle}</h2>
         </div>
       </div>

@@ -1,27 +1,28 @@
+import Image from 'next/image'
 import React from 'react'
-import Image from "next/image";
-
 import mainHeroImage from '@/public/images/mainHeroImage.png'
 
 const HeroSection = () => {
   return (
-    <div className="w-full relative">
+    <div className='relative w-full'>
       <Image
         src={mainHeroImage}
-        alt="hero_image"
-        className="w-full h-svh"
+        alt='hero_image'
+        className='h-svh w-full'
         style={{
           objectFit: 'cover',
-          filter: "brightness(0.3)"
+          filter: 'brightness(0.3)',
         }}
       />
-      <div className="text-white tracking-wide text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center tracking-wide text-white'>
         <p>わたし・ととのう・さろん</p>
-        <h1 className="text-5xl tracking-wide mt-2">Kikara</h1>
-        <p className="mt-20 text-xl font-thin leading-10">身体と暮らしと食事を<br></br>ととのえる</p>
-        <div className="mt-32 flex flex-col-reverse items-center justify-center">
-          <span className="text-white tracking-wide">Scroll</span>
-          <div className="animate-bounce w-0.5 h-20 bg-white"></div>
+        <h1 className='mt-2 text-5xl tracking-wide'>Kikara</h1>
+        <p className='mt-20 text-xl font-thin leading-10'>
+          身体と暮らしと食事を<br></br>ととのえる
+        </p>
+        <div className='mt-32 flex flex-col-reverse items-center justify-center'>
+          <span className='tracking-wide text-white'>Scroll</span>
+          <div className='h-20 w-0.5 animate-bounce bg-white'></div>
         </div>
       </div>
     </div>

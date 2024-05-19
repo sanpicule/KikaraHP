@@ -1,9 +1,6 @@
 import Footer from '../components/layouts/Footer'
 import Header from '../components/layouts/Header'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'くらし・ととのう・サロン Kikara',
@@ -13,14 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <html lang="ja">
-        <body className="font-sans">
+      <html lang='ja'>
+        <body className='font-sans'>
           <Header />
-            <main className='pt-[85px] bg-kikara-white'>{children}</main>
+          <main className='bg-kikara-white pt-[85px]'>{children}</main>
           <Footer />
         </body>
       </html>
     </>
   )
 }
-

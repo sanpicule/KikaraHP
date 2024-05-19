@@ -1,39 +1,34 @@
-import React from 'react'
 import Image from 'next/image'
-
-import featureOne from '@/public/images/orange.png'
+import React from 'react'
 import featureTwo from '@/public/images/beauty.png'
 import featureThree from '@/public/images/meal.png'
+import featureOne from '@/public/images/orange.png'
 
 const FeatureCard = ({ feature, number, content }) => {
-  let featureImage;
+  let featureImage
   switch (number) {
     case 1:
-      featureImage = featureOne;
-      break;
+      featureImage = featureOne
+      break
     case 2:
-      featureImage = featureTwo;
-      break;
+      featureImage = featureTwo
+      break
     case 3:
-      featureImage = featureThree;
-      break;
+      featureImage = featureThree
+      break
     default:
-      featureImage = featureOne;
+      featureImage = featureOne
   }
   return (
-    <div className='rounded-xl py-4 px-8 bg-kikara-white shadow-2xl'>
+    <div className='rounded-xl bg-kikara-white px-8 py-4 shadow-2xl'>
       <div className='flex items-center justify-center gap-4'>
-        <div className="w-10 h-10 rounded-full bg-secondary-brown-light flex justify-center items-center text-white text-lg font-bold">
+        <div className='text-lg flex h-10 w-10 items-center justify-center rounded-full bg-secondary-brown-light font-bold text-white'>
           {number}
         </div>
         <h4 className='tracking-normal'>{feature}</h4>
       </div>
-      <Image
-        src={featureImage}
-        alt={feature}
-        className='w-full mt-4'
-      />
-      <p className='mt-8 leading-8 md:tracking-wide md:leading-8'>{content}</p>
+      <Image src={featureImage} alt={feature} className='mt-4 w-full' />
+      <p className='mt-8 leading-8 md:leading-8 md:tracking-wide'>{content}</p>
     </div>
   )
 }

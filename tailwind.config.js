@@ -7,10 +7,10 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      'xs': '0.6rem',
-      'sm': '0.8rem',
-      'base': '1rem',
-      'xl': '1.25rem',
+      xs: '0.6rem',
+      sm: '0.8rem',
+      base: '1rem',
+      xl: '1.25rem',
       '2xl': '1.563rem',
       '3xl': '1.953rem',
       '4xl': '3rem',
@@ -19,8 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
         'primary-pink': '#FFE1D7',
@@ -29,31 +28,31 @@ module.exports = {
         'secondary-brown-light': '#D2B48C',
         'kikara-white': '#FDFDFD',
         'kikara-chip-red': '#F86767',
-        'Instagram': '#C13584',
+        Instagram: '#C13584',
         'Instagram-hover': '#991861',
-        'Facebook': '#4267B2',
+        Facebook: '#4267B2',
         'Facebook-hover': '#183b80',
-        'kikara-gray': '#F3F3F3'
+        'kikara-gray': '#F3F3F3',
       },
       height: {
-        '0.1': '0.1rem',
-        '0.25': '0.25rem',
-        '0.5': '0.5rem',
-        '0.75': '0.75rem',
+        0.1: '0.1rem',
+        0.25: '0.25rem',
+        0.5: '0.5rem',
+        0.75: '0.75rem',
       },
       letterSpacing: {
-        'wide': '.25em',
+        wide: '.25em',
       },
       fontFamily: {
-        'sans': ['Hiragino Mincho Pro', 'sans-serif'],
+        sans: ['Hiragino Mincho Pro', 'sans-serif'],
       },
       animation: {
-        'slideInFromBottom': 'slideInFromBottom 1s ease-in forwards',
-        'slideInFromRight': 'slideInFromRight 1s ease-in forwards',
-        'slideInFromLeft': 'slideInFromLeft 1s ease-in forwards',
+        slideInFromBottom: 'slideInFromBottom 1s ease-in forwards',
+        slideInFromRight: 'slideInFromRight 1s ease-in forwards',
+        slideInFromLeft: 'slideInFromLeft 1s ease-in forwards',
       },
       keyframes: {
-        'slideInFromBottom': {
+        slideInFromBottom: {
           '0%': {
             opacity: 0,
             transform: 'translateY(60px)',
@@ -63,7 +62,7 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
-        'slideInFromRight': {
+        slideInFromRight: {
           '0%': {
             opacity: 0,
             transform: 'translateX(60px)',
@@ -73,7 +72,7 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
-        'slideInFromLeft': {
+        slideInFromLeft: {
           '0%': {
             opacity: 0,
             transform: 'translateX(-60px)',
