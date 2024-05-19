@@ -32,7 +32,7 @@ const useScrollFadeIn = () => {
   return {
     scrollFadeInFromBottom,
     scrollFadeInFromRight,
-    scrollFadeInFromLeft
+    scrollFadeInFromLeft,
   }
 }
 

@@ -1,7 +1,4 @@
-import {
-  useState,
-  useEffect
-} from 'react';
+import { useState, useEffect } from 'react'
 
 const useMediaQuery = () => {
   const MOBILE_WIDTH = 768
@@ -12,7 +9,7 @@ const useMediaQuery = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth)
       setIsMobile(window.innerWidth <= MOBILE_WIDTH)
-    };
+    }
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
