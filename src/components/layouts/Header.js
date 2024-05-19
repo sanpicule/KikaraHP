@@ -11,8 +11,8 @@ const Header = () => {
   const [isClick, setIsClick] = useState(false)
   return (
     <div className='fixed left-0 top-0 z-50 w-screen bg-primary-pink-light'>
-      <div className='top-0 flex h-[85px] items-center px-4 py-2 shadow-sm md:py-0 md:pr-0'>
-        <div className='text-center' onClick={() => setIsClick(false)}>
+      <div className='top-0 flex h-[85px] items-center px-4 py-2 shadow-sm xl:py-0 xl:pr-0'>
+        <div onClick={() => setIsClick(false)}>
           <Link href={'/'}>
             <p className='text-sm tracking-tighter'>わたし・ととのう・さろん</p>
             <h2>kikara</h2>
@@ -21,7 +21,7 @@ const Header = () => {
         <p className='ml-4 hidden text-sm tracking-wide md:block'>
           熊本市東区で<br></br>心とカラダを整える
         </p>
-        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide md:flex'>
+        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide xl:flex'>
           {menuItemsList.map((menuItem, index) => (
             <li key={index} className='transition duration-300 hover:opacity-35'>
               <Link href={menuItem.url}>{menuItem.menuTitle}</Link>
@@ -30,11 +30,11 @@ const Header = () => {
         </ul>
         <Link
           href={'/contact'}
-          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 md:flex'
+          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 xl:flex'
         >
           お問い合わせ
         </Link>
-        <div className='ml-auto flex flex-col gap-2 md:hidden' onClick={() => setIsClick(!isClick)}>
+        <div className='ml-auto flex flex-col gap-2 xl:hidden' onClick={() => setIsClick(!isClick)}>
           <span
             className={`block h-[2px] w-8 bg-secondary-brown ${isClick ? 'translate-y-[10px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
           ></span>
@@ -49,7 +49,7 @@ const Header = () => {
       <div
         className={`absolute left-full h-screen w-screen bg-white p-4 transition duration-500 ${isClick && '-translate-x-full'}`}
       >
-        <div className='mx-auto w-[90%]'>
+        <div className='mx-auto w-[80%]'>
           <h4 className='text-secondary-brown-light'>サービス</h4>
           <div className='pl-2'>
             <ul className='ml-auto mr-10 w-full tracking-wide'>

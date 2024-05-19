@@ -18,6 +18,18 @@ h4 {
   h2 {
     @apply text-2xl
   }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  p {
+    @apply text-sm tracking-normal;
+  }
  }
 
 .section_sub {
