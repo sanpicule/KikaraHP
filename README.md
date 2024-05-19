@@ -4,8 +4,10 @@ Kikaraのホームページ用のリポジトリです。
 
 ## 開発環境
 - `NextJS v14.1.4`
-- `TailwindCSS v3.4.1`
-- `Node.js v20.11.0`
+- `TailwindCSS v3.3.0`
+- `Node.js v20.13.1`
+  - voltaでバージョン管理しています。
+  - install方法は[こちら](https://docs.volta.sh/guide/getting-started)
 
 ## 開発環境構築
 1. リポジトリをクローンする
