@@ -10,7 +10,8 @@ const config = {
     'next/core-web-vitals',
     'eslint:recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
+    // TODO: アクセシビリティを考慮するタイミングでコメントアウトを解除
+    // 'plugin:jsx-a11y/recommended',
     'prettier',
   ],
   rules: {
@@ -18,7 +19,6 @@ const config = {
       'warn',
       {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
-        alphabetize: { order: 'asc', caseInsensitive: true },
         pathGroups: [
           {
             pattern: '@/**',
@@ -26,12 +26,16 @@ const config = {
             position: 'before',
           },
         ],
+        pathGroupsExcludedImportTypes: ['builtin'],
+        alphabetize: {
+          order: 'asc',
+        },
         'newlines-between': 'never',
       },
     ],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'jsx-a11y/accessible-emoji': 'warn',
+    // 'jsx-a11y/accessible-emoji': 'warn',
     'react/react-in-jsx-scope': 'off',
     'no-unused-vars': 'error',
     eqeqeq: 'error',
