@@ -16,7 +16,7 @@ const ReikiPage = () => {
   return (
     <div>
       <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[80%] py-24 text-center md:w-[1040px] md:tracking-wide'>
         <div className='flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>直傳靈氣について</h2>
@@ -85,7 +85,7 @@ const ReikiPage = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[80%] py-24 md:w-[1040px] md:tracking-wide'>
         <div className='flex flex-col items-center gap-2'>
           <p className='section_sub'>detail</p>
           <h2>施術詳細</h2>

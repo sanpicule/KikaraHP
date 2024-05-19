@@ -12,7 +12,7 @@ const MineralPage = () => {
   return (
     <>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[80%] py-24 text-center md:w-[1040px] md:tracking-wide'>
         <div className='flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>ミネラル醗酵ドリンクについて</h2>
@@ -47,7 +47,7 @@ const MineralPage = () => {
           <h2>3つの特徴</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='mx-auto mt-24 max-w-[90%] md:w-[1040px]'>
+        <div className='mx-auto mt-24 max-w-[80%] md:w-[1040px]'>
           <div className='flex grow flex-col gap-8 md:flex-row'>
             {featureList.map((feature, index) => (
               <FeatureCard key={index} feature={feature.feature} number={feature.number} content={feature.content} />
@@ -55,7 +55,7 @@ const MineralPage = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[80%] py-24 text-center md:w-[1040px] md:tracking-wide'>
         <h2>\一緒にドリンク作りませんか？/</h2>
         <p className='mt-12 leading-8'>
           Kikaraではミネラル醗酵ドリンク教室を<br></br>定期的に開催しています！
