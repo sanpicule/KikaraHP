@@ -27,7 +27,14 @@ const FeatureCard = ({ feature, number, content }) => {
         </div>
         <h4 className='tracking-normal'>{feature}</h4>
       </div>
-      <Image src={featureImage} alt={feature} className='mt-4 w-full' />
+      <Image
+        src={featureImage}
+        alt={feature}
+        className='mt-4 h-[150px] w-full rounded-md'
+        style={{
+          objectFit: 'cover',
+        }}
+      />
       <p className='mt-8 leading-8 md:leading-8 md:tracking-wide'>{content}</p>
     </div>
   )

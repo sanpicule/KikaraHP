@@ -65,7 +65,7 @@ const MineralPage = () => {
             <Image
               src={throw1}
               alt='教室の様子１'
-              className='rounded-xl shadow-2xl'
+              className='h-[100px] rounded-xl shadow-2xl xl:h-full'
               style={{
                 objectFit: 'cover',
               }}
@@ -75,7 +75,7 @@ const MineralPage = () => {
             <Image
               src={throw2}
               alt='教室の様子２'
-              className='rounded-xl shadow-2xl'
+              className='h-[100px] rounded-xl shadow-2xl xl:h-full'
               style={{
                 objectFit: 'cover',
               }}

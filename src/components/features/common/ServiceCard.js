@@ -27,7 +27,7 @@ const ServiceCard = ({ service, title }) => {
   }
 
   return (
-    <div className='relative overflow-hidden rounded-xl shadow-2xl md:w-1/3 md:flex-col'>
+    <div className='relative h-[150px] overflow-hidden rounded-xl shadow-2xl md:w-1/3 md:flex-col xl:h-full'>
       <Link href={`/${service}`}>
         <Image
           src={serviceImage}
