@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-import useScrollFadeIn from './useScrollFadeIn';
 import HomeDetailButton from './HomeDetailButton';
+import useScrollFadeIn from './useScrollFadeIn';
 
 import serviceHeadNumber1 from '@/public/images/serviceHeadNumber1.png';
 import serviceHeadNumber2 from '@/public/images/serviceHeadNumber2.png';
