@@ -1,48 +1,58 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
+import useScrollFadeIn from '@/components/features/home/useScrollFadeIn'
 import tidyingHeroImage from '@/public/images/tidyingHero.png'
 import userMan from '@/public/images/userMan.png'
 import userWoman from '@/public/images/userWoman.png'
 
-const tidyingPage = () => {
+const TidyingPage = () => {
+  const scroll = useScrollFadeIn()
+  useEffect(() => {
+    scroll.scrollFadeInFromBottom()
+    scroll.scrollFadeInFromRight()
+    scroll.scrollFadeInFromLeft()
+  }, [scroll])
+
   return (
     <div>
       <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・手伝い'} />
-      <div className='mx-auto max-w-[80%] py-24 text-center md:w-[1040px] md:tracking-wide'>
-        <div className='flex flex-col items-center gap-2'>
+      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>片付け・手伝いとは</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='mt-24 text-center'>
+        <div className='js-show-on-scroll-from-bottom mt-24 text-center'>
           <p className='mt-8 leading-8 md:leading-10'>
             本来、家の役目は心安らかに寛げることで一日の疲れをリセットし活力をも補えることにあると思います。自分設計の家を２回建てたこと引っ越し10回以上の経験、ミニマリスト生活実践中である私の元へ多くの依頼を頂きましたのでこの度、出張片付けのお手伝いを併用する運びとなりました。
           </p>
         </div>
       </div>
       <div className='w-full bg-primary-pink py-24 text-center md:tracking-wide'>
-        <div className='flex flex-col items-center gap-2'>
+        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>target</p>
           <h2>このような方へ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='mx-auto mt-24 flex w-[80%] flex-col items-center gap-12 xl:w-[1040px] xl:items-start xl:gap-24'>
-          <div className='flex flex-col items-center gap-4 xl:flex-row'>
+        <div className='mx-auto mt-24 flex w-[90%] flex-col items-center gap-12 xl:w-[1040px] xl:items-start xl:gap-24'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-4 xl:flex-row'>
             <h2>01</h2>
             <h4 className='text-center xl:text-start'>
               ごちゃごちゃした部屋を見て<br></br>疲れが酷くなっていると感じる
             </h4>
           </div>
-          <div className='flex flex-col items-center gap-4 xl:mx-auto xl:flex-row'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-4 xl:mx-auto xl:flex-row'>
             <h2>02</h2>
             <h4 className='text-center xl:text-start'>
               人を呼びたいけれど<br></br>呼べるような状態ではない
             </h4>
           </div>
-          <div className='flex flex-col items-center gap-4 xl:ml-auto xl:flex-row'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-4 xl:ml-auto xl:flex-row'>
             <h2>03</h2>
             <h4 className='text-center xl:text-start'>
               片付けたいけれど、どこから<br></br>手をつけていいかわからない
@@ -50,14 +60,14 @@ const tidyingPage = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[80%] py-24 text-center md:w-[1040px] md:tracking-wide'>
-        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
+      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+        <div className='js-show-on-scroll-from-bottom js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>voice</p>
           <h2>お客様の声</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='js-show-on-scroll-from-bottom mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:w-[1040px] xl:grid-cols-4'>
-          <div className='flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
             <Image src={userMan} alt='' width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
@@ -65,7 +75,7 @@ const tidyingPage = () => {
               親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
             </p>
           </div>
-          <div className='flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
             <Image src={userWoman} alt='' width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
@@ -73,7 +83,7 @@ const tidyingPage = () => {
               親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
             </p>
           </div>
-          <div className='flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
             <Image src={userMan} alt='' width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
@@ -81,7 +91,7 @@ const tidyingPage = () => {
               親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
             </p>
           </div>
-          <div className='flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
+          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
             <Image src={userWoman} alt='' width={60} height={60} />
             <h4 className='mt-4'>ハンドルネーム</h4>
             <p>60代 男性</p>
@@ -90,7 +100,7 @@ const tidyingPage = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className='js-show-on-scroll-from-bottom'>
           <Link
             href={'/tidying/detail'}
             className='group relative mt-12 inline-block border bg-secondary-brown-light px-24 py-4 text-kikara-white no-underline outline-none transition-all duration-300 hover:bg-secondary-brown'
@@ -106,4 +116,4 @@ const tidyingPage = () => {
   )
 }
 
-export default tidyingPage
+export default TidyingPage

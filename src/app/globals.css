@@ -2,19 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-h2 {
+h1 {
   @apply text-3xl tracking-wide;
 }
 
-h3 {
+h2 {
   @apply text-2xl tracking-wide;
 }
 
-h4 {
+h3 {
   @apply text-xl tracking-wide;
 }
 
-@media (max-width: 640px) {
+h4 {
+  @apply text-md tracking-wide;
+}
+
+p {
+  @apply text-base tracking-wide;
+}
+
+@media (max-width: 1040px) {
   h2 {
     @apply text-2xl
   }
@@ -24,11 +32,11 @@ h4 {
   }
 
   h4 {
-    @apply text-base;
+    @apply text-md;
   }
 
   p {
-    @apply text-sm tracking-normal;
+    @apply text-base tracking-normal;
   }
  }
 
