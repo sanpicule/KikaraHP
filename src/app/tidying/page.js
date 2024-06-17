@@ -1,14 +1,13 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
+import VoiceCard from '@/components/features/common/VoiceCard'
 import useScrollFadeIn from '@/components/features/home/useScrollFadeIn'
+import voices from '@/data/voiceMineral.json'
 import tidyingHeroImage from '@/public/images/tidyingHero.png'
-import userMan from '@/public/images/userMan.png'
-import userWoman from '@/public/images/userWoman.png'
 
 const TidyingPage = () => {
   const scroll = useScrollFadeIn()
@@ -66,39 +65,10 @@ const TidyingPage = () => {
           <h2>お客様の声</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='js-show-on-scroll-from-bottom mt-12 grid grid-cols-1 gap-4 md:grid-cols-2 xl:w-[1040px] xl:grid-cols-4'>
-          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
-            <Image src={userMan} alt='' width={60} height={60} />
-            <h4 className='mt-4'>ハンドルネーム</h4>
-            <p>60代 男性</p>
-            <p className='mt-8'>
-              親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
-            </p>
-          </div>
-          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
-            <Image src={userWoman} alt='' width={60} height={60} />
-            <h4 className='mt-4'>ハンドルネーム</h4>
-            <p>60代 男性</p>
-            <p className='mt-8'>
-              親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
-            </p>
-          </div>
-          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
-            <Image src={userMan} alt='' width={60} height={60} />
-            <h4 className='mt-4'>ハンドルネーム</h4>
-            <p>60代 男性</p>
-            <p className='mt-8'>
-              親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
-            </p>
-          </div>
-          <div className='js-show-on-scroll-from-bottom flex flex-col items-center rounded-xl bg-kikara-white p-4 shadow-2xl'>
-            <Image src={userWoman} alt='' width={60} height={60} />
-            <h4 className='mt-4'>ハンドルネーム</h4>
-            <p>60代 男性</p>
-            <p className='mt-8'>
-              親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて
-            </p>
-          </div>
+        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-12 md:grid-cols-1 xl:w-[1040px]'>
+          {voices.map((voice, i) => (
+            <VoiceCard key={i} name={voice.name} info={voice.info} voice={voice.voice} index={i} />
+          ))}
         </div>
         <div className='js-show-on-scroll-from-bottom'>
           <Link
