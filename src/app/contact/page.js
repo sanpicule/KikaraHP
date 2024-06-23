@@ -29,11 +29,11 @@ const ContactPage = () => {
       <Stepper step1={true} />
       <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
       <form onSubmit={handleSubmit(onSubmit)} className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>
-        <div className='mx-auto flex w-[60%] items-center'>
-          <p className='w-1/3'>
+        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+          <p className='w-full md:w-1/3'>
             お名前<span className='text-kikara-chip-red'>*</span>
           </p>
-          <div className='flex w-2/3 flex-col '>
+          <div className='flex w-full flex-col md:w-2/3 '>
             <input
               {...register('name', {
                 required: '入力必須です',
@@ -44,11 +44,11 @@ const ContactPage = () => {
             {errors.name && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.name.message}</span>}
           </div>
         </div>
-        <div className='mx-auto flex w-[60%] items-center'>
-          <p className='w-1/3'>
+        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+          <p className='w-full md:w-1/3'>
             フリガナ<span className='text-kikara-chip-red'>*</span>
           </p>
-          <div className='flex w-2/3 flex-col '>
+          <div className='flex w-full flex-col md:w-2/3 '>
             <input
               {...register('name_kana', {
                 required: '入力必須です',
@@ -65,11 +65,11 @@ const ContactPage = () => {
             )}
           </div>
         </div>
-        <div className='mx-auto flex w-[60%] items-center'>
-          <p className='w-1/3'>
+        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+          <p className='w-full md:w-1/3'>
             メールアドレス<span className='text-kikara-chip-red'>*</span>
           </p>
-          <div className='flex w-2/3 flex-col '>
+          <div className='flex w-full flex-col md:w-2/3 '>
             <input
               {...register('mail', {
                 required: '入力必須です',
@@ -84,11 +84,11 @@ const ContactPage = () => {
             {errors.mail && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.mail.message}</span>}
           </div>
         </div>
-        <div className='mx-auto flex w-[60%] items-center'>
-          <p className='w-1/3'>
+        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+          <p className='w-full md:w-1/3'>
             メールアドレス（確認用）<span className='text-kikara-chip-red'>*</span>
           </p>
-          <div className='flex w-2/3 flex-col '>
+          <div className='flex w-full flex-col md:w-2/3 '>
             <input
               {...register('mail_confirm', {
                 required: '入力必須です',
@@ -106,11 +106,11 @@ const ContactPage = () => {
             )}
           </div>
         </div>
-        <div className='mx-auto flex w-[60%] items-center'>
-          <p className='w-1/3'>
+        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+          <p className='w-full md:w-1/3'>
             内容<span className='text-kikara-chip-red'>*</span>
           </p>
-          <div className='flex w-2/3 flex-col '>
+          <div className='flex w-full flex-col md:w-2/3 '>
             <textarea
               {...register('contents', {
                 required: '入力必須です',
