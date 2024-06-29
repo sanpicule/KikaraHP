@@ -7,54 +7,41 @@ import useScrollDirection from '@/hooks/useScrollDirection'
 import arrow from '@/public/images/arrow.png'
 import menuItemsList from '../../data/menuItems.json'
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false)
   const scrollDirection = useScrollDirection()
+  const pathname = usePathname()
+  console.log(pathname)
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-screen bg-primary-pink-light transition-transform duration-500 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed left-0 top-0 z-50 w-screen transition-transform duration-500 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}
     >
-      <div className='top-0 flex h-[85px] items-center px-4 shadow-sm md:px-12 xl:py-0 xl:pr-0'>
-        <div onClick={() => setIsClick(false)}>
-          <Link href={'/'}>
-            <p className='text-xs tracking-tighter'>わたし・ととのう・さろん</p>
-            <h1>kikara</h1>
-          </Link>
-        </div>
-        <p className='ml-8 hidden text-sm tracking-wide md:block'>
-          熊本市東区で<br></br>心とカラダを整える
-        </p>
-        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide xl:flex'>
-          {menuItemsList.map((menuItem, index) => (
-            <li key={index} className='transition duration-300 hover:opacity-35'>
-              <Link href={menuItem.url}>
-                <p>{menuItem.menuTitle}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <Link
-          href={'/contact'}
-          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 xl:flex'
-        >
-          お問い合わせ
-        </Link>
-        <div className='ml-auto flex flex-col gap-2 xl:hidden' onClick={() => setIsClick(!isClick)}>
+      <div className={`flex h-[85px] items-center px-4 md:px-12 ${pathname === '/' && 'h-auto pt-16'} ${pathname !== '/' && 'bg-primary-pink-light'}`}>
+        {pathname !== '/' && (
+          <div onClick={() => setIsClick(false)}>
+            <Link href={'/'}>
+              <p className='text-xs tracking-tighter'>わたし・ととのう・さろん</p>
+              <h1>kikara</h1>
+            </Link>
+          </div>
+        )}
+        <div className='ml-auto flex flex-col gap-4 z-40' onClick={() => setIsClick(!isClick)}>
           <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-y-[10px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-16 rounded-xl bg-secondary-brown ${isClick ? 'translate-y-[18px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
           ></span>
           <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-x-full opacity-0 transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-16 rounded-xl bg-secondary-brown ${isClick ? 'translate-x-full opacity-0 transition duration-300' : 'transition duration-500'}`}
           ></span>
           <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? '-translate-y-[10px] -rotate-45 transform transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-16 rounded-xl bg-secondary-brown ${isClick ? '-translate-y-[18px] -rotate-45 transform transition duration-300' : 'transition duration-500'}`}
           ></span>
         </div>
       </div>
       {/* ハンバーガーメニュー */}
       <div
-        className={`absolute left-full h-screen w-screen bg-white p-4 transition duration-500 ${isClick && '-translate-x-full'}`}
+        className={`absolute top-0 left-full h-screen w-screen bg-white px-4 pt-[85px] pb-4 transition duration-500 ${isClick && '-translate-x-full'}`}
       >
         <div className='mx-auto w-[90%]'>
           <h4 className='text-secondary-brown-light'>サービス</h4>
