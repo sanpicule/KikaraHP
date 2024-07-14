@@ -41,8 +41,8 @@ const ServiceIntroductionPages = () => {
                 src={serviceHeadNumber1}
                 alt='1'
                 width={37}
-                height={91}
                 className='mr-6'
+                priority
                 style={{
                   objectFit: 'cover',
                 }}
@@ -74,8 +74,8 @@ const ServiceIntroductionPages = () => {
                 src={serviceHeadNumber2}
                 alt='2'
                 width={53}
-                height={91}
                 className='mr-6'
+                priority
                 style={{
                   objectFit: 'cover',
                 }}
@@ -107,8 +107,8 @@ const ServiceIntroductionPages = () => {
                 src={serviceHeadNumber3}
                 alt='1'
                 width={56}
-                height={91}
                 className='mr-6'
+                priority
                 style={{
                   objectFit: 'cover',
                 }}
