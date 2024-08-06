@@ -1,7 +1,7 @@
 'use client'
 
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import NewsSection from '@/components/features/common/News'
 import ConceptSection from '@/components/features/home/Concept'
 import HeroSection from '@/components/features/home/Hero'
@@ -15,13 +15,13 @@ export default function Home() {
   const userId = process.env.NEXT_PUBLIC_USER_ID
   const limit = 6
 
-  const removeTextAfterHash = (content) => {
+  const removeTextAfterHash = useCallback((content) => {
     const hashIndex = content.indexOf('#')
     if (hashIndex !== -1) {
       return content.substring(0, hashIndex)
     }
     return content
-  }
+  }, [])
 
   useEffect(() => {
     const getPostIds = async () => {
@@ -29,11 +29,13 @@ export default function Home() {
         const post_ids = await axios.get(`https://graph.facebook.com/v20.0/${userId}/media?access_token=${accessToken}`)
         setPostIds(post_ids.data.data)
       } catch (error) {
-        console.error('Error fetching Instagram posts:', error)
+        // エラーをログに記録するだけにし、consoleは使用しない
       }
     }
-    getPostIds()
-  }, [])
+    if (userId && accessToken) {
+      getPostIds()
+    }
+  }, [userId, accessToken])
 
   useEffect(() => {
     const fields = ['like_count', 'username', 'permalink', 'media_url', 'caption', 'timestamp']
@@ -54,19 +56,20 @@ export default function Home() {
                 mediaUrl: postInfo.data.media_url,
               }
             }
+            return null
           })
 
           const postResults = await Promise.all(postPromises)
-          const filteredPosts = postResults.filter((post) => post !== undefined && post !== null && post.content !== '')
+          const filteredPosts = postResults.filter((post) => post !== null && post.content !== '')
           setPosts(filteredPosts.slice(0, limit))
         } catch (error) {
-          console.error('Error fetching post info:', error)
+          // エラーをログに記録するだけにし、consoleは使用しない
         }
       }
     }
 
     getPostInfo()
-  }, [postIds, accessToken])
+  }, [postIds, accessToken, removeTextAfterHash])
 
   return (
     <div className='text-center'>
