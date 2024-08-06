@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
+import ConfirmContent from '@/components/features/contact/ConfirmContent'
 import Stepper from '@/components/features/contact/Stepper'
-import ConfirmContent from './ConfirmContent'
 
 const ConfirmPage = () => {
   return (
