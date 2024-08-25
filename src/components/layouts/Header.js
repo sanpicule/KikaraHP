@@ -3,49 +3,56 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
+import useScrollDirection from '@/hooks/useScrollDirection'
 import arrow from '@/public/images/arrow.png'
 import menuItemsList from '../../data/menuItems.json'
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false)
+  const scrollDirection = useScrollDirection()
   return (
-    <div className='fixed left-0 top-0 z-50 w-screen bg-primary-pink-light'>
-      <div className='top-0 flex h-[85px] items-center px-4 py-2 shadow-sm md:py-0 md:pr-0'>
-        <div className='text-center' onClick={() => setIsClick(false)}>
+    <div
+      className={`fixed left-0 top-0 z-50 w-screen bg-primary-pink-light transition-transform duration-500 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}
+    >
+      <div className='top-0 flex h-[85px] items-center px-4 shadow-sm md:px-12 xl:py-0 xl:pr-0'>
+        <div onClick={() => setIsClick(false)}>
           <Link href={'/'}>
-            <p className='text-sm tracking-tighter'>わたし・ととのう・さろん</p>
-            <h2>kikara</h2>
+            <p className='text-xs tracking-tighter'>わたし・ととのう・さろん</p>
+            <h1>kikara</h1>
           </Link>
         </div>
-        <p className='ml-4 hidden text-sm tracking-wide md:block'>
+        <p className='ml-8 hidden text-sm tracking-wide md:block'>
           熊本市東区で<br></br>心とカラダを整える
         </p>
-        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide md:flex'>
+        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide xl:flex'>
           {menuItemsList.map((menuItem, index) => (
             <li key={index} className='transition duration-300 hover:opacity-35'>
-              <Link href={menuItem.url}>{menuItem.menuTitle}</Link>
+              <Link href={menuItem.url}>
+                <p>{menuItem.menuTitle}</p>
+              </Link>
             </li>
           ))}
         </ul>
         <Link
           href={'/contact'}
-          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 md:flex'
+          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 xl:flex'
         >
           お問い合わせ
         </Link>
-        <div className='ml-auto flex flex-col gap-2 md:hidden' onClick={() => setIsClick(!isClick)}>
+        <div className='ml-auto flex flex-col gap-2 xl:hidden' onClick={() => setIsClick(!isClick)}>
           <span
-            className={`block h-[2px] w-8 bg-secondary-brown ${isClick ? 'translate-y-[10px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-y-[10px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
           ></span>
           <span
-            className={`block h-[2px] w-8 bg-secondary-brown ${isClick ? 'translate-x-full opacity-0 transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-x-full opacity-0 transition duration-300' : 'transition duration-500'}`}
           ></span>
           <span
-            className={`block h-[2px] w-8 bg-secondary-brown ${isClick ? '-translate-y-[10px] -rotate-45 transform transition duration-300' : 'transition duration-500'}`}
+            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? '-translate-y-[10px] -rotate-45 transform transition duration-300' : 'transition duration-500'}`}
           ></span>
         </div>
       </div>
+      {/* ハンバーガーメニュー */}
       <div
         className={`absolute left-full h-screen w-screen bg-white p-4 transition duration-500 ${isClick && '-translate-x-full'}`}
       >

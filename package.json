@@ -12,13 +12,15 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "embla-carousel": "^8.0.2",
     "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
     "framer-motion": "^11.1.9",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.52.0"
   },
   "devDependencies": {
     "@testing-library/react": "^15.0.7",

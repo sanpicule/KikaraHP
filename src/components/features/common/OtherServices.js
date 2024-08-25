@@ -1,11 +1,20 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect } from 'react'
 import otherServices from '@/data/otherServices.json'
+import useScrollFadeIn from '../home/useScrollFadeIn'
 import ServiceCard from './ServiceCard'
 
 const OtherServices = () => {
+  const scroll = useScrollFadeIn()
+  useEffect(() => {
+    scroll.scrollFadeInFromBottom()
+    scroll.scrollFadeInFromRight()
+    scroll.scrollFadeInFromLeft()
+  }, [scroll])
   return (
     <div className='bg-primary-pink py-24 md:tracking-wider'>
-      <div className='flex flex-col items-center gap-2'>
+      <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
         <p className='section-sub'>others</p>
         <h2>その他のサービス</h2>
         <div className='h-0.1 w-12 bg-secondary-brown'></div>

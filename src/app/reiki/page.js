@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
+import useScrollFadeIn from '@/components/features/home/useScrollFadeIn'
 import favoImage from '@/public/images/favo.png'
 import reikiAboutImage from '@/public/images/reikiAbout.png'
 import reikiDetailImageLeft from '@/public/images/reikiDetailLeft.png'
@@ -13,34 +16,41 @@ import targetThreeImage from '@/public/images/reikiTargetThree.png'
 import targetTwoImage from '@/public/images/reikiTargetTwo.png'
 
 const ReikiPage = () => {
+  const scroll = useScrollFadeIn()
+  useEffect(() => {
+    scroll.scrollFadeInFromBottom()
+    scroll.scrollFadeInFromRight()
+    scroll.scrollFadeInFromLeft()
+  }, [scroll])
+
   return (
     <div>
       <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
       <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
-        <div className='flex flex-col items-center gap-2'>
+        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>直傳靈氣について</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='mt-24 text-center'>
-          <h3>直傳靈氣とは</h3>
-          <p className='mt-8 leading-8 md:leading-10'>
+          <h3 className='js-show-on-scroll-from-bottom'>直傳靈氣とは</h3>
+          <p className='js-show-on-scroll-from-bottom mt-8 leading-8 md:leading-10'>
             正式名称は「心身改善臼井靈氣療法」で、1922年大正11年臼井甕男により開発された手当による癒しの技術です。日本古来100年以上つづく自然療法であり家庭療法として知られています。靈氣は、心身改善を目的に天からのエネルギーを私の身体を通し貴方へ流していきます。人間がもつ自然治癒力と免疫力を整え不調を治療していきます。
           </p>
           <a
             href='https://www.jikiden-reiki.com/'
             target='_blank'
-            className='border-b border-blue-500 text-blue-500 transition duration-300 hover:opacity-50'
+            className='js-show-on-scroll-from-bottom border-b border-blue-500 text-blue-500 transition duration-300 hover:opacity-50'
           >
             直傳靈氣公式
           </a>
         </div>
-        <div className='mt-24 text-center'>
-          <h3>直傳靈氣の良さとは？</h3>
-          <p className='mt-8 leading-8 md:leading-10'>
+        <div className='js-show-on-scroll-from-bottom mt-24 text-center'>
+          <h3 className='js-show-on-scroll-from-bottom'>直傳靈氣の良さとは？</h3>
+          <p className='js-show-on-scroll-from-bottom mt-8 leading-8 md:leading-10'>
             靈氣は、小さなお子様や妊婦の方・高齢者にも安心して受けて頂けます。また、未病を病線から発見できるので、改善が早いという利点もあります。
           </p>
-          <div className='mt-4'>
+          <div className='js-show-on-scroll-from-bottom mt-4'>
             <Image
               src={reikiAboutImage}
               alt='hero_image'
@@ -53,31 +63,31 @@ const ReikiPage = () => {
         </div>
       </div>
       <div className='w-full bg-primary-pink py-24 text-center md:tracking-wide'>
-        <div className='flex flex-col items-center gap-2'>
+        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>target</p>
           <h2>このような方へ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='mx-auto mt-12 grid grid-cols-2 gap-12 md:w-[1040px]'>
-          <div className='flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-4 md:w-[1040px] md:grid-cols-2 md:gap-12'>
+          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
             <Image src={targetOneImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
             </p>
           </div>
-          <div className='flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
-            <Image src={targetTwoImage} alt='このような方へ1' width={50} height={50} />
-            <p className='text-start'>
-              日常の生活からリラックスし<br></br>深い癒しを求めている
-            </p>
-          </div>
-          <div className='flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
             <Image src={targetThreeImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
             </p>
           </div>
-          <div className='flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+            <Image src={targetTwoImage} alt='このような方へ1' width={50} height={50} />
+            <p className='text-start'>
+              日常の生活からリラックスし<br></br>深い癒しを求めている
+            </p>
+          </div>
+          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
             <Image src={targetFourImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
@@ -86,17 +96,17 @@ const ReikiPage = () => {
         </div>
       </div>
       <div className='mx-auto max-w-[90%] py-24 md:w-[1040px] md:tracking-wide'>
-        <div className='flex flex-col items-center gap-2'>
+        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>detail</p>
           <h2>施術詳細</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='mt-12'>
-          <div className='flex justify-center'>
+          <div className='js-show-on-scroll-from-bottom flex justify-center'>
             <p className='inline-block rounded-full bg-secondary-brown-light px-8 py-2 text-kikara-white'>メニュー</p>
           </div>
-          <div className='mt-12 grid grid-cols-2 gap-12'>
-            <div className='relative rounded-xl border-2 border-secondary-brown p-8'>
+          <div className='mt-12 grid grid-cols-1 gap-12 md:grid-cols-2'>
+            <div className='js-show-on-scroll-from-bottom relative rounded-xl border-2 border-secondary-brown p-8'>
               <Image src={favoImage} alt='' width={100} height={70} className='absolute right-8 top-8' />
               <h3>通常施術</h3>
               <div className='mt-8'>
@@ -111,7 +121,7 @@ const ReikiPage = () => {
                 </div>
               </div>
             </div>
-            <div className='rounded-xl border-2 border-secondary-brown p-8'>
+            <div className='js-show-on-scroll-from-bottom rounded-xl border-2 border-secondary-brown p-8'>
               <h3>遠隔施術</h3>
               <div className='mt-8'>
                 <div>
@@ -138,17 +148,18 @@ const ReikiPage = () => {
             </div>
           </div>
           <div className='mt-12'>
-            <div className='flex justify-center'>
+            <div className='js-show-on-scroll-from-bottom flex justify-center'>
               <p className='inline-block rounded-full bg-secondary-brown-light px-8 py-2 text-kikara-white'>場所</p>
             </div>
-            <div className='text-center'>
-              <h4 className='mt-12'>Kikaraで行っています。熊本市東区／県立大学近く</h4>
+            <div className='js-show-on-scroll-from-bottom text-center'>
+              <h4 className='mt-12'>
+                Kikaraで行っています。<br></br>熊本市東区／県立大学近く
+              </h4>
               <p className='mt-4'>※ご予約を頂いた方には詳細な住所をお知らせします</p>
-              <p>※駐車場完備</p>
             </div>
           </div>
           <div className='mx-auto mt-12 flex max-w-sm grow flex-col gap-4 md:max-w-5xl md:flex-row'>
-            <div className='w-full'>
+            <div className='js-show-on-scroll-from-bottom w-full'>
               <Image
                 src={reikiDetailImageLeft}
                 alt=''
@@ -158,7 +169,7 @@ const ReikiPage = () => {
                 }}
               />
             </div>
-            <div className='w-full'>
+            <div className='js-show-on-scroll-from-bottom w-full'>
               <Image
                 src={reikiDetailImageRight}
                 alt=''
@@ -169,7 +180,7 @@ const ReikiPage = () => {
               />
             </div>
           </div>
-          <div className='mt-12 text-center'>
+          <div className='js-show-on-scroll-from-bottom mt-12 text-center'>
             <a
               href='https://totonou-kikara.com/index.php?Form'
               target='_blank'

@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex flex-col items-center md:items-end'>
-          <ul className='hidden gap-10 text-xl tracking-wide md:flex'>
+          <ul className='hidden gap-10 text-xl tracking-wide xl:flex'>
             {menuItemsList.map((menuItem, index) => (
               <li key={index} className='transition duration-300 hover:opacity-35'>
                 <Link href={menuItem.url}>{menuItem.menuTitle}</Link>
