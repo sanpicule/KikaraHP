@@ -71,7 +71,7 @@ const Header = () => {
             </ul>
           </div>
           <h4 className='mt-8 text-secondary-brown-light'>予約</h4>
-          <div className='pl-2'>
+          <div className='flex flex-col gap-12 pl-2'>
             <ul className='ml-auto mr-10 w-full tracking-wide'>
               {menuItemsList.map((menuItem, index) => (
                 <li key={index} className='flex items-center justify-between py-4'>
@@ -91,6 +91,14 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <div className='w-full text-center' onClick={() => setIsClick(false)}>
+              <Link
+                href={'/contact'}
+                className='w-full border border-secondary-brown px-12 py-4 text-xl tracking-wide text-secondary-brown transition duration-300 hover:opacity-50 xl:flex'
+              >
+                お問い合わせ
+              </Link>
+            </div>
           </div>
         </div>
       </div>

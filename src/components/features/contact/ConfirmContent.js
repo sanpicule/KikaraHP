@@ -1,19 +1,38 @@
 'use client'
 
-import Image from 'next/image'
+import axios from 'axios'
 import { useSearchParams, useRouter } from 'next/navigation'
-import React from 'react'
-import back from '@/public/images/contactBack.png'
+import React, { useState } from 'react'
+import LoadingButton from './LoadingButton'
 
 const ConfirmContent = () => {
+  const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
   const entries = searchParams.entries()
   const query = Object.fromEntries(entries)
   const router = useRouter()
 
-  const handleSubmit = () => {
-    // TODO:API実装
-    router.push('/contact/complete')
+  const handleSubmit = async () => {
+    setLoading(true)
+    try {
+      const res = await axios.post('/api/contact', {
+        name: query.name,
+        name_kana: query.name_kana,
+        email: query.mail,
+        email_confirm: query.mail_confirm,
+        contents: query.contents,
+      })
+
+      if (res.status === 200) {
+        router.push('/contact/complete')
+      } else {
+        alert(`メッセージの送信に失敗しました。ステータス: ${res.status}`)
+      }
+    } catch (error) {
+      alert(`エラーが発生しました: ${error.message}`)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleBack = () => {
@@ -44,23 +63,7 @@ const ConfirmContent = () => {
           <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.contents}</p>
         </div>
       </div>
-      <div className='text-center'>
-        <button
-          type='submit'
-          onClick={handleSubmit}
-          className='mt-8 cursor-pointer rounded-xl bg-secondary-brown-light px-12 py-4 transition-all duration-300 hover:opacity-60'
-        >
-          返信する
-        </button>
-        <Image
-          src={back}
-          alt='back_button'
-          width={60}
-          height={40}
-          onClick={handleBack}
-          className='mx-auto mt-12 cursor-pointer transition-all duration-300 hover:opacity-70'
-        />
-      </div>
+      <LoadingButton loading={loading} handleClick={handleSubmit} handleBack={handleBack}></LoadingButton>
     </>
   )
 }
