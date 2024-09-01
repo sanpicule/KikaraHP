@@ -68,7 +68,6 @@ const Header = () => {
             <p className='text-md'>くらし・ととのう・さろん</p>
             <p className='text-[4rem]'>Kikara</p>
           </div>
-          <h4 className='mt-8 text-secondary-brown-light'>予約</h4>
           <div className='flex flex-col gap-12 pl-2'>
             <ul className='ml-auto mr-10 w-full tracking-wide'>
               {menuItemsList.map((menuItem, index) => (
@@ -83,13 +82,12 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <div className='w-full text-center' onClick={() => setIsClick(false)}>
-              <Link
-                href={'/contact'}
-                className='w-full border border-secondary-brown px-12 py-4 text-xl tracking-wide text-secondary-brown transition duration-300 hover:opacity-50 xl:flex'
-              >
-                お問い合わせ
-              </Link>
+            <div className='mt-24 flex items-center justify-center' onClick={() => setIsClick(false)}>
+              <button className='rounded-full bg-secondary-brown-light px-4 py-6 duration-300 hover:bg-secondary-brown'>
+                <Link href={'/contact'}>
+                  <p className='text-kikara-white'>お問い合わせ</p>
+                </Link>
+              </button>
             </div>
           </div>
         </div>
