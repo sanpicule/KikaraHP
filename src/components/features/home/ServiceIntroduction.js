@@ -47,7 +47,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3>ミネラル醗酵ドリンク教室</h3>
+              <h3 id='mineral'>ミネラル醗酵ドリンク教室</h3>
             </div>
             <div className='relative py-20'>
               <Image
@@ -80,7 +80,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3>片付け・お手伝い</h3>
+              <h3 id='tidying'>片付け・お手伝い</h3>
             </div>
             <div className='relative py-20'>
               <Image
@@ -102,7 +102,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className='mt-40'>
-            <h3 className='js-show-on-scroll-from-right flex items-center text-3xl'>
+            <h3 className='js-show-on-scroll-from-right flex items-center text-3xl' id='reiki'>
               <Image
                 src={serviceHeadNumber3}
                 alt='1'

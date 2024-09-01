@@ -1,103 +1,93 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import useScrollDirection from '@/hooks/useScrollDirection'
-import arrow from '@/public/images/arrow.png'
 import menuItemsList from '../../data/menuItems.json'
-import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 
 const Header = () => {
   const [isClick, setIsClick] = useState(false)
   const scrollDirection = useScrollDirection()
+  const pathname = usePathname()
+  const [hamburgerColor, setHamburgerColor] = useState('kikara-white')
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      if (scrollY > 840) {
+        setHamburgerColor('secondary-brown')
+      } else {
+        setHamburgerColor('kikara-white')
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-screen bg-primary-pink-light transition-transform duration-500 ${scrollDirection === 'down' ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed left-0 top-0 z-50 w-screen transition-transform duration-500 ${scrollDirection === 'down' && pathname !== '/' ? '-translate-y-full' : 'translate-y-0'}`}
     >
-      <div className='top-0 flex h-[85px] items-center px-4 shadow-sm md:px-12 xl:py-0 xl:pr-0'>
-        <div onClick={() => setIsClick(false)}>
-          <Link href={'/'}>
-            <p className='text-xs tracking-tighter'>わたし・ととのう・さろん</p>
-            <h1>kikara</h1>
-          </Link>
-        </div>
-        <p className='ml-8 hidden text-sm tracking-wide md:block'>
-          熊本市東区で<br></br>心とカラダを整える
-        </p>
-        <ul className='ml-auto mr-10 hidden gap-10 text-xl tracking-wide xl:flex'>
-          {menuItemsList.map((menuItem, index) => (
-            <li key={index} className='transition duration-300 hover:opacity-35'>
-              <Link href={menuItem.url}>
-                <p>{menuItem.menuTitle}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <Link
-          href={'/contact'}
-          className='hidden h-[85px] items-center bg-secondary-brown-light px-4 py-8 text-xl tracking-wide text-white transition duration-300 hover:opacity-50 xl:flex'
-        >
-          お問い合わせ
-        </Link>
-        <div className='ml-auto flex flex-col gap-2 xl:hidden' onClick={() => setIsClick(!isClick)}>
-          <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-y-[10px] rotate-45 transform transition duration-300' : 'transition duration-500'}`}
-          ></span>
-          <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? 'translate-x-full opacity-0 transition duration-300' : 'transition duration-500'}`}
-          ></span>
-          <span
-            className={`block h-[2px] w-8 rounded-xl bg-secondary-brown ${isClick ? '-translate-y-[10px] -rotate-45 transform transition duration-300' : 'transition duration-500'}`}
-          ></span>
+      <div
+        className={`flex h-[85px] items-center px-4 md:px-12 ${pathname === '/' && 'h-auto pt-16'} ${pathname !== '/' && 'bg-primary-pink-light'}`}
+      >
+        {pathname !== '/' && (
+          <div onClick={() => setIsClick(false)}>
+            <Link href={'/'}>
+              <p className='text-xs tracking-tighter'>わたし・ととのう・さろん</p>
+              <h1>kikara</h1>
+            </Link>
+          </div>
+        )}
+        <div className='group z-40 ml-auto mt-2' onClick={() => setIsClick(!isClick)}>
+          <div className='flex flex-col gap-4'>
+            <span
+              className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition duration-300 ${isClick ? 'w-16 translate-y-[18px] rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+            <span
+              className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition-all duration-300 group-hover:w-12 ${isClick ? '!w-16 translate-x-full bg-secondary-brown opacity-0 transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+            <span
+              className={`rounded-x block h-[2px] w-16 bg-${hamburgerColor} transition-all duration-300 group-hover:w-8 ${isClick ? '!w-16 -translate-y-[18px] -rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+          </div>
+          <p
+            className={`mt-2 text-center text-sm text-${hamburgerColor} duration-300 ${isClick ? 'text-secondary-brown transition-all duration-300' : 'transition duration-500'} ${pathname !== '/' && 'text-secondary-brown'}`}
+          >
+            MENU
+          </p>
         </div>
       </div>
       {/* ハンバーガーメニュー */}
       <div
-        className={`absolute left-full h-screen w-screen bg-white p-4 transition duration-500 ${isClick && '-translate-x-full'}`}
+        className={`absolute left-full top-0 h-screen w-screen bg-white px-4 pb-4 pt-[85px] transition duration-500 ${isClick && '-translate-x-full'} ${pathname === '/' && '!pt-[150px]'}`}
       >
         <div className='mx-auto w-[90%]'>
-          <h4 className='text-secondary-brown-light'>サービス</h4>
-          <div className='pl-2'>
+          <div className='flex flex-col items-center justify-center'>
+            <p className='text-md'>くらし・ととのう・さろん</p>
+            <p className='text-[4rem]'>Kikara</p>
+          </div>
+          <div className='flex flex-col gap-12 pl-2'>
             <ul className='ml-auto mr-10 w-full tracking-wide'>
               {menuItemsList.map((menuItem, index) => (
-                <li key={index} className='border-b border-dashed py-4' onClick={() => setIsClick(false)}>
-                  <Link href={menuItem.url} className='flex items-center justify-between'>
-                    <p>{menuItem.menuTitle}</p>
-                    <Image src={arrow} alt='menuArrow' width={35} />
+                <li key={index} className='mt-6 py-4 text-center' onClick={() => setIsClick(false)}>
+                  <Link href={menuItem.url}>
+                    <p
+                      className={`text-xl before:mr-2 before:inline-block before:w-0 before:bg-secondary-brown before:align-middle before:transition-all before:duration-300 before:content-[''] hover:before:h-[1px] hover:before:w-4`}
+                    >
+                      {menuItem.menuTitle}
+                    </p>
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-          <h4 className='mt-8 text-secondary-brown-light'>予約</h4>
-          <div className='flex flex-col gap-12 pl-2'>
-            <ul className='ml-auto mr-10 w-full tracking-wide'>
-              {menuItemsList.map((menuItem, index) => (
-                <li key={index} className='flex items-center justify-between py-4'>
-                  <p>{menuItem.menuTitle}</p>
-                  {menuItem.url === '/mineral' ? (
-                    <div className='flex gap-4'>
-                      <SnsIconBtn snsId={'instagram'} size={40} />
-                      <SnsIconBtn snsId={'facebook'} size={40} />
-                    </div>
-                  ) : (
-                    <button className='bg-secondary-brown-light px-4 py-1'>
-                      <a href={menuItem.reserveUrl} target='_blank'>
-                        <p className='text-kikara-white'>申込へ</p>
-                      </a>
-                    </button>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <div className='w-full text-center' onClick={() => setIsClick(false)}>
-              <Link
-                href={'/contact'}
-                className='w-full border border-secondary-brown px-12 py-4 text-xl tracking-wide text-secondary-brown transition duration-300 hover:opacity-50 xl:flex'
-              >
-                お問い合わせ
-              </Link>
+            <div className='mt-24 flex items-center justify-center' onClick={() => setIsClick(false)}>
+              <button className='rounded-full bg-secondary-brown-light px-4 py-6 duration-300 hover:bg-secondary-brown'>
+                <Link href={'/contact'}>
+                  <p className='text-kikara-white'>お問い合わせ</p>
+                </Link>
+              </button>
             </div>
           </div>
         </div>

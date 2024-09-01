@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <html lang='ja'>
         <body className='font-sans'>
           <Header />
-          <main className='bg-kikara-white pt-[85px]'>{children}</main>
+          <main className='bg-kikara-white'>{children}</main>
           <Footer />
         </body>
       </html>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 const ServicePageHero = ({ serviceImage, serviceTitle }) => {
   return (
     <div>
-      <div className='relative h-4/5 w-full'>
+      <div className='relative h-4/5 w-full pt-[85px]'>
         <Image
           src={serviceImage}
           alt='hero_image'
