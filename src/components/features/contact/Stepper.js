@@ -8,13 +8,13 @@ const Stepper = ({ step1 = false, step2 = false, step3 = false }) => {
         <div className={`h-4 w-4 rounded-full ${step1 ? 'bg-secondary-brown-light' : 'bg-gray-300'}`}></div>
         <p className={`text-xs ${step1 ? 'text-secondary-brown-light' : 'text-gray-300'}`}>項目の入力</p>
       </div>
-      <div class='h-[1px] w-12 bg-gray-400 md:w-32'></div>
+      <div className='h-[1px] w-12 bg-gray-400 md:w-32'></div>
       <div className='flex flex-col items-center justify-center gap-2'>
         <p className={`text-xxs ${step2 ? 'text-secondary-brown-light' : 'text-gray-300'}`}>STEP 02</p>
         <div className={`h-4 w-4 rounded-full ${step2 ? 'bg-secondary-brown-light' : 'bg-gray-300'}`}></div>
         <p className={`text-xs ${step2 ? 'text-secondary-brown-light' : 'text-gray-300'}`}>内容確認</p>
       </div>
-      <div class='h-[1px] w-12 bg-gray-400 md:w-32'></div>
+      <div className='h-[1px] w-12 bg-gray-400 md:w-32'></div>
       <div className='flex flex-col items-center justify-center gap-2'>
         <p className={`text-xxs ${step3 ? 'text-secondary-brown-light' : 'text-gray-300'}`}>STEP 03</p>
         <div className={`h-4 w-4 rounded-full ${step3 ? 'bg-secondary-brown-light' : 'bg-gray-300'}`}></div>

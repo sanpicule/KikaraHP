@@ -44,7 +44,7 @@ const VoiceCard = ({ name, info, voice, index }) => {
         )}
         {!isMobile && !jdgEven() && (
           <div
-            class='absolute -right-6 top-8 h-0 w-0 
+            className='absolute -right-6 top-8 h-0 w-0 
               border-b-[20px] border-l-[30px]
               border-t-[20px] border-b-transparent
               border-l-kikara-white border-t-transparent'
@@ -52,7 +52,7 @@ const VoiceCard = ({ name, info, voice, index }) => {
         )}
         {isMobile && (
           <div
-            class='absolute left-24 top-4 h-0 w-0 
+            className='absolute left-24 top-4 h-0 w-0 
             border-b-[30px] border-l-[20px]
             border-r-[20px] border-b-kikara-white
             border-l-transparent border-r-transparent'

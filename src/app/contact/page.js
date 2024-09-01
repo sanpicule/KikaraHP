@@ -131,7 +131,7 @@ const ContactPage = () => {
             checked={isChecked}
             onChange={handleCheckboxChange}
           />
-          <label for='checkbox1' className='text-gray-700'>
+          <label htmlFor='checkbox1' className='text-gray-700'>
             <span className='underline'>プライバシーポリシー</span>に同意する
           </label>
         </div>
