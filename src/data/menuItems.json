@@ -3,18 +3,21 @@
     "menuTitle": "ミネラル水",
     "url": "/mineral",
     "reserveUrl": "",
-    "id": "#mineral"
+    "id": "#mineral",
+    "imageName": "serviceMineral.png"
   },
   {
     "menuTitle": "片付け・お手伝い",
     "url": "/tidying",
     "reserveUrl": "https://totonou-kikara.com/index.php?Form",
-    "id": "#tidying"
+    "id": "#tidying",
+    "imageName": "serviceTidying.png"
   },
   {
     "menuTitle": "直傳靈氣",
     "url": "/reiki",
     "reserveUrl": "https://totonou-kikara.com/index.php?Form2",
-    "id": "#reiki"
+    "id": "#reiki",
+    "imageName": "serviceReiki.png"
   }
 ]
