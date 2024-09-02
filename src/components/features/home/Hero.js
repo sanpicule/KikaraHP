@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import menuItemsList from '@/data/menuItems.json'
 import mainHeroImage from '@/public/images/mainHeroImage.png'
-import menuItemsList from '../../../data/menuItems.json'
 
 const HeroSection = () => {
   return (
