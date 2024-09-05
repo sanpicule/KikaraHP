@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.3",
     "axios": "^1.7.5",
     "embla-carousel": "^8.0.2",
     "embla-carousel-autoplay": "^8.0.2",
