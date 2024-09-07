@@ -86,7 +86,7 @@ const Header = () => {
       </div>
       {/* ハンバーガーメニュー */}
       <div
-        className={`absolute left-full top-0 h-screen w-screen bg-white  transition duration-500 ${isClick && '-translate-x-full'}`}
+        className={`absolute left-full top-0 h-screen w-screen bg-white transition duration-500 ${isClick && '-translate-x-full'}`}
       >
         <div className='mx-auto flex justify-center'>
           <div className='w-1/2'>
