@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.list-container:hover .list-content {
+  opacity: 0.4;
+}
+
+.list-content:hover {
+  opacity: 1 !important;
+}
