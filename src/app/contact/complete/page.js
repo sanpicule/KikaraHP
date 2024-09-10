@@ -10,7 +10,7 @@ const CompletePage = () => {
     router.push('/')
   }
   return (
-    <div className='mx-auto max-w-[90%] py-24 md:tracking-wide'>
+    <div className='mx-auto max-w-[90%] py-36 md:tracking-wide'>
       <Stepper step1={true} step2={true} step3={true} />
       <h4 className='mt-24 text-center'>送信完了しました！</h4>
       <div className='mt-12 text-center'>

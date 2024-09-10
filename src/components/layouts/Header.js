@@ -89,7 +89,7 @@ const Header = () => {
         className={`absolute left-full top-0 h-screen w-screen bg-white transition duration-500 ${isClick && '-translate-x-full'}`}
       >
         <div className='mx-auto flex justify-center'>
-          <div className='w-1/2'>
+          <div className='hidden w-1/2 lg:block'>
             <Image
               src={displayedImage}
               alt=''
@@ -98,7 +98,7 @@ const Header = () => {
               className='h-screen w-auto object-cover'
             />
           </div>
-          <div className={`w-1/2 px-4 pb-4 pt-[150px]`}>
+          <div className={`w-full px-4 pb-4 pt-[150px] lg:w-1/2`}>
             <Link href={'/'} className='flex flex-col items-center justify-center' onClick={() => setIsClick(false)}>
               <p className='text-md'>くらし・ととのう・さろん</p>
               <p className='text-[4rem]'>Kikara</p>
@@ -121,7 +121,7 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-              <div className='mt-24 flex items-center justify-center'>
+              <div className='mt-24 flex items-center justify-center' onClick={() => setIsClick(!isClick)}>
                 <button className='rounded-full bg-secondary-brown-light px-4 py-6 duration-300 hover:bg-secondary-brown'>
                   <Link href={'/contact'}>
                     <p className='text-kikara-white'>お問い合わせ</p>

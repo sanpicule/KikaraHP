@@ -44,7 +44,7 @@ const MineralDetail = () => {
   return (
     <div>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
-      <div className='mx-auto max-w-[90%] py-24 text-center md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>ミネラル醗酵ドリンクについて</h2>
@@ -59,7 +59,7 @@ const MineralDetail = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>voice</p>
           <h2>お客様の声</h2>
@@ -140,7 +140,7 @@ const MineralDetail = () => {
           <h2>料理教室</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='relative mx-auto mt-24 flex h-96 w-[90%] items-end xl:mt-56 xl:w-full'>
+        <div className='relative mx-auto mt-12 flex h-96 w-[90%] items-end md:mt-24 xl:mt-56 xl:w-full'>
           <div className='absolute bottom-10 left-1/2 z-10 mx-auto flex w-full -translate-x-1/2 flex-col items-center justify-between text-center xl:w-[1040px] xl:flex-row '>
             <div className='js-show-on-scroll-from-left text-start'>
               <h4>ミネラルで作る</h4>
@@ -150,7 +150,7 @@ const MineralDetail = () => {
           </div>
           <div className='js-show-on-scroll-from-left h-32 w-full bg-primary-pink-light xl:w-1/2'></div>
         </div>
-        <div className='relative mx-auto mt-24 flex h-96 w-[90%] items-end justify-end xl:mt-56 xl:w-full'>
+        <div className='relative mx-auto mt-12 flex h-96 w-[90%] items-end justify-end md:mt-24 xl:mt-56 xl:w-full'>
           <div className='absolute bottom-10 right-1/2 z-10 mx-auto flex w-full translate-x-1/2 flex-col-reverse items-center justify-between text-center xl:w-[1040px] xl:flex-row '>
             <Image src={cooking2} alt='' width={700} height={500} className='js-show-on-scroll-from-left' />
             <div className='js-show-on-scroll-from-right text-start'>
@@ -161,7 +161,7 @@ const MineralDetail = () => {
           <div className='js-show-on-scroll-from-right h-32 w-full bg-primary-pink-light xl:w-1/2'></div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>flow</p>
           <h2>参加までの流れ</h2>

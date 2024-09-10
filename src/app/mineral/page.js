@@ -22,7 +22,7 @@ const MineralPage = () => {
   return (
     <>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>ミネラル醗酵ドリンクについて</h2>
@@ -65,8 +65,8 @@ const MineralPage = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
-        <h3 className='js-show-on-scroll-from-bottom font-bold tracking-normal md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+        <h3 className='js-show-on-scroll-from-bottom font-bold tracking-normal md:text-2xl md:tracking-wide'>
           \一緒にドリンク作りませんか？/
         </h3>
         <p className='js-show-on-scroll-from-bottom mt-12 leading-8'>

@@ -20,7 +20,7 @@ const TidyingPage = () => {
   return (
     <div>
       <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・手伝い'} />
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>about</p>
           <h2>片付け・手伝いとは</h2>
@@ -59,7 +59,7 @@ const TidyingPage = () => {
           </div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='section_sub'>voice</p>
           <h2>お客様の声</h2>

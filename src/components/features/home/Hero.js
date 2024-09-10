@@ -10,22 +10,24 @@ const HeroSection = () => {
       <Image
         src={mainHeroImage}
         alt='hero_image'
+        width={0}
+        height={0}
         className='h-svh w-full'
         style={{
           objectFit: 'cover',
           filter: 'brightness(0.3)',
         }}
       />
-      <div className='absolute left-[100px] top-[100px] transform text-left tracking-wide text-white'>
-        <p className='text-xl'>くらし・ととのう・さろん</p>
-        <h1 className='text-5xl tracking-wide'>Kikara</h1>
+      <div className='absolute left-8 top-16 transform text-left tracking-wide text-white md:left-12'>
+        <p className='xl:text-xl'>くらし・ととのう・さろん</p>
+        <h1 className='text-[48px] tracking-wide md:text-5xl'>Kikara</h1>
       </div>
-      <div className='absolute bottom-[100px] right-[100px] text-white'>
-        <p className='mt-20 text-right text-4xl font-thin tracking-wide'>
+      <div className='absolute bottom-24 right-8 text-white'>
+        <p className='mt-20 text-right text-[30px] font-thin tracking-wide md:text-4xl'>
           身体も<br></br>くらしも<br></br>食事も<br></br>ととのえる
         </p>
       </div>
-      <div className='absolute bottom-[100px] left-[100px] text-white'>
+      <div className='absolute bottom-24 left-24 hidden text-white md:block'>
         <h3 className='text-left text-3xl'>サービス一覧</h3>
         <ul className='tracking-wide'>
           {menuItemsList.map((menuItem, index) => (
@@ -48,7 +50,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className='absolute bottom-[100px] left-1/2 flex -translate-x-1/2 flex-col-reverse items-center justify-center'>
+      <div className='absolute bottom-[100px] left-1/2 hidden -translate-x-1/2 flex-col-reverse items-center justify-center md:flex'>
         <span className='tracking-wide text-white'>Scroll</span>
         <div className='h-20 w-0.5 animate-bounce bg-white'></div>
       </div>
