@@ -98,17 +98,17 @@ const Header = () => {
               className='h-screen w-auto object-cover'
             />
           </div>
-          <div className={`w-full px-4 pb-4 pt-[150px] lg:w-1/2`}>
+          <div className={`w-full px-4 pb-4 pt-[160px] lg:w-1/2`}>
             <Link href={'/'} className='flex flex-col items-center justify-center' onClick={() => setIsClick(false)}>
-              <p className='text-md'>くらし・ととのう・さろん</p>
-              <p className='text-[4rem]'>Kikara</p>
+              <p className='text-xs md:text-md'>くらし・ととのう・さろん</p>
+              <p className='text-4xl tracking-wide md:text-[4rem]'>Kikara</p>
             </Link>
-            <div className='mt-20'>
+            <div className='mt-4 md:mt-20'>
               <ul className='list-container w-full tracking-wide'>
                 {menuItemsList.map((menuItem, index) => (
                   <li
                     key={index}
-                    className={`list-content mt-6 flex h-20 items-center justify-center text-center text-xl`}
+                    className={`list-content mt-4 flex h-20 items-center justify-center text-center text-md md:text-xl`}
                     onClick={() => setIsClick(false)}
                     onMouseEnter={() => judgeMenuList(menuItem.url)}
                   >
@@ -121,8 +121,8 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-              <div className='mt-24 flex items-center justify-center' onClick={() => setIsClick(!isClick)}>
-                <button className='rounded-full bg-secondary-brown-light px-4 py-6 duration-300 hover:bg-secondary-brown'>
+              <div className='mt-8 flex items-center justify-center' onClick={() => setIsClick(!isClick)}>
+                <button className='bg-secondary-brown-light px-12 py-4 duration-300 hover:bg-secondary-brown'>
                   <Link href={'/contact'}>
                     <p className='text-kikara-white'>お問い合わせ</p>
                   </Link>
