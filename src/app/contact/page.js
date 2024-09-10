@@ -25,7 +25,7 @@ const ContactPage = () => {
     router.push(`/contact/confirm?${queryString}`)
   }
   return (
-    <div className='mx-auto max-w-[90%] py-24 md:tracking-wide'>
+    <div className='mx-auto max-w-[90%] py-36 md:tracking-wide'>
       <Stepper step1={true} />
       <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
       <form onSubmit={handleSubmit(onSubmit)} className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>

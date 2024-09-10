@@ -23,7 +23,7 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className='mt-[85px] bg-primary-pink'>
+    <div className='mt-[85px] bg-primary-pink pb-12'>
       {newsItem?.image_url && (
         <Image
           src={newsItem?.image_url || ''}
@@ -31,13 +31,13 @@ export default async function Page({ params }) {
           width={0}
           height={0}
           sizes='100vw'
-          style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+          className='h-[300px] w-full object-cover md:h-[500px]'
         />
       )}
-      <div className='mx-auto max-w-[90%] py-24 text-center md:w-[1040px] md:tracking-wide'>
+      <div className='mx-auto mt-12 max-w-[90%] rounded-[50px] bg-white px-12 py-12 text-center shadow-2xl md:w-[1040px] md:py-24 md:tracking-wide'>
         <p className='text-start'>{newsItem?.created_at.split('T')[0].replace(/-/g, '.')}</p>
-        <h1 className='text-start'>{newsItem?.title}</h1>
-        <div className='mt-24 rounded-[50px] bg-white py-12 shadow-2xl'>
+        <h1 className='text-start text-xl'>{newsItem?.title}</h1>
+        <div>
           <FormatText text={newsItem?.body} />
         </div>
       </div>
