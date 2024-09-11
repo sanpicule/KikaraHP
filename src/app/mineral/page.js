@@ -20,7 +20,7 @@ const MineralPage = () => {
     scroll.scrollFadeInFromLeft()
   }, [scroll])
   return (
-    <>
+    <div className='animate-fadeIn'>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
@@ -104,7 +104,7 @@ const MineralPage = () => {
         </Link>
       </div>
       <OtherServices />
-    </>
+    </div>
   )
 }
 
