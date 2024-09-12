@@ -53,9 +53,11 @@ module.exports = {
         sans: ['Hiragino Mincho Pro', 'sans-serif'],
       },
       animation: {
-        slideInFromBottom: 'slideInFromBottom 1s ease-in forwards',
-        slideInFromRight: 'slideInFromRight 1s ease-in forwards',
-        slideInFromLeft: 'slideInFromLeft 1s ease-in forwards',
+        slideInFromBottom: 'slideInFromBottom 1.2s ease-in forwards',
+        slideInFromRight: 'slideInFromRight 1.2s ease-in forwards',
+        slideInFromLeft: 'slideInFromLeft 1.2s ease-in forwards',
+        fadeIn: 'fadeIn 2s ease-in-out forwards',
+        fadeOut: 'fadeOut 2s ease forwards',
       },
       keyframes: {
         slideInFromBottom: {
@@ -87,6 +89,14 @@ module.exports = {
             opacity: 1,
             transform: 'translateX(0)',
           },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
         },
       },
     },

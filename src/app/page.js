@@ -1,5 +1,3 @@
-'use client'
-
 import NewsSection from '@/components/features/common/News'
 import ConceptSection from '@/components/features/home/Concept'
 import HeroSection from '@/components/features/home/Hero'
