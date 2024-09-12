@@ -29,7 +29,7 @@ const TidyingDetail = () => {
     scroll.scrollFadeInFromLeft()
   }, [scroll])
   return (
-    <div>
+    <div className='animate-fadeIn'>
       <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝いについて'} />
       <div className='mx-auto max-w-[90%] py-12 md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>

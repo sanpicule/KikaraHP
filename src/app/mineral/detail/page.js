@@ -42,7 +42,7 @@ const MineralDetail = () => {
   }, [scroll])
 
   return (
-    <div>
+    <div className='animate-fadeIn'>
       <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>

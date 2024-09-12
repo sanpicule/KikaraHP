@@ -24,7 +24,7 @@ const ReikiPage = () => {
   }, [scroll])
 
   return (
-    <div>
+    <div className='animate-fadeIn'>
       <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
