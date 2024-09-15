@@ -31,7 +31,7 @@ const ProfileSection = () => {
           <h2>プロフィール</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='js-show-on-scroll-from-bottom mt-12 flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-primary-pink px-8 py-8 shadow-2xl md:flex-row lg:gap-36 lg:px-24'>
+        <div className='js-show-on-scroll-from-bottom mt-12 flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-primary-pink px-8 py-8 shadow-2xl md:gap-12 lg:flex-row lg:gap-24 lg:px-24 xl:gap-36'>
           <Image
             src={profile}
             alt='プロフィール'
@@ -40,11 +40,11 @@ const ProfileSection = () => {
             className='h-[200px] w-[200px] rounded-[50%] bg-secondary-brown object-cover lg:h-[250px] lg:w-[250px]'
           />
           <div className='text-secondary-brown'>
-            <div className='text-center md:text-start xl:mt-0'>
+            <div className='text-center lg:text-start'>
               <p className='text-[12px]'>Hikawa Sonoe</p>
               <h1 className='xl:text-[50px]'>檜皮 園江</h1>
             </div>
-            <h4 className='mt-6 text-center text-sm leading-8 tracking-wide md:text-start md:text-base lg:text-xl'>
+            <h4 className='mt-6 text-center text-sm leading-8 tracking-wide md:text-base lg:text-start lg:text-xl'>
               1965年 8月 26日<br></br>
               静岡県生まれ<br></br>
               東京暮らしを経て、<br></br>

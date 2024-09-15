@@ -25,12 +25,12 @@ const Header = () => {
       setIsDisplay(false)
       setTimeout(() => {
         setIsDisplay(true)
-      }, 4000)
+      }, 2000)
     } else {
       setTimeout(() => {
         setIsDisplay(true)
         setIsHidden(true)
-      }, 1000)
+      }, 800)
     }
     const handleScroll = () => {
       const scrollY = window.scrollY

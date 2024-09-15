@@ -56,8 +56,8 @@ module.exports = {
         slideInFromBottom: 'slideInFromBottom 1.2s ease-in forwards',
         slideInFromRight: 'slideInFromRight 1.2s ease-in forwards',
         slideInFromLeft: 'slideInFromLeft 1.2s ease-in forwards',
-        fadeIn: 'fadeIn 2s ease-in-out forwards',
-        fadeOut: 'fadeOut 2s ease forwards',
+        fadeIn: 'fadeIn 1.5s ease-in-out forwards',
+        fadeOut: 'fadeOut 1.5s ease forwards',
       },
       keyframes: {
         slideInFromBottom: {

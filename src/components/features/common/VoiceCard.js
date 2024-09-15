@@ -20,7 +20,7 @@ const VoiceCard = ({ name, info, voice, index }) => {
       flex-col 
       items-center 
       rounded-xl 
-      bg-secondary-brown-light 
+      bg-secondary-brown
       p-4 
       shadow-2xl 
       ${jdgEven() ? 'md:flex-row' : 'md:flex-row-reverse'}

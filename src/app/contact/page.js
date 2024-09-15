@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Stepper from '@/components/features/contact/Stepper'
+import { privacyPolicyText } from '@/data/privacyPolicy.js'
 
 const ContactPage = () => {
   const {
@@ -28,8 +29,11 @@ const ContactPage = () => {
     <div className='mx-auto max-w-[90%] animate-fadeIn py-36 md:tracking-wide'>
       <Stepper step1={true} />
       <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
-      <form onSubmit={handleSubmit(onSubmit)} className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>
-        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className='mx-auto mt-12 flex flex-col items-center gap-8 p-4 md:gap-12 md:p-12'
+      >
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
           <p className='w-full md:w-1/3'>
             お名前<span className='text-kikara-chip-red'>*</span>
           </p>
@@ -40,11 +44,12 @@ const ContactPage = () => {
               })}
               className={`w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
               type='text'
+              placeholder='例）田中 太郎'
             />
             {errors.name && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.name.message}</span>}
           </div>
         </div>
-        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
           <p className='w-full md:w-1/3'>
             フリガナ<span className='text-kikara-chip-red'>*</span>
           </p>
@@ -59,13 +64,14 @@ const ContactPage = () => {
               })}
               className={`w-full rounded-md border ${errors.name_kana ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
               type='text'
+              placeholder='例）タナカ タロウ'
             />
             {errors.name_kana && (
               <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.name_kana.message}</span>
             )}
           </div>
         </div>
-        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
           <p className='w-full md:w-1/3'>
             メールアドレス<span className='text-kikara-chip-red'>*</span>
           </p>
@@ -80,11 +86,12 @@ const ContactPage = () => {
               })}
               className={`w-full rounded-md border ${errors.mail ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
               type='email'
+              placeholder='例）example.mail.com'
             />
             {errors.mail && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.mail.message}</span>}
           </div>
         </div>
-        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
           <p className='w-full md:w-1/3'>
             メールアドレス（確認用）<span className='text-kikara-chip-red'>*</span>
           </p>
@@ -100,27 +107,40 @@ const ContactPage = () => {
               })}
               className={`w-full rounded-md border ${errors.mail_confirm ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
               type='email'
+              placeholder='例）example.mail.com'
             />
             {errors.mail_confirm && (
               <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.mail_confirm.message}</span>
             )}
           </div>
         </div>
-        <div className='mx-auto flex w-full flex-col items-center md:w-[60%] md:flex-row'>
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
           <p className='w-full md:w-1/3'>
-            内容<span className='text-kikara-chip-red'>*</span>
+            問い合わせ内容<span className='text-kikara-chip-red'>*</span>
           </p>
           <div className='flex w-full flex-col md:w-2/3 '>
             <textarea
               {...register('contents', {
                 required: '入力必須です',
               })}
-              className={`w-full rounded-md border ${errors.contents ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
+              className={`h-64 w-full resize-none rounded-md border ${errors.contents ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
               type='text'
+              placeholder='例）料理初心者でも参加できますか？'
             />
             {errors.contents && (
               <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.contents.message}</span>
             )}
+          </div>
+        </div>
+        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
+          <p className='w-full md:w-1/3'>個人情報の取り扱い</p>
+          <div className='flex w-full flex-col md:w-2/3 '>
+            <textarea
+              className={`h-64 w-full rounded-md border border-secondary-brown ${errors.mail ? 'border-red-500' : 'border-gray-300'} px-6 py-4 tracking-normal`}
+              type='email'
+              value={privacyPolicyText}
+              readOnly
+            />
           </div>
         </div>
         <div className='flex items-center space-x-4'>
@@ -132,7 +152,7 @@ const ContactPage = () => {
             onChange={handleCheckboxChange}
           />
           <label htmlFor='checkbox1' className='text-gray-700'>
-            <span className='underline'>プライバシーポリシー</span>に同意する
+            プライバシーポリシーに同意する
           </label>
         </div>
         <button

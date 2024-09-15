@@ -64,7 +64,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   野菜や果物が持つ酵母菌にミネラルを入れてフレッシュなものとはまた違う栄養価のあるドリンクを手作りします。
                 </p>
@@ -97,7 +97,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-right absolute top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-right absolute top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   暮らしの空間を心地良く、物の存在が意識できる生活に。あなたの理想を現実にしていく最初の一歩を一緒に歩んでいきましょう。
                 </p>
@@ -130,7 +130,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   人間には自然浄化力があります。手を当てて天からのエネルギーを身体を通して流し本来持っている自然治癒力を目覚めさせていきます。
                 </p>
