@@ -32,7 +32,7 @@ const ServiceIntroductionPages = () => {
           </div>
         </div>
       )}
-      <div className='mx-auto max-w-[90%] pb-36 pt-12 text-center md:w-[1040px] md:py-12 md:py-24 md:tracking-wide '>
+      <div className='mx-auto max-w-[90%] py-12 pb-36 pt-12 text-center md:w-[1040px] md:py-24 md:tracking-wide '>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='text-sm tracking-wider'>service</p>
           <h1 className='text-3xl tracking-wide'>サービス紹介</h1>
@@ -40,7 +40,7 @@ const ServiceIntroductionPages = () => {
         </div>
         <div className='pt-32'>
           <div>
-            <div className='js-show-on-scroll-from-right flex items-center text-3xl'>
+            <div className='js-show-on-scroll-from-right flex items-center'>
               <Image
                 src={serviceHeadNumber1}
                 alt='1'
@@ -51,7 +51,9 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3 id='mineral'>ミネラル醗酵ドリンク教室</h3>
+              <h3 id='mineral' className='text-md md:text-3xl'>
+                ミネラル醗酵ドリンク教室
+              </h3>
             </div>
             <div className='relative py-8 md:py-20'>
               <Image
@@ -73,7 +75,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className='mt-40'>
-            <div className='js-show-on-scroll-from-left flex items-center justify-end text-3xl'>
+            <div className='js-show-on-scroll-from-left flex items-center justify-end'>
               <Image
                 src={serviceHeadNumber2}
                 alt='2'
@@ -84,7 +86,9 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3 id='tidying'>片付け・お手伝い</h3>
+              <h3 id='tidying' className='text-md md:text-3xl'>
+                片付け・お手伝い
+              </h3>
             </div>
             <div className='relative py-8 md:py-20'>
               <Image
@@ -106,7 +110,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className='mt-40'>
-            <h3 className='js-show-on-scroll-from-right flex items-center text-3xl' id='reiki'>
+            <h3 className='js-show-on-scroll-from-right flex items-center text-md md:text-3xl' id='reiki'>
               <Image
                 src={serviceHeadNumber3}
                 alt='1'
