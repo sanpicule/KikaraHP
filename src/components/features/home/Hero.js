@@ -20,11 +20,11 @@ const HeroSection = () => {
       setIsFading(true)
       setTimeout(() => {
         setIsHidden(true)
-      }, 2000)
+      }, 800)
       setTimeout(() => {
         setIsDisplay(true)
-      }, 2000)
-    }, 2000)
+      }, 800)
+    }, 800)
 
     return () => {
       clearTimeout(timer)
@@ -65,27 +65,29 @@ const HeroSection = () => {
       {isDisplay && (
         <>
           <div
-            className={`${isDisplay && 'animate-fadeIn'} absolute left-8 top-16 transform text-left tracking-wide text-white md:left-12`}
+            className={`${isDisplay && 'animate-fadeIn'} absolute left-8 top-8 transform text-left tracking-wide text-white md:left-12`}
           >
             <p className='xl:text-xl'>くらし・ととのう・さろん</p>
-            <h1 className='text-[48px] tracking-wide md:text-5xl'>Kikara</h1>
+            <h1 className='text-[50px] tracking-wide md:text-[70px] xl:text-5xl'>Kikara</h1>
           </div>
           <div className={`${isDisplay && 'animate-fadeIn'} absolute bottom-24 right-8 text-white`}>
-            <p className='mt-20 text-right text-[30px] font-thin tracking-wide md:text-4xl'>
+            <p className='mt-20 text-right text-[30px] font-thin tracking-wide md:text-[40px] xl:text-4xl'>
               身体も<br></br>くらしも<br></br>食事も<br></br>ととのえる
             </p>
           </div>
-          <div className={`${isDisplay && 'animate-fadeIn'} absolute bottom-24 left-24 hidden text-white md:block`}>
-            <h3 className='text-left text-3xl'>サービス一覧</h3>
+          <div
+            className={`${isDisplay && 'animate-fadeIn'} md: absolute bottom-36 left-24 hidden text-white md:block xl:bottom-48`}
+          >
+            <h3 className='text-left text-2xl xl:text-3xl'>サービス一覧</h3>
             <ul className='tracking-wide'>
               {menuItemsList.map((menuItem, index) => (
                 <li key={index} className='ml-8 w-[300px] py-4 text-xl'>
                   <Link href={menuItem.id} className='flex items-center justify-between'>
-                    <p
+                    <h3
                       className={`before:mr-2 before:inline-block before:w-0 before:bg-kikara-white before:align-middle before:transition-all before:duration-300 before:content-[''] hover:before:h-[2px] hover:before:w-4`}
                     >
                       {menuItem.menuTitle}
-                    </p>
+                    </h3>
                   </Link>
                 </li>
               ))}
@@ -93,7 +95,7 @@ const HeroSection = () => {
             <div className='mt-8 flex items-start'>
               <button className='bg-secondary-brown-light px-4 py-6 duration-300 hover:bg-secondary-brown'>
                 <Link href={'/contact'}>
-                  <p className='text-kikara-white [writing-mode:vertical-rl]'>お問い合わせ</p>
+                  <p className='text-kikara-white'>お問い合わせ</p>
                 </Link>
               </button>
             </div>

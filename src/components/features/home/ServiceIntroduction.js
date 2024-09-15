@@ -25,14 +25,14 @@ const ServiceIntroductionPages = () => {
   return (
     <div className='flex justify-around xl:p-20'>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-right'>
+        <div className='js-show-on-scroll-from-right hidden xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='text-sm tracking-wide'>Service</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
         </div>
       )}
-      <div className='mx-auto max-w-[90%] pb-36 pt-12 text-center md:w-[1040px] md:py-12 md:py-24 md:tracking-wide '>
+      <div className='mx-auto max-w-[90%] py-12 pb-36 pt-12 text-center md:w-[1040px] md:py-24 md:tracking-wide '>
         <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
           <p className='text-sm tracking-wider'>service</p>
           <h1 className='text-3xl tracking-wide'>サービス紹介</h1>
@@ -40,7 +40,7 @@ const ServiceIntroductionPages = () => {
         </div>
         <div className='pt-32'>
           <div>
-            <div className='js-show-on-scroll-from-right flex items-center text-3xl'>
+            <div className='js-show-on-scroll-from-right flex items-center'>
               <Image
                 src={serviceHeadNumber1}
                 alt='1'
@@ -51,7 +51,9 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3 id='mineral'>ミネラル醗酵ドリンク教室</h3>
+              <h3 id='mineral' className='text-md md:text-3xl'>
+                ミネラル醗酵ドリンク教室
+              </h3>
             </div>
             <div className='relative py-8 md:py-20'>
               <Image
@@ -64,7 +66,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   野菜や果物が持つ酵母菌にミネラルを入れてフレッシュなものとはまた違う栄養価のあるドリンクを手作りします。
                 </p>
@@ -73,7 +75,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className='mt-40'>
-            <div className='js-show-on-scroll-from-left flex items-center justify-end text-3xl'>
+            <div className='js-show-on-scroll-from-left flex items-center justify-end'>
               <Image
                 src={serviceHeadNumber2}
                 alt='2'
@@ -84,7 +86,9 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <h3 id='tidying'>片付け・お手伝い</h3>
+              <h3 id='tidying' className='text-md md:text-3xl'>
+                片付け・お手伝い
+              </h3>
             </div>
             <div className='relative py-8 md:py-20'>
               <Image
@@ -97,7 +101,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-right absolute top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-right absolute top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   暮らしの空間を心地良く、物の存在が意識できる生活に。あなたの理想を現実にしていく最初の一歩を一緒に歩んでいきましょう。
                 </p>
@@ -106,7 +110,7 @@ const ServiceIntroductionPages = () => {
             </div>
           </div>
           <div className='mt-40'>
-            <h3 className='js-show-on-scroll-from-right flex items-center text-3xl' id='reiki'>
+            <h3 className='js-show-on-scroll-from-right flex items-center text-md md:text-3xl' id='reiki'>
               <Image
                 src={serviceHeadNumber3}
                 alt='1'
@@ -130,7 +134,7 @@ const ServiceIntroductionPages = () => {
                   objectFit: 'cover',
                 }}
               />
-              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 xl:w-[600px]'>
+              <div className='js-show-on-scroll-from-left absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'>
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   人間には自然浄化力があります。手を当てて天からのエネルギーを身体を通して流し本来持っている自然治癒力を目覚めさせていきます。
                 </p>
@@ -141,7 +145,7 @@ const ServiceIntroductionPages = () => {
         </div>
       </div>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-left mt-auto -translate-y-[100px]'>
+        <div className='js-show-on-scroll-from-left mt-auto hidden -translate-y-[100px] xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='text-sm tracking-wide'>Service</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>

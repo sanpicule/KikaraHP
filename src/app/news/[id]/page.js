@@ -31,7 +31,7 @@ export default async function Page({ params }) {
           width={0}
           height={0}
           sizes='100vw'
-          className='h-[300px] w-full object-cover md:h-[500px]'
+          className='h-[300px] w-full object-cover md:h-[400px] xl:h-[500px]'
         />
       )}
       <div className='mx-auto mt-12 max-w-[90%] rounded-[50px] bg-white px-12 py-12 text-center shadow-2xl md:w-[1040px] md:py-24 md:tracking-wide'>

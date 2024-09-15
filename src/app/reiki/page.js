@@ -68,26 +68,26 @@ const ReikiPage = () => {
           <h2>このような方へ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
-        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-4 md:w-[1040px] md:grid-cols-2 md:gap-12'>
-          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 lg:w-[1040px]'>
+          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-2 rounded-xl bg-kikara-white py-8 shadow-xl lg:gap-8'>
             <Image src={targetOneImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
             </p>
           </div>
-          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+          <div className='js-show-on-scroll-from-left flex items-center justify-center gap-2 rounded-xl bg-kikara-white py-8 shadow-xl lg:gap-8'>
             <Image src={targetThreeImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
             </p>
           </div>
-          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-2 rounded-xl bg-kikara-white py-8 shadow-xl lg:gap-8'>
             <Image src={targetTwoImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている
             </p>
           </div>
-          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-8 rounded-xl bg-kikara-white py-8 shadow-xl'>
+          <div className='js-show-on-scroll-from-right flex items-center justify-center gap-2 rounded-xl bg-kikara-white py-8 shadow-xl lg:gap-8'>
             <Image src={targetFourImage} alt='このような方へ1' width={50} height={50} />
             <p className='text-start'>
               日常の生活からリラックスし<br></br>深い癒しを求めている

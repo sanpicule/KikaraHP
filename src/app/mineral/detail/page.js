@@ -141,7 +141,7 @@ const MineralDetail = () => {
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='relative mx-auto mt-12 flex h-96 w-[90%] items-end md:mt-24 xl:mt-56 xl:w-full'>
-          <div className='absolute bottom-10 left-1/2 z-10 mx-auto flex w-full -translate-x-1/2 flex-col items-center justify-between text-center xl:w-[1040px] xl:flex-row '>
+          <div className='absolute bottom-8 left-1/2 z-10 mx-auto flex w-full -translate-x-1/2 flex-col items-center justify-between text-center md:-bottom-36 xl:-bottom-8 xl:w-[1040px] xl:flex-row '>
             <div className='js-show-on-scroll-from-left text-start'>
               <h4>ミネラルで作る</h4>
               <h2 className='ml-8 mt-2'>自家製味噌教室</h2>
@@ -151,7 +151,7 @@ const MineralDetail = () => {
           <div className='js-show-on-scroll-from-left h-32 w-full bg-primary-pink-light xl:w-1/2'></div>
         </div>
         <div className='relative mx-auto mt-12 flex h-96 w-[90%] items-end justify-end md:mt-24 xl:mt-56 xl:w-full'>
-          <div className='absolute bottom-10 right-1/2 z-10 mx-auto flex w-full translate-x-1/2 flex-col-reverse items-center justify-between text-center xl:w-[1040px] xl:flex-row '>
+          <div className='absolute bottom-8 right-1/2 z-10 mx-auto flex w-full translate-x-1/2 flex-col-reverse items-center justify-between text-center md:-bottom-48 xl:-bottom-8 xl:w-[1040px] xl:flex-row '>
             <Image src={cooking2} alt='' width={700} height={500} className='js-show-on-scroll-from-left' />
             <div className='js-show-on-scroll-from-right text-start'>
               <h4 className='ml-24'>ミネラルたっぷり</h4>
@@ -168,7 +168,7 @@ const MineralDetail = () => {
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='mt-24 flex h-full w-full flex-col items-center justify-between gap-12 tracking-normal xl:flex-row xl:gap-0'>
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-12 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={one}
               alt=''
@@ -181,7 +181,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={two}
               alt=''
@@ -194,7 +194,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>Facebook、Instagramからお申し込みいただけます。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={three}
               alt=''
@@ -207,7 +207,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={four}
               alt=''
