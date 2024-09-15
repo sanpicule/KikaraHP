@@ -25,7 +25,7 @@ const ServiceIntroductionPages = () => {
   return (
     <div className='flex justify-around xl:p-20'>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-right'>
+        <div className='js-show-on-scroll-from-right hidden xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='text-sm tracking-wide'>Service</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
@@ -141,7 +141,7 @@ const ServiceIntroductionPages = () => {
         </div>
       </div>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-left mt-auto -translate-y-[100px]'>
+        <div className='js-show-on-scroll-from-left mt-auto hidden -translate-y-[100px] xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='text-sm tracking-wide'>Service</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>

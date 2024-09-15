@@ -168,7 +168,7 @@ const MineralDetail = () => {
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </div>
         <div className='mt-24 flex h-full w-full flex-col items-center justify-between gap-12 tracking-normal xl:flex-row xl:gap-0'>
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-12 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={one}
               alt=''
@@ -181,7 +181,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={two}
               alt=''
@@ -194,7 +194,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>Facebook、Instagramからお申し込みいただけます。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={three}
               alt=''
@@ -207,7 +207,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={four}
               alt=''

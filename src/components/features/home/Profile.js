@@ -18,7 +18,7 @@ const ProfileSection = () => {
   return (
     <div className='flex justify-between xl:p-20'>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-left'>
+        <div className='js-show-on-scroll-from-left hidden xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>Profile</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
@@ -55,7 +55,7 @@ const ProfileSection = () => {
         </div>
       </div>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-right mt-auto -translate-y-full'>
+        <div className='js-show-on-scroll-from-right mt-auto hidden -translate-y-full xl:block'>
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>Profile</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
