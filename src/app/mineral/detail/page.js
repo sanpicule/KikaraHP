@@ -181,7 +181,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={two}
               alt=''
@@ -194,7 +194,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>Facebook、Instagramからお申し込みいただけます。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={three}
               alt=''
@@ -207,7 +207,7 @@ const MineralDetail = () => {
             <p className='xl:h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
           </div>
           {!isMobile && <FlowRightArrow />}
-          <div className='js-show-on-scroll-from-bottom relative flex h-[500px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
+          <div className='js-show-on-scroll-from-bottom relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'>
             <Image
               src={four}
               alt=''
