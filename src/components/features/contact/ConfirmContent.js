@@ -12,6 +12,14 @@ const ConfirmContent = () => {
   const query = Object.fromEntries(entries)
   const router = useRouter()
 
+  const fields = [
+    { label: '名前', value: query.name },
+    { label: 'フリガナ', value: query.name_kana },
+    { label: 'メールアドレス', value: query.mail },
+    { label: 'メールアドレス（確認用）', value: query.mail_confirm },
+    { label: '内容', value: query.contents },
+  ]
+
   const handleSubmit = async () => {
     setLoading(true)
     try {
@@ -41,29 +49,15 @@ const ConfirmContent = () => {
 
   return (
     <>
-      <div className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>
-        <div className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-          <p className='w-full font-bold md:w-1/3'>名前</p>
-          <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.name}</p>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-          <p className='w-full font-bold md:w-1/3'>フリガナ</p>
-          <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.name_kana}</p>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-          <p className='w-full font-bold md:w-1/3'>メールアドレス</p>
-          <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.mail}</p>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-          <p className='w-full font-bold md:w-1/3'>メールアドレス（確認用）</p>
-          <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.mail_confirm}</p>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-          <p className='w-full font-bold md:w-1/3'>内容</p>
-          <p className='ml-12 w-full md:ml-0 md:w-2/3'>{query.contents}</p>
-        </div>
-      </div>
-      <LoadingButton loading={loading} handleClick={handleSubmit} handleBack={handleBack}></LoadingButton>
+      <ul className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>
+        {fields.map(({ label, value }, index) => (
+          <li key={index} className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
+            <p className='w-full font-bold md:w-1/3'>{label}</p>
+            <p className='ml-12 w-full md:ml-0 md:w-2/3'>{value}</p>
+          </li>
+        ))}
+      </ul>
+      <LoadingButton loading={loading} handleClick={handleSubmit} handleBack={handleBack} />
     </>
   )
 }
