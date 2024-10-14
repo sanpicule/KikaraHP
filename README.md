@@ -16,7 +16,7 @@ Kikaraのホームページ用のリポジトリです。
 1. リポジトリをクローンする
 
 ```
-git clone https://github.com/sanpicule/kikara.git
+git clone https://github.com/sanpicule/kikaraHP.git
 ```
 
 2. VSCode起動
@@ -26,18 +26,18 @@ git clone https://github.com/sanpicule/kikara.git
 code .
 ```
 
-3. VSCodeのターミナルを起動し、developをフェッチ
+を実行する。
 
-```
-git fetch origin develop
+3. VSCodeのターミナルを起動し、developブランチにチェックアウトする。
 
+```bash
 git checkout develop
 ```
 
 3. パッケージインストール
 
 ```
-npm install
+npm ci
 ```
 
 3. 開発環境の立ち上げ
