@@ -1,0 +1,89 @@
+name: Quality Check
+
+on:
+  # プルリクエストが「main」または「develop」ブランチに対して開かれたり、追加でコミットされたときに実行
+  pull_request:
+    branches:
+      - main
+      - develop
+    types:
+      - opened
+      - synchronize
+  # 手動でワークフローを実行する場合のトリガー
+  workflow_dispatch:
+
+env:
+  # Node.js のバージョン設定
+  NODE_VERSION: 20.13.1
+
+jobs:
+  # ユニットテストを実行するジョブ
+  test:
+    name: 'Run Unit Tests'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and install dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Vitest を使ってユニットテストを実行
+      - name: Run Vitest
+        run: npm run ci:test
+        env:
+          CI: true # CI 環境用に設定
+
+  # コードスタイルチェックを行うジョブ
+  lint:
+    name: 'ESLint Check'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and install dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # ESLintを実行
+      - name: Run ESLint check
+        run: npm run ci:lint
+
+  # Prettier を使ってコードの整形を確認するジョブ
+  prettier:
+    name: 'Prettier Formatting Check'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and install dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # Prettier を使ってコードのフォーマットを確認
+      - name: Run Prettier check
+        run: npm run ci:prettier
+
+  # プロジェクトのビルドを行うジョブ
+  build:
+    name: 'Build the Project'
+    runs-on: ubuntu-latest
+    needs: [test, lint, prettier] # 型チェック、テスト、コードスタイル、整形が成功した後に実行
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and install dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # プロジェクトのビルドを実行
+      - name: Run Build
+        run: npm run build
