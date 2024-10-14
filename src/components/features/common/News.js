@@ -17,7 +17,8 @@ const NewsSection = () => {
 
   const fetchPosts = async () => {
     const { data, error } = await supabase.from('news').select('*').order('created_at', { ascending: false })
-    if (error) console.log('Error fetching posts:', error)
+    // eslint-disable-next-line no-console
+    if (error) console.error('Error fetching posts:', error)
     else {
       setPosts(data)
     }
@@ -77,6 +78,7 @@ const NewsSection = () => {
                     </div>
                     <Image
                       src={arrowRight}
+                      alt={post.title}
                       width={40}
                       height={200}
                       className='transition-all duration-300 group-hover:translate-x-4'
