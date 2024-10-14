@@ -1,8 +1,8 @@
 import Body from '@/components/layouts/Body'
 
 export const metadata = {
-  title: 'くらし・ととのう・サロン Kikara',
-  description: 'くらし・ととのう・サロンKikaraの公式サイト',
+  title: 'Kikara',
+  description: 'Kikaraの公式サイト',
 }
 
 export default function RootLayout({ children }) {
