@@ -24,7 +24,7 @@ p {
 
 @media (max-width: 1040px) {
   h2 {
-    @apply text-2xl
+    @apply text-2xl;
   }
 
   h3 {
@@ -38,7 +38,7 @@ p {
   p {
     @apply text-base tracking-normal;
   }
- }
+}
 
 .section_sub {
   @apply text-sm tracking-wide;
