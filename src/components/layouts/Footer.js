@@ -14,7 +14,7 @@ const Footer = () => {
               <p className='text-xs tracking-wider'>くらし・ととのう・さろん</p>
               <h2 className='tracking-wide'>Kikara</h2>
               <p className='text-sm tracking-wider'>熊本市東区で心と身体を整える</p>
-              <p className='text-md mt-12 font-bold tracking-wider'>連絡先</p>
+              <p className='mt-12 text-md font-bold tracking-wider'>連絡先</p>
               <p className='text-sm tracking-wider'>070-5414-3874</p>
               <p className='text-sm tracking-wider'>chiisonoblog@gmail.com</p>
               <div className='mt-4 hidden items-center gap-2 md:flex'>

@@ -9,6 +9,9 @@
     "lint": "next lint",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "ci:test": "vitest",
+    "ci:lint": "eslint .",
+    "ci:prettier": "prettier --check .",
     "prepare": "husky"
   },
   "dependencies": {
