@@ -1,14 +1,16 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import useAnimation from '@/hooks/useAnimation'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { supabase } from '@/lib/supabase'
 import arrowRight from '@/public/images/arrowRight.png'
-import useScrollFadeIn from '../home/useScrollFadeIn'
 
 const NewsSection = () => {
+  const animate = useAnimation()
   const [posts, setPosts] = useState([])
   const { isMobile } = useMediaQuery()
   useEffect(() => {
@@ -23,31 +25,42 @@ const NewsSection = () => {
     }
   }
 
-  const scroll = useScrollFadeIn()
-  useEffect(() => {
-    scroll.scrollFadeInFromBottom()
-    scroll.scrollFadeInFromRight()
-    scroll.scrollFadeInFromLeft()
-  }, [scroll])
-
   return (
     <div className='flex justify-between bg-primary-pink xl:p-20'>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-left hidden xl:block'>
+        <motion.div
+          variants={animate.scrollFadeInFromLeft}
+          initial={animate.scrollFadeInFromLeft.initial}
+          whileInView={animate.scrollFadeInFromLeft.whileInView}
+          viewport={animate.scrollFadeInFromLeft.viewport}
+          className='hidden xl:block'
+        >
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>News</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
-        </div>
+        </motion.div>
       )}
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
-        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='flex flex-col items-center gap-2'
+        >
           <p className='section_sub'>News</p>
           <h2>お知らせ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
-        </div>
+        </motion.div>
         {posts.length > 0 ? (
-          <div className='js-show-on-scroll-from-bottom my-10 rounded-xl bg-kikara-white p-4 md:p-10'>
+          <motion.div
+            variants={animate.scrollFadeInFromBottom}
+            initial={animate.scrollFadeInFromBottom.initial}
+            whileInView={animate.scrollFadeInFromBottom.whileInView}
+            viewport={animate.scrollFadeInFromBottom.viewport}
+            className='my-10 rounded-xl bg-kikara-white p-4 md:p-10'
+          >
             {posts.map((post) => (
               <div
                 key={post.id}
@@ -85,18 +98,32 @@ const NewsSection = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </motion.div>
         ) : (
-          <div>表示するお知らせはありません。</div>
+          <motion.div
+            variants={animate.scrollFadeInFromBottom}
+            initial={animate.scrollFadeInFromBottom.initial}
+            whileInView={animate.scrollFadeInFromBottom.whileInView}
+            viewport={animate.scrollFadeInFromBottom.viewport}
+            className='mt-8'
+          >
+            表示するお知らせはありません。
+          </motion.div>
         )}
       </div>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-bottom mt-auto hidden -translate-y-full xl:block'>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='mt-auto hidden -translate-y-full xl:block'
+        >
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>News</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   )

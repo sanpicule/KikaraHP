@@ -1,12 +1,12 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useEffect } from 'react'
 import FlowRightArrow from '@/components/features/common/FlowRightArrow'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
-import useScrollFadeIn from '@/components/features/home/useScrollFadeIn'
 import preparationList from '@/data/tidyingPreparationList.json'
+import useAnimation from '@/hooks/useAnimation'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import one from '@/public/images/1.png'
 import two from '@/public/images/2.png'
@@ -21,29 +21,49 @@ import tidyingHeroImage from '@/public/images/tidyingHero.png'
 import tidyingReply from '@/public/images/tidyingReply.png'
 
 const TidyingDetail = () => {
+  const animate = useAnimation()
   const { isTab } = useMediaQuery()
-  const scroll = useScrollFadeIn()
-  useEffect(() => {
-    scroll.scrollFadeInFromBottom()
-    scroll.scrollFadeInFromRight()
-    scroll.scrollFadeInFromLeft()
-  }, [scroll])
   return (
-    <div className='animate-fadeIn'>
-      <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝いについて'} />
+    <div>
+      <motion.div
+        variants={animate.scrollFadeIn}
+        initial={animate.scrollFadeIn.initial}
+        whileInView={animate.scrollFadeIn.whileInView}
+        viewport={animate.scrollFadeIn.viewport}
+      >
+        <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝いについて'} />
+      </motion.div>
       <div className='mx-auto max-w-[90%] py-12 md:w-[1040px] md:py-24 md:tracking-wide'>
-        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='flex flex-col items-center gap-2'
+        >
           <p className='section_sub'>detail</p>
           <h2>片付け・お手伝い</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
-        </div>
+        </motion.div>
         <div className='mt-12'>
           <div className='pb-12'>
-            <div className='js-show-on-scroll-from-bottom flex justify-center'>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='flex justify-center'
+            >
               <p className='inline-block rounded-full bg-secondary-brown-light px-8 py-2 text-kikara-white'>メニュー</p>
-            </div>
+            </motion.div>
             <div className='mt-12 grid grid-cols-1 gap-12 xl:grid-cols-2'>
-              <div className='js-show-on-scroll-from-bottom relative rounded-xl border-2 border-secondary-brown p-8'>
+              <motion.div
+                variants={animate.scrollFadeInFromBottom}
+                initial={animate.scrollFadeInFromBottom.initial}
+                whileInView={animate.scrollFadeInFromBottom.whileInView}
+                viewport={animate.scrollFadeInFromBottom.viewport}
+                className='relative rounded-xl border-2 border-secondary-brown p-8'
+              >
                 <Image src={favoImage} alt='' width={100} height={70} className='absolute right-8 top-8' />
                 <h3>単発利用</h3>
                 <div className='mt-8'>
@@ -61,8 +81,14 @@ const TidyingDetail = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className='js-show-on-scroll-from-bottom rounded-xl border-2 border-secondary-brown p-8'>
+              </motion.div>
+              <motion.div
+                variants={animate.scrollFadeInFromBottom}
+                initial={animate.scrollFadeInFromBottom.initial}
+                whileInView={animate.scrollFadeInFromBottom.whileInView}
+                viewport={animate.scrollFadeInFromBottom.viewport}
+                className='rounded-xl border-2 border-secondary-brown p-8'
+              >
                 <h3>長期利用</h3>
                 <div className='mt-8'>
                   <p className='inline-block rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>料金</p>
@@ -76,16 +102,28 @@ const TidyingDetail = () => {
                     <p className='tracking-normal'>※ 定期的にお伺いし、片付けのサポートをさせていただきます</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className='mt-12'>
-            <div className='js-show-on-scroll-from-bottom flex justify-center'>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='flex justify-center'
+            >
               <p className='inline-block rounded-full bg-secondary-brown-light px-8 py-2 text-kikara-white'>
                 準備していただくもの
               </p>
-            </div>
-            <div className='js-show-on-scroll-from-bottom mt-12 pl-8'>
+            </motion.div>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='mt-12 pl-8'
+            >
               <ul className='flex flex-col gap-2 text-xl'>
                 {preparationList.map((preparation, index) => (
                   <li key={index}>
@@ -107,13 +145,25 @@ const TidyingDetail = () => {
                   <p>・収納ケース（プラスチックや布地）</p>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
           <div className='mt-12'>
-            <div className='js-show-on-scroll-from-bottom flex justify-center'>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='flex justify-center'
+            >
               <p className='inline-block rounded-full bg-kikara-chip-red px-8 py-2 text-kikara-white'>注意事項</p>
-            </div>
-            <div className='js-show-on-scroll-from-bottom mt-12 px-2 xl:pl-8'>
+            </motion.div>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='mt-12 px-2 xl:pl-8'
+            >
               <ul className='mt-4 flex flex-col gap-2 text-xl'>
                 <li>
                   <p>1. 片付けお手伝いでお伺いするエリアは現時点で、熊本市東区から約60分圏内</p>
@@ -128,16 +178,28 @@ const TidyingDetail = () => {
                   <p>4. 片付けする場所は簡単で良いですのでお掃除しておいて下さい（特に、キッチンの際）</p>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
           <div className='mt-12'>
-            <div className='js-show-on-scroll-from-bottom flex justify-center'>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className='flex justify-center'
+            >
               <p className='inline-block rounded-full bg-secondary-brown-light px-8 py-2 text-kikara-white'>
                 片付け手伝い例
               </p>
-            </div>
+            </motion.div>
             <div className='mt-12 flex flex-col items-center justify-between gap-12 md:flex-row xl:gap-2'>
-              <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-4'>
+              <motion.div
+                variants={animate.scrollFadeInFromBottom}
+                initial={animate.scrollFadeInFromBottom.initial}
+                whileInView={animate.scrollFadeInFromBottom.whileInView}
+                viewport={animate.scrollFadeInFromBottom.viewport}
+                className='flex flex-col items-center gap-4'
+              >
                 <p>Before</p>
                 <Image
                   src={beforeImage}
@@ -146,11 +208,22 @@ const TidyingDetail = () => {
                   width={450}
                   height={700}
                 />
-              </div>
-              <div className='js-show-on-scroll-from-bottom'>
+              </motion.div>
+              <motion.div
+                variants={animate.scrollFadeInFromBottom}
+                initial={animate.scrollFadeInFromBottom.initial}
+                whileInView={animate.scrollFadeInFromBottom.whileInView}
+                viewport={animate.scrollFadeInFromBottom.viewport}
+              >
                 <Image src={arrowImage} alt='矢印' width={70} height={30} className='rotate-90 md:rotate-0' />
-              </div>
-              <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-4'>
+              </motion.div>
+              <motion.div
+                variants={animate.scrollFadeInFromBottom}
+                initial={animate.scrollFadeInFromBottom.initial}
+                whileInView={animate.scrollFadeInFromBottom.whileInView}
+                viewport={animate.scrollFadeInFromBottom.viewport}
+                className='flex flex-col items-center gap-4'
+              >
                 <p>After</p>
                 <Image
                   src={afterImage}
@@ -159,18 +232,30 @@ const TidyingDetail = () => {
                   width={450}
                   height={700}
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
-            <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
+            <motion.div
+              variants={animate.scrollFadeInFromBottom}
+              initial={animate.scrollFadeInFromBottom.initial}
+              whileInView={animate.scrollFadeInFromBottom.whileInView}
+              viewport={animate.scrollFadeInFromBottom.viewport}
+              className=' flex flex-col items-center gap-2'
+            >
               <p className='section_sub'>flow</p>
               <h2>片付けまでの流れ</h2>
               <div className='h-0.1 w-12 bg-secondary-brown'></div>
-            </div>
+            </motion.div>
             <div className='mt-12 flex h-full flex-col items-center justify-center gap-4'>
               <div className='mt-24 flex h-full w-full flex-col justify-around gap-12 tracking-normal md:flex-row xl:gap-0'>
-                <div className='js-show-on-scroll-from-bottom relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'>
+                <motion.div
+                  variants={animate.scrollFadeInFromBottom}
+                  initial={animate.scrollFadeInFromBottom.initial}
+                  whileInView={animate.scrollFadeInFromBottom.whileInView}
+                  viewport={animate.scrollFadeInFromBottom.viewport}
+                  className='relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'
+                >
                   <Image
                     src={one}
                     alt=''
@@ -181,9 +266,15 @@ const TidyingDetail = () => {
                   <h3>申込</h3>
                   <Image src={tidyingApplication} alt='' width={150} height={150} />
                   <p className='h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
-                </div>
+                </motion.div>
                 {!isTab && <FlowRightArrow />}
-                <div className='js-show-on-scroll-from-bottom relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'>
+                <motion.div
+                  variants={animate.scrollFadeInFromBottom}
+                  initial={animate.scrollFadeInFromBottom.initial}
+                  whileInView={animate.scrollFadeInFromBottom.whileInView}
+                  viewport={animate.scrollFadeInFromBottom.viewport}
+                  className='relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'
+                >
                   <Image
                     src={two}
                     alt=''
@@ -196,9 +287,15 @@ const TidyingDetail = () => {
                   <p className='h-full'>
                     下記の<span className='text-kikara-chip-red'>「予約はこちら」</span>からお申し込みいただけます。
                   </p>
-                </div>
+                </motion.div>
                 {!isTab && <FlowRightArrow />}
-                <div className='js-show-on-scroll-from-bottom relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'>
+                <motion.div
+                  variants={animate.scrollFadeInFromBottom}
+                  initial={animate.scrollFadeInFromBottom.initial}
+                  whileInView={animate.scrollFadeInFromBottom.whileInView}
+                  viewport={animate.scrollFadeInFromBottom.viewport}
+                  className='relative mx-auto flex w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12'
+                >
                   <Image
                     src={three}
                     alt=''
@@ -209,11 +306,17 @@ const TidyingDetail = () => {
                   <h3>片付け</h3>
                   <Image src={tidyingDo} alt='' width={150} height={150} />
                   <p className='h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
-          <div className='js-show-on-scroll-from-bottom text-center'>
+          <motion.div
+            variants={animate.scrollFadeInFromBottom}
+            initial={animate.scrollFadeInFromBottom.initial}
+            whileInView={animate.scrollFadeInFromBottom.whileInView}
+            viewport={animate.scrollFadeInFromBottom.viewport}
+            className='text-center'
+          >
             <a
               href='https://totonou-kikara.com/index.php?Form'
               target='_blank'
@@ -223,7 +326,7 @@ const TidyingDetail = () => {
               <span className='absolute -left-2 -top-2 h-4 w-4 border-l-2 border-t-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[129%] group-hover:w-[105%] group-hover:border-secondary-brown'></span>
               <span className='absolute -bottom-2 -right-2 h-4 w-4 border-b-2 border-r-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[128%] group-hover:w-[105%] group-hover:border-secondary-brown'></span>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
       <OtherServices></OtherServices>

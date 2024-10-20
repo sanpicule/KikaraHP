@@ -1,10 +1,12 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import menuItemsList from '@/data/menuItems.json'
+import useAnimation from '@/hooks/useAnimation'
 import useScrollDirection from '@/hooks/useScrollDirection'
 import serviceMineral from '@/public/images/serviceMineral.png'
 import serviceReiki from '@/public/images/serviceReiki.png'
@@ -13,6 +15,7 @@ import './style.css'
 import useStore from '@/store/store'
 
 const Header = () => {
+  const animate = useAnimation()
   const { isHidden, isDisplay, setIsDisplay, setIsHidden } = useStore()
   const [isClick, setIsClick] = useState(false)
   const [isImageChanging, setIsImageChanging] = useState(false)
@@ -92,8 +95,12 @@ const Header = () => {
           </div>
         )}
         {isDisplay && isHidden && (
-          <div
-            className={`group z-30 ml-auto mt-2 ${pathname === '/' && 'animate-fadeIn'} ${isDisplay && 'animate-fadeIn'}`}
+          <motion.div
+            variants={animate.scrollFadeIn}
+            initial={animate.scrollFadeIn.initial}
+            whileInView={animate.scrollFadeIn.whileInView}
+            viewport={animate.scrollFadeIn.viewport}
+            className={`group z-30 ml-auto mt-2`}
             onClick={() => {
               setIsClick(!isClick)
               setCurrentMenu('')
@@ -115,7 +122,7 @@ const Header = () => {
             >
               MENU
             </p>
-          </div>
+          </motion.div>
         )}
       </div>
       {/* ハンバーガーメニュー */}
