@@ -207,7 +207,7 @@ const MineralDetail = () => {
             </motion.div>
           </div>
           <motion.div
-            className='h-32 bg-primary-pink-light xl:w-1/2'
+            className='h-32 w-full bg-primary-pink-light xl:w-1/2'
             variants={animate.scrollFadeInFromLeft}
             initial={animate.scrollFadeInFromLeft.initial}
             whileInView={animate.scrollFadeInFromLeft.whileInView}
