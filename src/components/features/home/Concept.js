@@ -1,36 +1,48 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import { motion } from 'framer-motion'
+import useAnimation from '@/hooks/useAnimation'
 import useMediaQuery from '@/hooks/useMediaQuery'
-import useScrollFadeIn from './useScrollFadeIn'
 
 const ConceptSection = () => {
   const { isMobile } = useMediaQuery()
-
-  const scroll = useScrollFadeIn()
-  useEffect(() => {
-    scroll.scrollFadeInFromBottom()
-    scroll.scrollFadeInFromRight()
-    scroll.scrollFadeInFromLeft()
-  }, [scroll])
+  const animate = useAnimation()
 
   return (
     <div className='flex justify-between px-2 py-12 xl:p-20'>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-left hidden xl:block'>
+        <motion.div
+          variants={animate.scrollFadeInFromLeft}
+          initial={animate.scrollFadeInFromLeft.initial}
+          whileInView={animate.scrollFadeInFromLeft.whileInView}
+          viewport={animate.scrollFadeInFromLeft.viewport}
+          className='hidden xl:block'
+        >
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>Concept</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
-        </div>
+        </motion.div>
       )}
       <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
-        <div className='js-show-on-scroll-from-bottom flex flex-col items-center gap-2'>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='flex flex-col items-center gap-2'
+        >
           <p className='section_sub'>concept</p>
           <h2>コンセプト</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
-        </div>
-        <div className='js-show-on-scroll-from-bottom pt-10'>
+        </motion.div>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='pt-10'
+        >
           <p className='mx-auto w-full text-sm leading-10 tracking-normal md:tracking-wide lg:text-xl'>
             kikaraとは...<br></br>そのままの姿でその者らしくただソコニイル<br></br>木が好きだった。<br></br>
             シンプルな物、自然素材な物を集めた<br></br>木からはじまった私を表現する場所<br></br>
@@ -39,15 +51,21 @@ const ConceptSection = () => {
             最終目的の自然食品の販売へと繋げる。<br></br>食べ物で身体と精神は創られていく。<br></br>
             一番シンプルな事を見つけるきっかけになれたら
           </p>
-        </div>
+        </motion.div>
       </div>
       {!isMobile && (
-        <div className='js-show-on-scroll-from-right mt-auto hidden -translate-y-full xl:block'>
+        <motion.div
+          variants={animate.scrollFadeInFromRight}
+          initial={animate.scrollFadeInFromRight.initial}
+          whileInView={animate.scrollFadeInFromRight.whileInView}
+          viewport={animate.scrollFadeInFromRight.viewport}
+          className='mt-auto hidden -translate-y-full xl:block'
+        >
           <div className='flex translate-y-full -rotate-90 items-center gap-2'>
             <p className='section_sub'>Concept</p>
             <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   )
