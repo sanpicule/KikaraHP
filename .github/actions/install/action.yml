@@ -11,7 +11,7 @@ inputs:
   husky:
     description: 'Whether to disable Husky hooks during CI/CD'
     required: false
-    default: 0
+    default: '0'
 
 runs:
   using: 'composite'
