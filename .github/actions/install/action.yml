@@ -1,0 +1,31 @@
+name: 'Install'
+description: 'Setup Node.js, and install project dependencies'
+
+inputs:
+  # 使用する Node.js のバージョン
+  node-version:
+    description: 'The version of Node.js to use'
+    required: false
+    default: 'lts/*'
+  # CI/CD で Husky のフックを無効にするかどうか
+  husky:
+    description: 'Whether to disable Husky hooks during CI/CD'
+    required: false
+    default: '0'
+
+runs:
+  using: 'composite'
+  steps:
+    # Node.js のバージョンを設定
+    - name: Set Node.js version to ${{ inputs.node-version }}
+      id: setup-node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }} # 入力された Node.js のバージョンを使用
+
+    # プロジェクトの依存関係をインストール
+    - name: Install dependencies
+      shell: bash
+      run: npm install # npm を使って依存関係をインストール
+      env:
+        HUSKY: ${{ inputs.husky }} # Husky のフックを無効にするための環境変数を設定

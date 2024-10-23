@@ -94,7 +94,13 @@ const NewsSection = () => {
                         <h4 className='text-sm md:text-md'>{post.title}</h4>
                       </div>
                     </div>
-                    <Image src={arrowRight} width={40} height={200} />
+                    <Image
+                      src={arrowRight}
+                      alt={post.title}
+                      width={40}
+                      height={200}
+                      className='transition-all duration-300 group-hover:translate-x-4'
+                    />
                   </div>
                 </Link>
               </div>
