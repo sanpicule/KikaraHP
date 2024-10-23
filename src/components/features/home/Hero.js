@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 import menuItemsList from '@/data/menuItems.json'
 import useAnimate from '@/hooks/useAnimation'
 import initImage from '@/public/images/initImage.png'
@@ -86,13 +87,13 @@ const HeroSection = () => {
               <ul className='tracking-wide'>
                 {menuItemsList.map((menuItem, index) => (
                   <li key={index} className='ml-8 w-[300px] py-4 text-xl'>
-                    <Link href={menuItem.id} className='flex items-center justify-between'>
+                    <ScrollLink to={menuItem.id} smooth={true} className='flex items-center justify-between'>
                       <h3
                         className={`before:mr-2 before:inline-block before:w-0 before:bg-kikara-white before:align-middle before:transition-all before:duration-300 before:content-[''] hover:before:h-[2px] hover:before:w-4`}
                       >
                         {menuItem.menuTitle}
                       </h3>
-                    </Link>
+                    </ScrollLink>
                   </li>
                 ))}
               </ul>
