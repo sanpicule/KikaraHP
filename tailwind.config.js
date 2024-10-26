@@ -50,7 +50,7 @@ module.exports = {
         wide: '.25em',
       },
       fontFamily: {
-        sans: ['Hiragino Mincho Pro', 'sans-serif'],
+        sans: ['"Noto Serif JP"', 'serif', 'sans-serif'],
       },
       animation: {
         slideInFromBottom: 'slideInFromBottom 1.2s ease-in forwards',
