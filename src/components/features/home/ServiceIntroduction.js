@@ -26,9 +26,9 @@ const ServiceIntroductionPages = () => {
           viewport={animate.scrollFadeInFromRight.viewport}
           className='hidden xl:block'
         >
-          <div className='flex translate-y-full -rotate-90 items-center gap-2'>
+          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
+            <div className='h-16 w-[1px] bg-secondary-brown'></div>
             <p className='text-sm tracking-wide'>Service</p>
-            <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
         </motion.div>
       )}
@@ -217,9 +217,9 @@ const ServiceIntroductionPages = () => {
           viewport={animate.scrollFadeInFromLeft.viewport}
           className='mt-auto hidden -translate-y-[100px] xl:block'
         >
-          <div className='flex translate-y-full -rotate-90 items-center gap-2'>
+          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
+            <div className='h-16 w-[1px] bg-secondary-brown'></div>
             <p className='text-sm tracking-wide'>Service</p>
-            <div className='h-0.1 w-16 bg-secondary-brown'></div>
           </div>
         </motion.div>
       )}

@@ -41,9 +41,9 @@ const NewsSection = () => {
           viewport={animate.scrollFadeInFromLeft.viewport}
           className='hidden xl:block'
         >
-          <div className='flex translate-y-full -rotate-90 items-center gap-2'>
-            <p className='section_sub'>News</p>
-            <div className='h-0.1 w-16 bg-secondary-brown'></div>
+          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
+            <div className='h-16 w-[1px] bg-secondary-brown'></div>
+            <p className='text-sm tracking-wide'>News</p>
           </div>
         </motion.div>
       )}
@@ -126,9 +126,9 @@ const NewsSection = () => {
           viewport={animate.scrollFadeInFromBottom.viewport}
           className='mt-auto hidden -translate-y-full xl:block'
         >
-          <div className='flex translate-y-full -rotate-90 items-center gap-2'>
-            <p className='section_sub'>News</p>
-            <div className='h-0.1 w-16 bg-secondary-brown'></div>
+          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
+            <div className='h-16 w-[1px] bg-secondary-brown'></div>
+            <p className='text-sm tracking-wide'>News</p>
           </div>
         </motion.div>
       )}
