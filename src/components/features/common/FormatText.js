@@ -10,7 +10,7 @@ const FormatText = ({ text }) => {
     </React.Fragment>
   ))
 
-  return <div className='mt-12 whitespace-pre-wrap text-start'>{textWithBreaks}</div>
+  return <div className='mt-8 whitespace-pre-wrap text-start md:mt-12'>{textWithBreaks}</div>
 }
 
 export default FormatText

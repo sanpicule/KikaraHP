@@ -21,7 +21,7 @@
     "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-react": "^8.0.2",
     "framer-motion": "^11.1.9",
-    "next": "14.1.4",
+    "next": "^14.2.16",
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
