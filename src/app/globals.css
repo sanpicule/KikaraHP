@@ -40,10 +40,6 @@ p {
   }
 }
 
-.section_sub {
-  @apply text-sm tracking-wide;
-}
-
 body {
   @apply text-secondary-brown;
 }
