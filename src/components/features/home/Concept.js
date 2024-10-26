@@ -9,7 +9,7 @@ const ConceptSection = () => {
   const animate = useAnimation()
 
   return (
-    <div className='flex justify-between px-2 py-12 xl:p-20'>
+    <div className='flex justify-between px-2 py-12 xl:p-[140px]'>
       {!isMobile && (
         <motion.div
           variants={animate.scrollFadeInFromLeft}
@@ -24,7 +24,7 @@ const ConceptSection = () => {
           </div>
         </motion.div>
       )}
-      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}
