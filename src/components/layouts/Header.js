@@ -81,7 +81,7 @@ const Header = () => {
   }
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-screen transition-transform duration-500 ${scrollDirection === 'down' && pathname !== '/' ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed right-0 top-0 z-50 w-screen transition-transform duration-500 ${pathname === '/' && '!w-auto'} ${scrollDirection === 'down' && pathname !== '/' ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div
         className={`flex h-[85px] items-center px-4 md:px-12 ${pathname === '/' && 'h-auto pt-4'} ${pathname !== '/' && 'bg-primary-pink-light'}`}
