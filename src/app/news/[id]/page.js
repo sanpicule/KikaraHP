@@ -23,20 +23,20 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className='mt-[85px] bg-primary-pink pb-12'>
-      {newsItem?.image_url && (
-        <Image
-          src={newsItem?.image_url || ''}
-          alt={newsItem?.title || 'News Image'}
-          width={0}
-          height={0}
-          sizes='100vw'
-          className='h-[300px] w-full object-cover md:h-[400px] xl:h-[500px]'
-        />
-      )}
-      <div className='mx-auto mt-12 max-w-[90%] rounded-[50px] bg-white px-12 py-12 text-center shadow-2xl md:w-[1040px] md:py-24 md:tracking-wide'>
-        <p className='text-start'>{newsItem?.created_at.split('T')[0].replace(/-/g, '.')}</p>
-        <h1 className='text-start text-xl'>{newsItem?.title}</h1>
+    <div className='mt-[85px] bg-primary-pink py-12'>
+      <div className='mx-auto mt-4 max-w-[90%] rounded-xl p-4 text-center shadow-sm md:mt-8 md:w-[1040px] md:p-8 md:tracking-wide'>
+        <p className='text-start text-xs'>{newsItem?.created_at.split('T')[0].replace(/-/g, '.')}</p>
+        <h1 className='text-start text-md font-bold md:text-3xl'>{newsItem?.title}</h1>
+        {newsItem?.image_url && (
+          <Image
+            src={newsItem?.image_url || ''}
+            alt={newsItem?.title || 'News Image'}
+            width={0}
+            height={0}
+            sizes='100vw'
+            className='mt-8 w-full rounded-xl object-cover md:w-[60%]'
+          />
+        )}
         <div>
           <FormatText text={newsItem?.body} />
         </div>
