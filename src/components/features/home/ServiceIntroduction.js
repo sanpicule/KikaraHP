@@ -17,7 +17,7 @@ const ServiceIntroductionPages = () => {
   const animate = useAnimation()
   const { isMobile } = useMediaQuery()
   return (
-    <div className='flex justify-around xl:p-20'>
+    <div className='flex justify-around xl:p-[140px]'>
       {!isMobile && (
         <motion.div
           variants={animate.scrollFadeInFromRight}
@@ -32,7 +32,7 @@ const ServiceIntroductionPages = () => {
           </div>
         </motion.div>
       )}
-      <div className='mx-auto max-w-[90%] py-12 pb-36 pt-12 text-center md:w-[1040px] md:py-24 md:tracking-wide '>
+      <div className='max-w-[90%] py-12 pb-36 pt-12 text-center md:w-[1040px] md:py-24 md:tracking-wide '>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}

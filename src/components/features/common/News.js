@@ -34,7 +34,7 @@ const NewsSection = () => {
   }
 
   return (
-    <div className='flex justify-between bg-primary-pink xl:p-20'>
+    <div className='flex justify-between bg-primary-pink xl:p-[140px]'>
       {!isMobile && (
         <motion.div
           variants={animate.scrollFadeInFromLeft}
@@ -49,7 +49,7 @@ const NewsSection = () => {
           </div>
         </motion.div>
       )}
-      <div className='mx-auto min-w-[85%] max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='min-w-[85%] max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}
