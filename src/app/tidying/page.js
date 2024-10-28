@@ -5,7 +5,7 @@ import Link from 'next/link'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 import VoiceCard from '@/components/features/common/VoiceCard'
-import voices from '@/data/voiceMineral.json'
+import voices from '@/data/voiceTidying.json'
 import useAnimation from '@/hooks/useAnimation'
 import tidyingHeroImage from '@/public/images/tidyingHero.png'
 
@@ -58,16 +58,16 @@ const TidyingPage = () => {
           <h2>このような方へ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
-        <div className='mx-auto mt-24 flex w-[90%] flex-col items-center gap-12 xl:w-[1040px] xl:items-start xl:gap-24'>
+        <div className='mx-auto mt-12 flex w-[90%] flex-col items-center gap-4 xl:w-[1040px] xl:items-start xl:gap-12'>
           <motion.div
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
             viewport={animate.scrollFadeInFromBottom.viewport}
-            className='flex flex-col items-center gap-4 xl:flex-row'
+            className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:w-fit'
           >
-            <h2>01</h2>
-            <h4 className='text-center xl:text-start'>
+            <h2 className='text-md md:text-2xl'>01</h2>
+            <h4 className='text-start text-sm md:text-md'>
               ごちゃごちゃした部屋を見て<br></br>疲れが酷くなっていると感じる
             </h4>
           </motion.div>
@@ -76,10 +76,10 @@ const TidyingPage = () => {
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
             viewport={animate.scrollFadeInFromBottom.viewport}
-            className='flex flex-col items-center gap-4 xl:mx-auto xl:flex-row'
+            className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:mx-auto xl:w-fit'
           >
-            <h2>02</h2>
-            <h4 className='text-center xl:text-start'>
+            <h2 className='text-md md:text-2xl'>02</h2>
+            <h4 className='text-start text-sm md:text-md'>
               人を呼びたいけれど<br></br>呼べるような状態ではない
             </h4>
           </motion.div>
@@ -88,10 +88,10 @@ const TidyingPage = () => {
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
             viewport={animate.scrollFadeInFromBottom.viewport}
-            className='flex flex-col items-center gap-4 xl:ml-auto xl:flex-row'
+            className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:ml-auto xl:w-fit'
           >
-            <h2>03</h2>
-            <h4 className='text-center xl:text-start'>
+            <h2 className='text-md md:text-2xl'>03</h2>
+            <h4 className='text-start text-sm md:text-md'>
               片付けたいけれど、どこから<br></br>手をつけていいかわからない
             </h4>
           </motion.div>
@@ -109,9 +109,9 @@ const TidyingPage = () => {
           <h2>お客様の声</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
-        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-12 md:grid-cols-1 xl:w-[1040px]'>
+        <div className='mx-auto mt-12 grid gap-6 md:w-[90%] md:grid-cols-2 xl:w-[1040px]'>
           {voices.map((voice, i) => (
-            <VoiceCard key={i} name={voice.name} info={voice.info} voice={voice.voice} index={i} />
+            <VoiceCard key={i} voice={voice} />
           ))}
         </div>
         <motion.div
