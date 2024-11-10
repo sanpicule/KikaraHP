@@ -244,7 +244,7 @@ const MineralDetail = () => {
           ></motion.div>
         </div>
       </div>
-      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-28 md:tracking-wide'>
         <motion.div
           className=' flex flex-col items-center gap-2'
           variants={animate.scrollFadeInFromBottom}
@@ -333,6 +333,19 @@ const MineralDetail = () => {
             <p className='md:h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
           </motion.div>
         </div>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='mb-12 flex flex-col items-center justify-center'
+        >
+          <div className='mt-8 flex flex-col justify-center gap-2 md:flex-row'>
+            <SnsLongBtn snsId='facebook' iconSize={18} />
+            <SnsLongBtn snsId='instagram' iconSize={18} />
+          </div>
+          <p className='mt-4 text-center'>開催情報は上記SNSアカウントにてをご確認ください。</p>
+        </motion.div>
       </div>
       <OtherServices decoration={false} />
     </div>
