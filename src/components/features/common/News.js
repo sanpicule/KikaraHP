@@ -25,10 +25,8 @@ const NewsSection = () => {
       .eq('user_id', userId)
       .eq('public', true)
       .order('created_at', { ascending: false })
-    if (error) {
-      // Use a logging library or remove the console statement
-      // console.error('Error fetching posts:', error) // This line is causing the error
-    } else {
+      .limit(3)
+    if (!error) {
       setPosts(data)
     }
   }
@@ -72,10 +70,10 @@ const NewsSection = () => {
             {posts.map((post) => (
               <div
                 key={post.id}
-                className='transition-bg cursor-pointer gap-12 border-b border-kikara-white px-4 py-4 duration-500 hover:bg-kikara-white md:px-8 md:py-8'
+                className='transition-bg cursor-pointer gap-12 border-b border-kikara-white duration-500 hover:bg-kikara-white'
               >
                 <Link href={`/news/${post.id}`}>
-                  <div className='flex items-center justify-between'>
+                  <div className='flex items-center justify-between px-4 py-4 md:px-8 md:py-8'>
                     <div className='flex origin-left flex-col gap-1 md:flex-row md:gap-4'>
                       <div className='mt-2 flex items-center gap-2 text-start md:flex-row md:items-center md:gap-4'>
                         <p className='text-xs tracking-normal md:text-sm'>
@@ -109,6 +107,14 @@ const NewsSection = () => {
                 </Link>
               </div>
             ))}
+            <Link href={'/news'}>
+              <div className='mt-12 text-center'>
+                <div className='group relative inline-block w-[200px] overflow-hidden border border-secondary-brown bg-white text-center leading-[50px] text-secondary-brown no-underline transition-colors duration-500 hover:text-white md:w-[300px] md:leading-[60px]'>
+                  <p className='relative z-10'>View More</p>
+                  <div className='absolute inset-0 origin-right scale-x-0 transform bg-secondary-brown transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100'></div>
+                </div>
+              </div>
+            </Link>
           </motion.div>
         ) : (
           <motion.div

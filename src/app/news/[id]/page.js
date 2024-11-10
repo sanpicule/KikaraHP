@@ -23,7 +23,7 @@ export default async function Page({ params }) {
   }
 
   return (
-    <div className='mt-[85px] bg-primary-pink py-12'>
+    <div className='mt-[85px] py-12'>
       <div className='mx-auto mt-4 max-w-[90%] rounded-xl p-4 text-center shadow-sm md:mt-8 md:w-[1040px] md:p-8 md:tracking-wide'>
         <p className='text-start text-xs'>{newsItem?.created_at.split('T')[0].replace(/-/g, '.')}</p>
         <h1 className='text-start text-md font-bold md:text-3xl'>{newsItem?.title}</h1>
