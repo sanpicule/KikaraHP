@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import CommonButton from '@/components/features/common/Buttons/CommonButton'
 import FlowRightArrow from '@/components/features/common/FlowRightArrow'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
@@ -317,15 +318,11 @@ const TidyingDetail = () => {
             viewport={animate.scrollFadeInFromBottom.viewport}
             className='text-center'
           >
-            <a
-              href='https://totonou-kikara.com/index.php?Form'
-              target='_blank'
-              className='group relative mx-auto inline-block w-full border bg-secondary-brown-light py-4 text-kikara-white no-underline outline-none transition-all duration-300 hover:bg-secondary-brown md:w-1/3'
-            >
-              <p>予約はこちらから</p>
-              <span className='absolute -left-2 -top-2 h-4 w-4 border-l-2 border-t-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[129%] group-hover:w-[105%] group-hover:border-secondary-brown'></span>
-              <span className='absolute -bottom-2 -right-2 h-4 w-4 border-b-2 border-r-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[128%] group-hover:w-[105%] group-hover:border-secondary-brown'></span>
-            </a>
+            <CommonButton
+              url={'https://totonou-kikara.com/index.php?Form'}
+              buttonText={'予約はこちらから'}
+              target={true}
+            />
           </motion.div>
         </div>
       </div>

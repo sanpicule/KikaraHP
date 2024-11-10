@@ -11,7 +11,7 @@ import service3bg from '@/public/images/service3bg.png'
 import serviceHeadNumber1 from '@/public/images/serviceHeadNumber1.png'
 import serviceHeadNumber2 from '@/public/images/serviceHeadNumber2.png'
 import serviceHeadNumber3 from '@/public/images/serviceHeadNumber3.png'
-import HomeDetailButton from './HomeDetailButton'
+import CommonButton from '../common/Buttons/CommonButton'
 
 const ServiceIntroductionPages = () => {
   const animate = useAnimation()
@@ -91,12 +91,14 @@ const ServiceIntroductionPages = () => {
                 initial={animate.scrollFadeInFromLeft.initial}
                 whileInView={animate.scrollFadeInFromLeft.whileInView}
                 viewport={animate.scrollFadeInFromLeft.viewport}
-                className='absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'
+                className='absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 text-end shadow-2xl md:px-10 lg:w-[600px]'
               >
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   野菜や果物が持つ酵母菌にミネラルを入れてフレッシュなものとはまた違う栄養価のあるドリンクを手作りします。
                 </p>
-                <HomeDetailButton url={'/mineral'} />
+                <div className='inline-block'>
+                  <CommonButton url={'/mineral'} buttonText={'詳細を確認する'} />
+                </div>
               </motion.div>
             </div>
           </div>
@@ -145,12 +147,14 @@ const ServiceIntroductionPages = () => {
                 initial={animate.scrollFadeInFromRight.initial}
                 whileInView={animate.scrollFadeInFromRight.whileInView}
                 viewport={animate.scrollFadeInFromRight.viewport}
-                className='absolute top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'
+                className='absolute top-1/2 rounded-xl bg-white px-4 py-6 text-end shadow-2xl md:px-10 lg:w-[600px]'
               >
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   暮らしの空間を心地良く、物の存在が意識できる生活に。あなたの理想を現実にしていく最初の一歩を一緒に歩んでいきましょう。
                 </p>
-                <HomeDetailButton url={'/tidying'} />
+                <div className='inline-block'>
+                  <CommonButton url={'/tidying'} buttonText={'詳細を確認する'} />
+                </div>
               </motion.div>
             </div>
           </div>
@@ -198,12 +202,14 @@ const ServiceIntroductionPages = () => {
                 initial={animate.scrollFadeInFromLeft.initial}
                 whileInView={animate.scrollFadeInFromLeft.whileInView}
                 viewport={animate.scrollFadeInFromLeft.viewport}
-                className='absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 shadow-2xl md:px-10 lg:w-[600px]'
+                className='absolute right-0 top-1/2 rounded-xl bg-white px-4 py-6 text-end shadow-2xl md:px-10 lg:w-[600px]'
               >
                 <p className='lg:text-lg text-left text-sm leading-10'>
                   人間には自然浄化力があります。手を当てて天からのエネルギーを身体を通して流し本来持っている自然治癒力を目覚めさせていきます。
                 </p>
-                <HomeDetailButton url={'/reiki'} />
+                <div className='inline-block'>
+                  <CommonButton url={'/reiki'} buttonText={'詳細を確認する'} />
+                </div>
               </motion.div>
             </div>
           </div>

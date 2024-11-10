@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
+import CommonButton from '@/components/features/common/Buttons/CommonButton'
 import OtherServices from '@/components/features/common/OtherServices'
 import ServicePageHero from '@/components/features/common/ServicePageHero'
 import FeatureCard from '@/components/features/mineral/FeatureCard'
@@ -149,15 +149,9 @@ const MineralPage = () => {
           initial={animate.scrollFadeInFromBottom.initial}
           whileInView={animate.scrollFadeInFromBottom.whileInView}
           viewport={animate.scrollFadeInFromBottom.viewport}
+          className='mt-12'
         >
-          <Link
-            href={'/mineral/detail'}
-            className='group relative mt-12 inline-block border bg-secondary-brown-light px-24 py-4 text-kikara-white no-underline outline-none transition-all duration-300 hover:bg-secondary-brown'
-          >
-            詳細を確認する
-            <span className='absolute -left-2 -top-2 h-4 w-4 border-l-2 border-t-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[129%] group-hover:w-[104.5%] group-hover:border-secondary-brown'></span>
-            <span className='absolute -bottom-2 -right-2 h-4 w-4 border-b-2 border-r-2 border-secondary-brown-light transition-all duration-300 group-hover:h-[129%] group-hover:w-[104.5%] group-hover:border-secondary-brown'></span>
-          </Link>
+          <CommonButton url={'/mineral/detail'} buttonText={'詳細を確認する'} />
         </motion.div>
       </div>
       <OtherServices />
