@@ -333,8 +333,8 @@ const MineralDetail = () => {
             <p className='md:h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
           </motion.div>
         </div>
-        <div className='flex flex-col items-center justify-center'>
-          <div className='mt-8 flex justify-center gap-2'>
+        <div className='mb-12 flex flex-col items-center justify-center'>
+          <div className='mt-8 flex flex-col justify-center gap-2 md:flex-row'>
             <SnsLongBtn snsId='facebook' iconSize={18} />
             <SnsLongBtn snsId='instagram' iconSize={18} />
           </div>
