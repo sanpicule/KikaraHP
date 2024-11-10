@@ -24,7 +24,7 @@ const ConceptSection = () => {
           </div>
         </motion.div>
       )}
-      <div className='max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}
@@ -41,16 +41,29 @@ const ConceptSection = () => {
           initial={animate.scrollFadeInFromBottom.initial}
           whileInView={animate.scrollFadeInFromBottom.whileInView}
           viewport={animate.scrollFadeInFromBottom.viewport}
-          className='pt-10'
+          className='mt-12 md:mt-24'
         >
-          <p className='mx-auto w-full text-sm leading-10 tracking-normal md:tracking-wide lg:text-xl'>
-            kikaraとは...<br></br>そのままの姿でその者らしくただソコニイル<br></br>木が好きだった。<br></br>
-            シンプルな物、自然素材な物を集めた<br></br>木からはじまった私を表現する場所<br></br>
-            2004年自宅の庭でガーデンショップkikara<br></br>を静岡にオープン。<br></br>
-            野に咲く小花や育て易い植物を集めて自然のある暮らしを提案。<br></br>生活雑貨も麻や綿素材を中心に揃え<br></br>
-            最終目的の自然食品の販売へと繋げる。<br></br>食べ物で身体と精神は創られていく。<br></br>
-            一番シンプルな事を見つけるきっかけになれたら
-          </p>
+          {isMobile ? (
+            <>
+              <p className='text-md font-bold'>「そのままの姿で、自然と共に」</p>
+              <p className='mx-auto mt-12 text-sm leading-8 tracking-normal md:tracking-wide'>
+                Kikaraは、自然の美しさとシンプルな暮らしを大切にする場所です。2004年に静岡で開店し、植物や自然素材の生活雑貨、自然食品を通じて、心地よい自然を感じられる空間を提案しています。ここで本来の自分らしさを見つけるきっかけになればと思っています。
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className='font-bold'>「そのままの姿で、自然と共に」</h2>
+              <p className='mx-auto mt-12 text-md leading-10 tracking-normal md:tracking-wide'>
+                私たちが大切にするのは、ただそこにある自然の美しさや、人が本来の自分らしくいられる場所。
+                2004年、静岡の自宅の庭でガーデンショップ「Kikara」をオープンしました。
+                木々と共にある暮らしを愛し、シンプルで自然素材にこだわったアイテムを集めています。
+                野に咲く小花や育てやすい植物を中心に、自然を感じられる空間を提案。
+                麻や綿の生活雑貨、そして心と体に優しい自然食品を通じ、
+                シンプルな生活の大切さをお届けできればと思います。 Kikaraは、自然が創り出す心地よさを身近に感じ、
+                ありのままの自分を見つけるきっかけになる場所でありたいと考えています。
+              </p>
+            </>
+          )}
         </motion.div>
       </div>
       {!isMobile && (

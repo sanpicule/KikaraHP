@@ -92,9 +92,9 @@ const MineralDetail = () => {
           <h2>お客様の声</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
-        <div className='mx-auto mt-12 grid w-[90%] grid-cols-1 gap-12 md:grid-cols-1 xl:w-[1040px]'>
+        <div className='mx-auto mt-12 grid gap-6 md:w-[90%] md:grid-cols-2 xl:w-[1040px]'>
           {voices.map((voice, i) => (
-            <VoiceCard key={i} name={voice.name} info={voice.info} voice={voice.voice} index={i} />
+            <VoiceCard key={i} voice={voice} />
           ))}
         </div>
       </div>
@@ -112,55 +112,55 @@ const MineralDetail = () => {
             <div className='h-0.1 w-12 bg-secondary-brown'></div>
           </motion.div>
           <motion.div
-            className='mt-12 rounded-xl bg-kikara-white px-2 py-12 shadow-2xl xl:px-44'
+            className='mt-12 rounded-md bg-kikara-white px-2 py-12 shadow-2xl md:px-24 xl:px-44'
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
             viewport={animate.scrollFadeInFromBottom.viewport}
           >
-            <motion.div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-8 xl:flex-row xl:justify-between xl:p-4'>
+            <motion.div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-8 md:flex-row md:justify-between md:p-4'>
               <p className='rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>講師</p>
-              <div className='flex flex-col items-center justify-center xl:w-1/2 xl:items-start'>
+              <div className='flex flex-col items-center justify-center md:w-1/2 md:items-start'>
                 <Image src={profileImage} alt='' width={100} height={100} />
                 <h2 className='mt-4'>檜皮 園江</h2>
               </div>
             </motion.div>
-            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 xl:flex-row xl:justify-between xl:p-4'>
+            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 md:flex-row md:justify-between md:p-4'>
               <p className='inline-block rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>場所</p>
-              <div className='text-center xl:w-1/2 xl:text-start'>
+              <div className='text-center md:w-1/2 md:text-start'>
                 <p>
                   <span className='text-2xl'>Kikara</span>で行っています。
                 </p>
                 <p className='mt-2'>※ご予約を頂いた方には詳細な住所をお知らせします</p>
                 <p className='mt-4'>
-                  <span className='text-xl text-secondary-brown-light'>出張教室</span>も承ってます！{' '}
+                  <span className='text-md text-secondary-brown-light'>出張教室</span>も承ってます！{' '}
                 </p>
               </div>
             </div>
-            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 xl:flex-row xl:justify-between xl:p-4'>
+            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 md:flex-row md:justify-between md:p-4'>
               <p className='inline-block rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>持ち物</p>
-              <ul className='text-xl xl:w-1/2'>
+              <ul className='text-md md:w-1/2'>
                 <li>包丁</li>
                 <li>まな板</li>
                 <li>エプロン</li>
                 <li>はかり</li>
               </ul>
             </div>
-            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 xl:flex-row xl:justify-between xl:p-4'>
+            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 md:flex-row md:justify-between md:p-4'>
               <p className='inline-block rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>参加費</p>
-              <div className='ml-8 xl:w-1/2'>
+              <div className='ml-8 md:w-1/2'>
                 <h4>
-                  <span className='text-2xl tracking-normal text-kikara-chip-red xl:text-4xl'>4,000円</span>/1回(税込)
+                  <span className='text-2xl tracking-normal text-kikara-chip-red md:text-4xl'>4,000円</span>/1回(税込)
                 </h4>
                 <p className='mt-2 tracking-normal'>※当日現金払いとなります</p>
                 <p className='mt-2 tracking-normal'>※出張教室も同じ参加費です</p>
               </div>
             </div>
-            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 xl:flex-row xl:justify-between xl:p-4'>
+            <div className='flex flex-col items-center justify-center gap-8 border-b border-gray-300 px-4 py-12 md:flex-row md:justify-between md:p-4'>
               <p className='inline-block rounded-full bg-secondary-brown px-8 py-2 text-kikara-white'>申込方法</p>
-              <div className='xl:ml-8 xl:w-1/2'>
-                <div className='flex flex-col items-center justify-start xl:items-start'>
-                  <p className='text-center xl:text-left'>
+              <div className='md:ml-8 md:w-1/2'>
+                <div className='flex flex-col items-center justify-start md:items-start'>
+                  <p className='text-center md:text-left'>
                     InstagramもしくはFacebookのダイレクトメッセージにてご連絡ください。
                   </p>
                   <div className='mt-8 flex flex-col justify-start gap-2'>
@@ -256,9 +256,9 @@ const MineralDetail = () => {
           <h2>参加までの流れ</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
-        <div className='mt-24 flex h-full w-full flex-col items-center justify-between gap-12 tracking-normal xl:flex-row xl:gap-0'>
+        <div className='mt-24 flex h-full w-full flex-col items-center justify-between gap-12 tracking-normal md:flex-row md:gap-0'>
           <motion.div
-            className=' relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'
+            className=' relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 md:w-full'
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
@@ -273,11 +273,11 @@ const MineralDetail = () => {
             />
             <h3>開催情報</h3>
             <Image src={infoImage} alt='' width={150} height={150} />
-            <p className='xl:h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
+            <p className='md:h-full'>当サイトのNewsまたはInstagram、Facebookをご確認ください。</p>
           </motion.div>
           {!isMobile && <FlowRightArrow />}
           <motion.div
-            className='relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'
+            className='relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 md:w-full'
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
@@ -292,11 +292,11 @@ const MineralDetail = () => {
             />
             <h3>お申し込み</h3>
             <Image src={replyImage} alt='' width={150} height={150} />
-            <p className='xl:h-full'>Facebook、Instagramからお申し込みいただけます。</p>
+            <p className='md:h-full'>Facebook、Instagramからお申し込みいただけます。</p>
           </motion.div>
           {!isMobile && <FlowRightArrow />}
           <motion.div
-            className='relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'
+            className='relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 md:w-full'
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
@@ -311,11 +311,11 @@ const MineralDetail = () => {
             />
             <h3>持ち物準備</h3>
             <Image src={preparationImage} alt='' width={150} height={150} />
-            <p className='xl:h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
+            <p className='md:h-full'>ご持参いただきたいものがあります。教室詳細をご確認ください。</p>
           </motion.div>
           {!isMobile && <FlowRightArrow />}
           <motion.div
-            className=' relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 xl:w-full'
+            className=' relative flex h-[450px] w-[90%] flex-1 flex-col items-center justify-center gap-8 rounded-3xl px-4 py-12 md:w-full'
             variants={animate.scrollFadeInFromBottom}
             initial={animate.scrollFadeInFromBottom.initial}
             whileInView={animate.scrollFadeInFromBottom.whileInView}
@@ -330,7 +330,7 @@ const MineralDetail = () => {
             />
             <h3>教室に参加</h3>
             <Image src={classImage} alt='' width={150} height={150} />
-            <p className='xl:h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
+            <p className='md:h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
           </motion.div>
         </div>
       </div>

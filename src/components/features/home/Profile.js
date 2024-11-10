@@ -26,7 +26,7 @@ const ProfileSection = () => {
           </div>
         </motion.div>
       )}
-      <div className='max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}
@@ -43,7 +43,7 @@ const ProfileSection = () => {
           initial={animate.scrollFadeInFromBottom.initial}
           whileInView={animate.scrollFadeInFromBottom.whileInView}
           viewport={animate.scrollFadeInFromBottom.viewport}
-          className='mt-12 flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-primary-pink px-8 py-8 shadow-2xl md:gap-12 lg:flex-row lg:gap-24 lg:px-24 xl:gap-36'
+          className='mt-12 flex w-full flex-col items-center justify-center gap-4 rounded-xl bg-primary-pink px-8 py-8 shadow-2xl md:flex-row md:gap-24 lg:gap-48 lg:px-24 xl:gap-36'
         >
           <Image
             src={profile}
@@ -53,11 +53,11 @@ const ProfileSection = () => {
             className='h-[200px] w-[200px] rounded-[50%] bg-secondary-brown object-cover lg:h-[250px] lg:w-[250px]'
           />
           <div className='text-secondary-brown'>
-            <div className='text-center lg:text-start'>
-              <p className='text-[12px]'>Hikawa Sonoe</p>
+            <div className='text-start'>
+              <p className='text-xs tracking-wide'>Hikawa Sonoe</p>
               <h1 className='xl:text-[50px]'>檜皮 園江</h1>
             </div>
-            <h4 className='mt-6 text-center text-sm leading-8 tracking-wide md:text-base lg:text-start lg:text-xl'>
+            <h4 className='mt-6 text-start text-sm leading-8 tracking-wide md:text-base lg:text-xl'>
               1965年 8月 26日<br></br>
               静岡県生まれ<br></br>
               東京暮らしを経て、<br></br>
