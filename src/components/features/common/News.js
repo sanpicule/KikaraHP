@@ -109,8 +109,8 @@ const NewsSection = () => {
             ))}
             <Link href={'/news'}>
               <div className='mt-12 text-center'>
-                <div className='group relative inline-block w-[300px] overflow-hidden border border-secondary-brown bg-white text-center leading-[60px] text-secondary-brown no-underline transition-colors duration-500 hover:text-white'>
-                  <span className='relative z-10'>View More</span>
+                <div className='group relative inline-block w-[200px] overflow-hidden border border-secondary-brown bg-white text-center leading-[50px] text-secondary-brown no-underline transition-colors duration-500 hover:text-white md:w-[300px] md:leading-[60px]'>
+                  <p className='relative z-10'>View More</p>
                   <div className='absolute inset-0 origin-right scale-x-0 transform bg-secondary-brown transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100'></div>
                 </div>
               </div>

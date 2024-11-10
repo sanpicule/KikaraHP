@@ -60,14 +60,14 @@ const NewsListPage = () => {
   return (
     <div className='relative mt-[85px] h-4/5 w-full'>
       {fetching && (
-        <div className='p-12'>
-          <h1>お知らせ一覧</h1>
-          <div className='mb-8 mt-8 flex justify-center gap-4'>
+        <div className='px-4 py-8 md:p-12'>
+          <h2>お知らせ一覧</h2>
+          <div className='mb-8 mt-8 flex justify-center gap-2 md:gap-4'>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
               <button
                 key={pageNumber}
                 onClick={() => handlePageChange(pageNumber)}
-                className={`h-12 w-12 rounded-[50%] border ${
+                className={`h-8 w-8 rounded-[50%] border md:h-10 md:w-10 ${
                   currentPage === pageNumber
                     ? 'bg-secondary-brown-dark bg-secondary-brown-light text-kikara-white'
                     : 'hover:opacity-50'
