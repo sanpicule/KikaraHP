@@ -34,7 +34,7 @@ const NewsSection = () => {
   }
 
   return (
-    <div className='flex justify-between bg-primary-pink xl:p-20'>
+    <div className='flex justify-center bg-primary-pink xl:justify-between xl:p-[140px]'>
       {!isMobile && (
         <motion.div
           variants={animate.scrollFadeInFromLeft}

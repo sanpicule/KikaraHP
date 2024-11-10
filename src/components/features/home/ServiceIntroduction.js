@@ -17,7 +17,7 @@ const ServiceIntroductionPages = () => {
   const animate = useAnimation()
   const { isMobile } = useMediaQuery()
   return (
-    <div className='flex justify-around xl:p-[140px]'>
+    <div className='flex justify-center xl:justify-between xl:p-[140px]'>
       {!isMobile && (
         <motion.div
           variants={animate.scrollFadeInFromRight}

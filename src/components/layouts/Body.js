@@ -17,7 +17,7 @@ const Body = ({ children }) => {
   return (
     <body className={`font-sans ${!isHidden && 'overflow-hidden'}`}>
       <Header />
-      <main className='bg-kikara-white'>{children}</main>
+      <main className='overflow-x-hidden bg-kikara-white'>{children}</main>
       <Footer />
     </body>
   )
