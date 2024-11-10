@@ -333,13 +333,19 @@ const MineralDetail = () => {
             <p className='md:h-full'>Kikaraにて開催しております。アクセスはこちらからご確認ください。</p>
           </motion.div>
         </div>
-        <div className='mb-12 flex flex-col items-center justify-center'>
+        <motion.div
+          variants={animate.scrollFadeInFromBottom}
+          initial={animate.scrollFadeInFromBottom.initial}
+          whileInView={animate.scrollFadeInFromBottom.whileInView}
+          viewport={animate.scrollFadeInFromBottom.viewport}
+          className='mb-12 flex flex-col items-center justify-center'
+        >
           <div className='mt-8 flex flex-col justify-center gap-2 md:flex-row'>
             <SnsLongBtn snsId='facebook' iconSize={18} />
             <SnsLongBtn snsId='instagram' iconSize={18} />
           </div>
           <p className='mt-4 text-center'>開催情報は上記SNSアカウントにてをご確認ください。</p>
-        </div>
+        </motion.div>
       </div>
       <OtherServices decoration={false} />
     </div>
