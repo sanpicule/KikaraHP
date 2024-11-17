@@ -5,7 +5,7 @@ export const metadata = {
 }
 export default function NotFound() {
   return (
-    <div className='m-auto flex h-screen w-[90%] flex-col items-center justify-center bg-white text-center text-black md:w-full'>
+    <div className='m-auto mt-[85px] flex w-[90%] flex-col items-center justify-center bg-white py-12 text-center text-black md:w-full'>
       <div className="items-center font-[system-ui,_'Segoe_UI',_Roboto,_Helvetica,_Arial,_sans-serif,_'Apple_Color_Emoji',_'Segoe_UI_Emoji'] leading-[49px] md:flex">
         <h1 className='border-gray-300 text-2xl font-medium md:mr-6 md:border-r md:pr-6'>404</h1>
         <div>
