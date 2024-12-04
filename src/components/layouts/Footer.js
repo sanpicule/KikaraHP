@@ -23,8 +23,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='mt-4 flex justify-center sm:justify-start'>
-            <div className='flex gap-12 sm:hidden'>
+          <div className='mt-4 flex justify-center md:justify-start'>
+            <div className='flex gap-12 md:hidden'>
               <SnsIconBtn snsId='facebook' />
               <SnsIconBtn snsId='instagram' />
             </div>
@@ -43,18 +43,28 @@ const Footer = () => {
       <div className='pt-12 text-center'>
         <div className='flex-col justify-center gap-12 text-sm sm:flex sm:flex-row'>
           <div>
-            <a href='https://totonou-kikara.com/index.php?Law' target='_blank' rel='noopener noreferrer'>
+            <a
+              href='https://totonou-kikara.com/index.php?Privacypolicy'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='transition duration-300 hover:opacity-35'
+            >
               プライバシーポリシー
             </a>
           </div>
           <div>
-            <a href='https://totonou-kikara.com/index.php?Privacypolicy' target='_blank' rel='noopener noreferrer'>
+            <a
+              href='https://totonou-kikara.com/index.php?Law'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='transition duration-300 hover:opacity-35'
+            >
               特定商取引法
             </a>
           </div>
           <div>
             {/* TODO: 適切なURLを設定 */}
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+            <a href='/sitemap' rel='noopener noreferrer' className='transition duration-300 hover:opacity-35'>
               サイトマップ
             </a>
           </div>

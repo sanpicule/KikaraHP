@@ -20,7 +20,7 @@ const TidyingPage = () => {
         whileInView={animate.scrollFadeIn.whileInView}
         viewport={animate.scrollFadeIn.viewport}
       >
-        <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・手伝い'} />
+        <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝い'} />
       </motion.div>
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
@@ -31,7 +31,7 @@ const TidyingPage = () => {
           className='flex flex-col items-center gap-2'
         >
           <p className='section_sub'>about</p>
-          <h2>片付け・手伝いとは</h2>
+          <h2>片付け・お手伝いとは</h2>
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
         <motion.div
