@@ -1,0 +1,65 @@
+[
+  {
+    "title": "ホーム",
+    "items": [
+      {
+        "subTitle": "ホーム",
+        "subLink": "/",
+        "subItems": []
+      }
+    ]
+  },
+  {
+    "title": "サービス一覧",
+    "items": [
+      {
+        "subTitle": "ミネラル水",
+        "subLink": "/mineral",
+        "subItems": [
+          {
+            "menu": "ミネラル水詳細ページ",
+            "menuLink": "/mineral/detail"
+          }
+        ]
+      },
+      {
+        "subTitle": "片付け・お手伝い",
+        "subLink": "/tidying",
+        "subItems": [
+          {
+            "menu": "片付け・お手伝い詳細ページ",
+            "menuLink": "/tidying/detail"
+          }
+        ]
+      },
+      {
+        "subTitle": "直傳靈氣",
+        "subLink": "/reiki",
+        "subItems": []
+      }
+    ]
+  },
+  {
+    "title": "お問い合わせ",
+    "items": [
+      {
+        "subTitle": "お問い合わせ",
+        "subLink": "/contact",
+        "subItems": [
+          {
+            "menu": "プライバシーポリシー",
+            "menuLink": "https://totonou-kikara.com/index.php?Privacypolicy"
+          },
+          {
+            "menu": "特定商取引法",
+            "menuLink": "https://totonou-kikara.com/index.php?Law"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "SNS",
+    "items": []
+  }
+]
