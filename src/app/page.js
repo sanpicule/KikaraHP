@@ -18,7 +18,7 @@ export default function Home() {
       behavior: 'smooth',
     })
   }, [])
-  const { setIsHidden, setIsDisplay } = useStore()
+  const { setIsHomeAnimating, setIsHomeAnimationCompleted } = useStore()
 
   return (
     <div className='text-center'>
@@ -31,11 +31,11 @@ export default function Home() {
           },
         }}
         transition={{
-          duration: 1.5,
+          duration: 3,
           times: [0, 0.75, 1],
         }}
         onAnimationComplete={() => {
-          setIsHidden(true), setIsDisplay(true)
+          setIsHomeAnimating(true), setIsHomeAnimationCompleted(true)
         }}
       >
         <Image
@@ -53,7 +53,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            duration: 1.5,
+            duration: 3,
           }}
         >
           <p className='text-xs md:text-md'>くらし・ととのう・さろん</p>

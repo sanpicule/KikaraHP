@@ -10,7 +10,7 @@ import mainHeroImage from '@/public/images/mainHeroImage.png'
 import useStore from '@/store/store'
 
 const HeroSection = () => {
-  const { isDisplay } = useStore()
+  const { isHomeAnimating } = useStore()
   const animate = useAnimate()
 
   return (
@@ -26,7 +26,7 @@ const HeroSection = () => {
           filter: 'brightness(0.3)',
         }}
       />
-      {isDisplay && (
+      {isHomeAnimating && (
         <>
           <motion.div
             variants={animate.scrollFadeIn}

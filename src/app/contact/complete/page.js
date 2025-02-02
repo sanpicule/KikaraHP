@@ -1,16 +1,25 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Stepper from '@/components/features/contact/Stepper'
+import useAnimation from '@/hooks/useAnimation'
 
 const CompletePage = () => {
   const router = useRouter()
   const handleTop = () => {
     router.push('/')
   }
+  const animate = useAnimation()
   return (
-    <div className='mx-auto max-w-[90%] py-36 md:tracking-wide'>
+    <motion.div
+      variants={animate.scrollFadeIn}
+      initial={animate.scrollFadeIn.initial}
+      whileInView={animate.scrollFadeIn.whileInView}
+      viewport={animate.scrollFadeIn.viewport}
+      className='mx-auto max-w-[90%] py-36 md:tracking-wide'
+    >
       <Stepper step1={true} step2={true} step3={true} />
       <h4 className='mt-24 text-center'>送信完了しました！</h4>
       <div className='mt-12 text-center'>
@@ -22,7 +31,7 @@ const CompletePage = () => {
           TOPに戻る
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

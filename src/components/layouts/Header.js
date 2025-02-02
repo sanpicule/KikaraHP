@@ -16,7 +16,7 @@ import useStore from '@/store/store'
 
 const Header = () => {
   const animate = useAnimation()
-  const { isHidden, isDisplay, setIsDisplay, setIsHidden } = useStore()
+  const { isHomeAnimating, isHomeAnimationCompleted, setIsHomeAnimating, setIsHomeAnimationCompleted } = useStore()
   const [isClick, setIsClick] = useState(false)
   const [isImageChanging, setIsImageChanging] = useState(false)
   const pathname = usePathname()
@@ -25,14 +25,14 @@ const Header = () => {
   const [hamburgerColor, setHamburgerColor] = useState('kikara-white')
   useEffect(() => {
     if (pathname === '/') {
-      setIsDisplay(false)
+      setIsHomeAnimating(false)
       setTimeout(() => {
-        setIsDisplay(true)
+        setIsHomeAnimating(true)
       }, 2000)
     } else {
       setTimeout(() => {
-        setIsDisplay(true)
-        setIsHidden(true)
+        setIsHomeAnimating(true)
+        setIsHomeAnimationCompleted(true)
       }, 800)
     }
     const handleScroll = () => {
@@ -47,7 +47,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [pathname, setIsDisplay, setIsHidden])
+  }, [pathname, setIsHomeAnimating, setIsHomeAnimationCompleted])
 
   // ハンバーガーメニュー内のホバーされたリストに応じて画像を変更する
   const [displayedImage, setDisplayedImage] = useState(serviceMineral)
@@ -81,7 +81,7 @@ const Header = () => {
   }
   return (
     <div
-      className={`fixed right-0 top-0 z-50 w-screen transition-transform duration-500 ${pathname === '/' && '!w-auto'} ${scrollDirection === 'down' && pathname !== '/' ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed right-0 top-0 z-40 w-screen transition-transform duration-500 ${pathname === '/' && '!w-auto'} ${scrollDirection === 'down' && pathname !== '/' && !isClick ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div
         className={`flex h-[85px] items-center px-4 md:px-12 ${pathname === '/' && 'h-auto pt-4'} ${pathname !== '/' && 'bg-primary-pink-light'}`}
@@ -94,7 +94,7 @@ const Header = () => {
             </Link>
           </div>
         )}
-        {isDisplay && isHidden && (
+        {isHomeAnimating && isHomeAnimationCompleted && (
           <motion.div
             variants={animate.scrollFadeIn}
             initial={animate.scrollFadeIn.initial}
