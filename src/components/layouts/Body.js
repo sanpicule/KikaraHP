@@ -2,7 +2,7 @@
 
 import { AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import { useMemo } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import '@/app/globals.css'
 import Footer from './Footer'
 import Header from './Header'
@@ -10,12 +10,26 @@ import PageAnimation from './PageAnimation'
 
 const Body = ({ children }) => {
   const pathname = usePathname()
+  const [shouldAnimate, setShouldAnimate] = useState(true)
 
   // アニメーションを適用しないページのリスト
   const noAnimationPages = useMemo(() => ['/contact', '/contact/confirm', '/contact/complete'], [])
 
-  // アニメーションを適用するかどうかの判定
-  const shouldAnimate = useMemo(() => !noAnimationPages.includes(pathname), [pathname, noAnimationPages])
+  useEffect(() => {
+    const handlePopState = () => {
+      setShouldAnimate(false) // ブラウザバック時はアニメーション無効
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [])
+
+  useEffect(() => {
+    setShouldAnimate(!noAnimationPages.includes(pathname)) // 通常の遷移時はアニメーション有効
+  }, [pathname, noAnimationPages])
+
   const isTopPage = useMemo(() => pathname === '/', [pathname])
 
   return (
