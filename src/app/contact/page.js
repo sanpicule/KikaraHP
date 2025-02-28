@@ -1,15 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Stepper from '@/components/features/contact/Stepper'
 import { privacyPolicyText } from '@/data/privacyPolicy.js'
-import useAnimation from '@/hooks/useAnimation'
 
 const ContactPage = () => {
-  const animate = useAnimation()
   const {
     register,
     handleSubmit,
@@ -29,13 +26,7 @@ const ContactPage = () => {
     router.push(`/contact/confirm?${queryString}`)
   }
   return (
-    <motion.div
-      className='mx-auto max-w-[90%] py-36 md:tracking-wide'
-      variants={animate.scrollFadeIn}
-      initial={animate.scrollFadeIn.initial}
-      whileInView={animate.scrollFadeIn.whileInView}
-      viewport={animate.scrollFadeIn.viewport}
-    >
+    <div className='mx-auto max-w-[90%] py-36 md:tracking-wide'>
       <Stepper step1={true} />
       <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
       <form
@@ -172,7 +163,7 @@ const ContactPage = () => {
           入力内容を確認する
         </button>
       </form>
-    </motion.div>
+    </div>
   )
 }
 
