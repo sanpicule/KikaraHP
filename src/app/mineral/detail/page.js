@@ -38,16 +38,7 @@ const MineralDetail = () => {
 
   return (
     <div>
-      <motion.div>
-        <ServicePageHero
-          serviceImage={mineral}
-          serviceTitle={'ミネラル醗酵ドリンク'}
-          variants={animate.scrollFadeIn}
-          initial={animate.scrollFadeIn.initial}
-          whileInView={animate.scrollFadeIn.whileInView}
-          viewport={animate.scrollFadeIn.viewport}
-        />
-      </motion.div>
+      <ServicePageHero serviceImage={mineral} serviceTitle={'ミネラル醗酵ドリンク'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:py-24 md:tracking-wide'>
         <motion.div
           className='flex flex-col items-center gap-2'

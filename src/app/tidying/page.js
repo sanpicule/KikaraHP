@@ -14,14 +14,7 @@ const TidyingPage = () => {
 
   return (
     <div>
-      <motion.div
-        variants={animate.scrollFadeIn}
-        initial={animate.scrollFadeIn.initial}
-        whileInView={animate.scrollFadeIn.whileInView}
-        viewport={animate.scrollFadeIn.viewport}
-      >
-        <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝い'} />
-      </motion.div>
+      <ServicePageHero serviceImage={tidyingHeroImage} serviceTitle={'片付け・お手伝い'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}

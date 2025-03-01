@@ -21,14 +21,7 @@ const ReikiPage = () => {
 
   return (
     <div>
-      <motion.div
-        variants={animate.scrollFadeIn}
-        initial={animate.scrollFadeIn.initial}
-        whileInView={animate.scrollFadeIn.whileInView}
-        viewport={animate.scrollFadeIn.viewport}
-      >
-        <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
-      </motion.div>
+      <ServicePageHero serviceImage={reikiHero} serviceTitle={'直傳靈氣について'} />
       <div className='mx-auto max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}

@@ -1,22 +1,17 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import menuItemsList from '@/data/menuItems.json'
-import useAnimation from '@/hooks/useAnimation'
 import useScrollDirection from '@/hooks/useScrollDirection'
 import serviceMineral from '@/public/images/serviceMineral.png'
 import serviceReiki from '@/public/images/serviceReiki.png'
 import serviceTidying from '@/public/images/serviceTidying.png'
 import './style.css'
-import useStore from '@/store/store'
 
 const Header = () => {
-  const animate = useAnimation()
-  const { isHidden, isDisplay, setIsDisplay, setIsHidden } = useStore()
   const [isClick, setIsClick] = useState(false)
   const [isImageChanging, setIsImageChanging] = useState(false)
   const pathname = usePathname()
@@ -24,17 +19,6 @@ const Header = () => {
   const scrollDirection = useScrollDirection()
   const [hamburgerColor, setHamburgerColor] = useState('kikara-white')
   useEffect(() => {
-    if (pathname === '/') {
-      setIsDisplay(false)
-      setTimeout(() => {
-        setIsDisplay(true)
-      }, 2000)
-    } else {
-      setTimeout(() => {
-        setIsDisplay(true)
-        setIsHidden(true)
-      }, 800)
-    }
     const handleScroll = () => {
       const scrollY = window.scrollY
       if (scrollY > 840) {
@@ -47,7 +31,7 @@ const Header = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [pathname, setIsDisplay, setIsHidden])
+  }, [pathname])
 
   // ハンバーガーメニュー内のホバーされたリストに応じて画像を変更する
   const [displayedImage, setDisplayedImage] = useState(serviceMineral)
@@ -81,7 +65,7 @@ const Header = () => {
   }
   return (
     <div
-      className={`fixed right-0 top-0 z-50 w-screen transition-transform duration-500 ${pathname === '/' && '!w-auto'} ${scrollDirection === 'down' && pathname !== '/' ? '-translate-y-full' : 'translate-y-0'}`}
+      className={`fixed right-0 top-0 z-40 w-screen transition-transform duration-500 ${pathname === '/' && '!w-auto'} ${scrollDirection === 'down' && pathname !== '/' && !isClick ? '-translate-y-full' : 'translate-y-0'}`}
     >
       <div
         className={`flex h-[85px] items-center px-4 md:px-12 ${pathname === '/' && 'h-auto pt-4'} ${pathname !== '/' && 'bg-primary-pink-light'}`}
@@ -94,36 +78,30 @@ const Header = () => {
             </Link>
           </div>
         )}
-        {isDisplay && isHidden && (
-          <motion.div
-            variants={animate.scrollFadeIn}
-            initial={animate.scrollFadeIn.initial}
-            whileInView={animate.scrollFadeIn.whileInView}
-            viewport={animate.scrollFadeIn.viewport}
-            className={`group z-30 ml-auto mt-2`}
-            onClick={() => {
-              setIsClick(!isClick)
-              setCurrentMenu('')
-            }}
+        <div
+          className={`group z-30 ml-auto mt-2`}
+          onClick={() => {
+            setIsClick(!isClick)
+            setCurrentMenu('')
+          }}
+        >
+          <div className='flex flex-col gap-4'>
+            <span
+              className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition duration-300 ${isClick ? 'w-16 translate-y-[18px] rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+            <span
+              className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition-all duration-300 group-hover:w-12 ${isClick ? '!w-16 translate-x-full bg-secondary-brown opacity-0 transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+            <span
+              className={`rounded-x block h-[2px] w-16 bg-${hamburgerColor} transition-all duration-300 group-hover:w-8 ${isClick ? '!w-16 -translate-y-[18px] -rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
+            ></span>
+          </div>
+          <p
+            className={`mt-2 text-center text-sm text-${hamburgerColor} duration-300 ${isClick ? 'text-secondary-brown transition-all duration-300' : 'transition duration-500'} ${pathname !== '/' && 'text-secondary-brown'}`}
           >
-            <div className='flex flex-col gap-4'>
-              <span
-                className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition duration-300 ${isClick ? 'w-16 translate-y-[18px] rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
-              ></span>
-              <span
-                className={`block h-[2px] w-16 rounded-xl bg-${hamburgerColor} transition-all duration-300 group-hover:w-12 ${isClick ? '!w-16 translate-x-full bg-secondary-brown opacity-0 transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
-              ></span>
-              <span
-                className={`rounded-x block h-[2px] w-16 bg-${hamburgerColor} transition-all duration-300 group-hover:w-8 ${isClick ? '!w-16 -translate-y-[18px] -rotate-45 transform bg-secondary-brown transition duration-300' : 'transition duration-500'} ${pathname !== '/' && 'bg-secondary-brown'}`}
-              ></span>
-            </div>
-            <p
-              className={`mt-2 text-center text-sm text-${hamburgerColor} duration-300 ${isClick ? 'text-secondary-brown transition-all duration-300' : 'transition duration-500'} ${pathname !== '/' && 'text-secondary-brown'}`}
-            >
-              MENU
-            </p>
-          </motion.div>
-        )}
+            MENU
+          </p>
+        </div>
       </div>
       {/* ハンバーガーメニュー */}
       <div
