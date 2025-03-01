@@ -10,17 +10,15 @@ import PageAnimation from './PageAnimation'
 
 const Body = ({ children }) => {
   const pathname = usePathname()
-  const [isActiveAnimate, setIsActiveAnimate] = useState(true)
-  const [isBack, setIsBack] = useState(false) // ブラウザバック時の判定
+  const [isActiveAnimate, setIsActiveAnimate] = useState(false)
+  const [isBack, setIsBack] = useState(false)
 
-  // アニメーションを適用しないページのリスト
   const noAnimationPages = useMemo(() => ['/contact', '/contact/confirm', '/contact/complete'], [])
 
   useEffect(() => {
     const handlePopState = () => {
-      setIsBack(true) // ブラウザバックが発生したことを記録
+      setIsBack(true)
     }
-
     window.addEventListener('popstate', handlePopState)
     return () => {
       window.removeEventListener('popstate', handlePopState)
@@ -29,19 +27,19 @@ const Body = ({ children }) => {
 
   useEffect(() => {
     if (isBack) {
-      setIsActiveAnimate(false) // ブラウザバック時はアニメーション無効
-      setIsBack(false) // フラグをリセット
+      setIsActiveAnimate(false)
+      setIsBack(false)
     } else {
-      setIsActiveAnimate(!noAnimationPages.includes(pathname)) // 通常の遷移時はアニメーション有効
+      setIsActiveAnimate(!noAnimationPages.includes(pathname))
     }
-  }, [pathname, noAnimationPages, isBack])
+  }, [pathname])
 
   const isTopPage = useMemo(() => pathname === '/', [pathname])
 
   return (
     <AnimatePresence mode='wait'>
       <body key={pathname} className='relative font-sans'>
-        {isActiveAnimate && <PageAnimation isTopPage={isTopPage} />}
+        {!isBack && isActiveAnimate && <PageAnimation isTopPage={isTopPage} />}
         <Header />
         <main className='min-h-[calc(100vh-465px)] overflow-x-hidden bg-kikara-white'>{children}</main>
         <Footer />
