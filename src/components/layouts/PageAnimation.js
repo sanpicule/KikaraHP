@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion'
 import Lottie from 'lottie-react'
+import { usePathname } from 'next/navigation'
+import { useMemo } from 'react'
 import animationData from '@/public/animation.json'
 
-const PageAnimation = ({ isTopPage }) => {
+const PageAnimation = () => {
+  const pathname = usePathname()
+  const isTopPage = useMemo(() => pathname === '/', [pathname])
   return (
     <div>
       {/* 全ページ共通アニメーション */}

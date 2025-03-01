@@ -34,12 +34,10 @@ const Body = ({ children }) => {
     }
   }, [pathname])
 
-  const isTopPage = useMemo(() => pathname === '/', [pathname])
-
   return (
     <AnimatePresence mode='wait'>
       <body key={pathname} className='relative font-sans'>
-        {isActiveAnimate && <PageAnimation isTopPage={isTopPage} />}
+        {isActiveAnimate && <PageAnimation />}
         <Header />
         <main className='min-h-[calc(100vh-465px)] overflow-x-hidden bg-kikara-white'>{children}</main>
         <Footer />
