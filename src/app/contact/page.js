@@ -30,11 +30,16 @@ const ContactPage = () => {
   }
   return (
     <motion.div
-      className='mx-auto max-w-[90%] py-36 md:tracking-wide'
       variants={animate.scrollFadeIn}
       initial={animate.scrollFadeIn.initial}
-      whileInView={animate.scrollFadeIn.whileInView}
       viewport={animate.scrollFadeIn.viewport}
+      whileInView={{
+        opacity: 1,
+        transition: {
+          duration: 2,
+        },
+      }}
+      className='mx-auto max-w-[90%] py-36 md:tracking-wide'
     >
       <Stepper step1={true} />
       <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
