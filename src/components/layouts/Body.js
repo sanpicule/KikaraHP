@@ -10,7 +10,7 @@ import PageAnimation from './PageAnimation'
 
 const Body = ({ children }) => {
   const pathname = usePathname()
-  const [isActiveAnimate, setIsActiveAnimate] = useState(false)
+  const [isActiveAnimate, setIsActiveAnimate] = useState(null)
   const [isBack, setIsBack] = useState(false)
 
   const noAnimationPages = useMemo(() => ['/contact', '/contact/confirm', '/contact/complete'], [])
@@ -39,7 +39,7 @@ const Body = ({ children }) => {
   return (
     <AnimatePresence mode='wait'>
       <body key={pathname} className='relative font-sans'>
-        {!isBack && isActiveAnimate && <PageAnimation isTopPage={isTopPage} />}
+        {isActiveAnimate && <PageAnimation isTopPage={isTopPage} />}
         <Header />
         <main className='min-h-[calc(100vh-465px)] overflow-x-hidden bg-kikara-white'>{children}</main>
         <Footer />
