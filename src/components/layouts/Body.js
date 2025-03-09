@@ -37,7 +37,7 @@ const Body = ({ children }) => {
   return (
     <body className='relative font-sans'>
       <AnimatePresence mode='wait'>
-        <div key={pathname}>
+        <div key={pathname} className='overflow-x-hidden'>
           {isActiveAnimate && <PageAnimation />}
           <Header />
           <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
