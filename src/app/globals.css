@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply overflow-x-hidden;
-}
-
 h1 {
   @apply text-3xl tracking-wide;
 }
