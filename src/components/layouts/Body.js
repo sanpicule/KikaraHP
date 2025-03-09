@@ -35,14 +35,16 @@ const Body = ({ children }) => {
   }, [pathname])
 
   return (
-    <AnimatePresence mode='wait'>
-      <body key={pathname} className='relative font-sans'>
-        {isActiveAnimate && <PageAnimation />}
-        <Header />
-        <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
-        <Footer />
-      </body>
-    </AnimatePresence>
+    <body className='relative font-sans'>
+      <AnimatePresence mode='wait'>
+        <div key={pathname}>
+          {isActiveAnimate && <PageAnimation />}
+          <Header />
+          <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
+          <Footer />
+        </div>
+      </AnimatePresence>
+    </body>
   )
 }
 
