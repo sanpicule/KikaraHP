@@ -39,7 +39,7 @@ const Body = ({ children }) => {
       <body key={pathname} className='relative font-sans'>
         {isActiveAnimate && <PageAnimation />}
         <Header />
-        <main className='min-h-[calc(100vh-465px)] overflow-x-hidden bg-kikara-white'>{children}</main>
+        <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
         <Footer />
       </body>
     </AnimatePresence>
