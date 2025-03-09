@@ -22,8 +22,8 @@ const OtherServices = () => {
       </motion.div>
       <div className='mx-auto mt-24 max-w-[90%] md:w-[1040px]'>
         <div className='flex grow flex-col gap-4 md:flex-row'>
-          {otherServices.map((service) => (
-            <ServiceCard key={service.service} service={service.service} title={service.title} />
+          {otherServices.map((service, index) => (
+            <ServiceCard key={service.service} service={service.service} title={service.title} index={index} />
           ))}
         </div>
       </div>

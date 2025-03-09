@@ -4,13 +4,14 @@ import React from 'react'
 import useAnimation from '@/hooks/useAnimation'
 import userWoman from '@/public/images/userWoman.png'
 
-const VoiceCard = ({ voice }) => {
+const VoiceCard = ({ voice, index }) => {
   const animate = useAnimation()
   return (
     <motion.div
       variants={animate.scrollFadeInFromBottom}
       initial={animate.scrollFadeInFromBottom.initial}
       whileInView={animate.scrollFadeInFromBottom.whileInView}
+      custom={index}
       viewport={animate.scrollFadeInFromBottom.viewport}
       className='rounded-md p-6 shadow-md'
     >

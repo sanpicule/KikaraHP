@@ -17,13 +17,11 @@ const useAnimate = () => {
       y: 60,
       opacity: 0,
     },
-    whileInView: {
-      y: 0,
+    whileInView: (custom) => ({
       opacity: 1,
-      transition: {
-        duration: 1.2,
-      },
-    },
+      y: 0,
+      transition: { duration: 1.2, delay: custom * 0.2 }, // `custom` に index を渡して遅延
+    }),
     viewport: { once: true },
   }
 
@@ -32,13 +30,11 @@ const useAnimate = () => {
       x: 60,
       opacity: 0,
     },
-    whileInView: {
+    whileInView: (custom) => ({
       x: 0,
       opacity: 1,
-      transition: {
-        duration: 1.2,
-      },
-    },
+      transition: { duration: 1.2, delay: custom * 0.2 }, // `custom` に index を渡して遅延
+    }),
     viewport: { once: true },
   }
 
@@ -47,13 +43,11 @@ const useAnimate = () => {
       x: -60,
       opacity: 0,
     },
-    whileInView: {
+    whileInView: (custom) => ({
       x: 0,
       opacity: 1,
-      transition: {
-        duration: 1.2,
-      },
-    },
+      transition: { duration: 1.2, delay: custom * 0.2 }, // `custom` に index を渡して遅延
+    }),
     viewport: { once: true },
   }
 
