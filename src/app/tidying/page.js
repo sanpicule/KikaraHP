@@ -53,10 +53,11 @@ const TidyingPage = () => {
         </motion.div>
         <div className='mx-auto mt-12 flex w-[90%] flex-col items-center gap-4 xl:w-[1040px] xl:items-start xl:gap-12'>
           <motion.div
-            variants={animate.scrollFadeInFromBottom}
-            initial={animate.scrollFadeInFromBottom.initial}
-            whileInView={animate.scrollFadeInFromBottom.whileInView}
-            viewport={animate.scrollFadeInFromBottom.viewport}
+            variants={animate.scrollFadeInFromLeft}
+            initial={animate.scrollFadeInFromLeft.initial}
+            whileInView={animate.scrollFadeInFromLeft.whileInView}
+            custom={0}
+            viewport={animate.scrollFadeInFromLeft.viewport}
             className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:w-fit'
           >
             <h2 className='text-md md:text-2xl'>01</h2>
@@ -65,10 +66,11 @@ const TidyingPage = () => {
             </h4>
           </motion.div>
           <motion.div
-            variants={animate.scrollFadeInFromBottom}
-            initial={animate.scrollFadeInFromBottom.initial}
-            whileInView={animate.scrollFadeInFromBottom.whileInView}
-            viewport={animate.scrollFadeInFromBottom.viewport}
+            variants={animate.scrollFadeInFromLeft}
+            initial={animate.scrollFadeInFromLeft.initial}
+            whileInView={animate.scrollFadeInFromLeft.whileInView}
+            custom={1}
+            viewport={animate.scrollFadeInFromLeft.viewport}
             className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:mx-auto xl:w-fit'
           >
             <h2 className='text-md md:text-2xl'>02</h2>
@@ -77,10 +79,11 @@ const TidyingPage = () => {
             </h4>
           </motion.div>
           <motion.div
-            variants={animate.scrollFadeInFromBottom}
-            initial={animate.scrollFadeInFromBottom.initial}
-            whileInView={animate.scrollFadeInFromBottom.whileInView}
-            viewport={animate.scrollFadeInFromBottom.viewport}
+            variants={animate.scrollFadeInFromLeft}
+            initial={animate.scrollFadeInFromLeft.initial}
+            whileInView={animate.scrollFadeInFromLeft.whileInView}
+            custom={2}
+            viewport={animate.scrollFadeInFromLeft.viewport}
             className='flex w-full items-center gap-4 rounded-2xl bg-kikara-white p-4 shadow-md md:px-12 md:py-8 xl:ml-auto xl:w-fit'
           >
             <h2 className='text-md md:text-2xl'>03</h2>
@@ -103,8 +106,8 @@ const TidyingPage = () => {
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
         <div className='mx-auto mt-12 grid gap-6 md:w-[90%] md:grid-cols-2 xl:w-[1040px]'>
-          {voices.map((voice, i) => (
-            <VoiceCard key={i} voice={voice} />
+          {voices.map((voice, index) => (
+            <VoiceCard key={index} voice={voice} index={index} />
           ))}
         </div>
         <motion.div
