@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import useAnimation from '@/hooks/useAnimation'
 import SectionDecorator from '@/components/features/common/SectionDecorator'
 import SectionHeader from '@/components/features/common/SectionHeader'
+import useAnimation from '@/hooks/useAnimation'
 
 const steps = [
   {
@@ -15,7 +15,8 @@ const steps = [
   {
     number: '02',
     title: '料理教室に参加',
-    description: '少人数制の料理教室で、ミネラル水を使った醗酵ドリンクの作り方を丁寧にご説明します。材料はすべてご用意します。',
+    description:
+      '少人数制の料理教室で、ミネラル水を使った醗酵ドリンクの作り方を丁寧にご説明します。材料はすべてご用意します。',
   },
   {
     number: '03',

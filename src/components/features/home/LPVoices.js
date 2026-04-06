@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import useAnimation from '@/hooks/useAnimation'
 import SectionHeader from '@/components/features/common/SectionHeader'
 import voicesData from '@/data/voiceMineral.json'
+import useAnimation from '@/hooks/useAnimation'
 import userWomanImage from '@/public/images/userWoman.png'
 
 const LPVoices = () => {
@@ -31,7 +31,7 @@ const LPVoices = () => {
               whileInView={animate.scrollFadeInFromBottom.whileInView}
               viewport={animate.scrollFadeInFromBottom.viewport}
               custom={index}
-              className='border-b border-gray-100 pb-8 mb-8 px-2 text-left md:px-6'
+              className='mb-8 border-b border-gray-100 px-2 pb-8 text-left md:px-6'
             >
               <p className='text-base font-medium italic text-gray-700'>「{voice.summary}」</p>
               <p className='mt-4 text-base leading-relaxed text-gray-500'>{voice.voice}</p>

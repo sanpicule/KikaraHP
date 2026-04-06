@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import SectionHeader from '@/components/features/common/SectionHeader'
 import useAnimation from '@/hooks/useAnimation'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { supabase } from '@/lib/supabase'
-import SectionHeader from '@/components/features/common/SectionHeader'
 import arrowRight from '@/public/images/arrowRight.png'
 
 const NewsSection = () => {
@@ -40,7 +40,7 @@ const NewsSection = () => {
           initial={animate.scrollFadeInFromLeft.initial}
           whileInView={animate.scrollFadeInFromLeft.whileInView}
           viewport={animate.scrollFadeInFromLeft.viewport}
-          className='hidden xl:flex items-center self-center'
+          className='hidden items-center self-center xl:flex'
         >
           <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
             <div className='h-16 w-[1px] bg-secondary-brown'></div>
@@ -66,10 +66,7 @@ const NewsSection = () => {
             className='my-1 p-4 md:p-10'
           >
             {posts.map((post) => (
-              <div
-                key={post.id}
-                className='border-b border-gray-200 duration-500 hover:bg-white'
-              >
+              <div key={post.id} className='border-b border-gray-200 duration-500 hover:bg-white'>
                 <Link href={`/news/${post.id}`}>
                   <div className='flex items-center justify-between px-4 py-4 md:px-8 md:py-8'>
                     <div className='flex origin-left flex-col gap-1 md:flex-row md:gap-4'>
@@ -132,7 +129,7 @@ const NewsSection = () => {
           initial={animate.scrollFadeInFromBottom.initial}
           whileInView={animate.scrollFadeInFromBottom.whileInView}
           viewport={animate.scrollFadeInFromBottom.viewport}
-          className='hidden xl:flex items-center self-center'
+          className='hidden items-center self-center xl:flex'
         >
           <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
             <div className='h-16 w-[1px] bg-secondary-brown'></div>

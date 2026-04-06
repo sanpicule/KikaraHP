@@ -29,17 +29,17 @@ module.exports = {
       },
       colors: {
         /* NANA-inspired sage/mint palette */
-        'primary-pink': '#E8EDEA',         /* light sage green — section accent bg */
-        'primary-pink-light': '#F5F7F6',   /* near-white section bg */
-        'secondary-brown': '#2A2A2A',      /* near-black for text */
-        'secondary-brown-light': '#7A9E9A',/* muted teal accent */
+        'primary-pink': '#E8EDEA' /* light sage green — section accent bg */,
+        'primary-pink-light': '#F5F7F6' /* near-white section bg */,
+        'secondary-brown': '#2A2A2A' /* near-black for text */,
+        'secondary-brown-light': '#7A9E9A' /* muted teal accent */,
         'kikara-white': '#FFFFFF',
         'kikara-chip-red': '#7A9E9A',
         Instagram: '#C13584',
         'Instagram-hover': '#991861',
         Facebook: '#4267B2',
         'Facebook-hover': '#183b80',
-        'kikara-gray': '#F5F5F5',          /* ライトグレー — section divider */
+        'kikara-gray': '#F5F5F5' /* ライトグレー — section divider */,
       },
       height: {
         0.1: '0.1rem',

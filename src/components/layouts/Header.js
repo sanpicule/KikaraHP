@@ -53,10 +53,7 @@ const Header = () => {
             </Link>
           </div>
         )}
-        <div
-          className={`group z-30 ml-auto mt-2`}
-          onClick={() => setIsClick(!isClick)}
-        >
+        <div className={`group z-30 ml-auto mt-2`} onClick={() => setIsClick(!isClick)}>
           <div className='flex flex-col gap-[5px]'>
             <span
               className={`block h-[2px] w-8 rounded-xl bg-${hamburgerColor} transition duration-300 ${isClick ? '!w-8 translate-y-[7px] rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
@@ -99,7 +96,7 @@ const Header = () => {
                 {menuItemsList.map((menuItem, index) => (
                   <li
                     key={index}
-                    className={`list-content mx-auto mt-4 flex w-64 items-center justify-center text-center tracking-widest text-md md:text-xl`}
+                    className={`list-content mx-auto mt-4 flex w-64 items-center justify-center text-center text-md tracking-widest md:text-xl`}
                     onClick={() => setIsClick(false)}
                   >
                     <a

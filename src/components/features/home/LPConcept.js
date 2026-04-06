@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import useAnimation from '@/hooks/useAnimation'
 import SectionHeader from '@/components/features/common/SectionHeader'
+import useAnimation from '@/hooks/useAnimation'
 
 const LPConcept = () => {
   const animate = useAnimation()
@@ -28,7 +28,8 @@ const LPConcept = () => {
           className='mt-10 max-w-2xl text-left'
         >
           <p className='text-sm italic leading-relaxed tracking-wide text-gray-400'>
-            &ldquo;Nurtured by the mineral water of Kumamoto,<br />
+            &ldquo;Nurtured by the mineral water of Kumamoto,
+            <br />
             crafted with care for your daily wellness.&rdquo;
           </p>
           <p className='mt-8 text-base leading-[2] text-gray-600'>

@@ -1,12 +1,12 @@
 'use client'
 
 import NewsSection from '@/components/features/common/News'
+import FAQSection from '@/components/features/home/FAQ'
 import HeroSection from '@/components/features/home/Hero'
+import HowToBuySection from '@/components/features/home/HowToBuy'
 import ConceptSection from '@/components/features/home/LPConcept'
 import FeaturesSection from '@/components/features/home/LPFeatures'
 import VoicesSection from '@/components/features/home/LPVoices'
-import HowToBuySection from '@/components/features/home/HowToBuy'
-import FAQSection from '@/components/features/home/FAQ'
 
 export default function Home() {
   return (

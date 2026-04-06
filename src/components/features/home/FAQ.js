@@ -2,27 +2,24 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import useAnimation from '@/hooks/useAnimation'
 import SectionDecorator from '@/components/features/common/SectionDecorator'
 import SectionHeader from '@/components/features/common/SectionHeader'
 import faqData from '@/data/faq.json'
+import useAnimation from '@/hooks/useAnimation'
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className='border-b border-gray-200'>
-      <button
-        className='flex w-full items-center justify-between py-5 text-left'
-        onClick={onClick}
-      >
-        <span className='pr-4 text-base font-medium text-secondary-brown md:text-lg'>
-          Q. {question}
-        </span>
-        <span className={`flex-shrink-0 text-secondary-brown-light text-2xl transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
+      <button className='flex w-full items-center justify-between py-5 text-left' onClick={onClick}>
+        <span className='md:text-lg pr-4 text-base font-medium text-secondary-brown'>Q. {question}</span>
+        <span
+          className={`flex-shrink-0 text-2xl text-secondary-brown-light transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
+        >
           +
         </span>
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}>
-        <p className='text-left leading-relaxed text-gray-600 text-sm md:text-base'>A. {answer}</p>
+        <p className='text-left text-sm leading-relaxed text-gray-600 md:text-base'>A. {answer}</p>
       </div>
     </div>
   )

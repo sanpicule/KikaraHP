@@ -2,20 +2,16 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import SectionHeader from '@/components/features/common/SectionHeader'
 import featuresData from '@/data/features.json'
 import useAnimation from '@/hooks/useAnimation'
-import SectionHeader from '@/components/features/common/SectionHeader'
-import orangeImage from '@/public/images/orange.png'
 import beautyImage from '@/public/images/beauty.png'
 import mealImage from '@/public/images/meal.png'
+import orangeImage from '@/public/images/orange.png'
 
 const featureImages = [orangeImage, beautyImage, mealImage]
 
-const taglines = [
-  'Easy & Natural',
-  'Health & Beauty',
-  'Kitchen & Lifestyle',
-]
+const taglines = ['Easy & Natural', 'Health & Beauty', 'Kitchen & Lifestyle']
 
 const LPFeatures = () => {
   const animate = useAnimation()
@@ -46,12 +42,7 @@ const LPFeatures = () => {
               {/* Image column — 1 image per feature */}
               <div className='md:w-[45%]'>
                 <div className='relative h-64 w-full overflow-hidden md:h-96'>
-                  <Image
-                    src={featureImages[index]}
-                    alt={feature.feature}
-                    fill
-                    className='object-cover'
-                  />
+                  <Image src={featureImages[index]} alt={feature.feature} fill className='object-cover' />
                 </div>
               </div>
               {/* Text column */}
