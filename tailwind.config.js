@@ -28,17 +28,18 @@ module.exports = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'primary-pink': '#FFE1D7',
-        'primary-pink-light': '#FFF2ED',
-        'secondary-brown': '#5D5046',
-        'secondary-brown-light': '#D2B48C',
-        'kikara-white': '#FDFDFD',
-        'kikara-chip-red': '#F86767',
+        /* NANA-inspired sage/mint palette */
+        'primary-pink': '#E8EDEA',         /* light sage green — section accent bg */
+        'primary-pink-light': '#F5F7F6',   /* near-white section bg */
+        'secondary-brown': '#2A2A2A',      /* near-black for text */
+        'secondary-brown-light': '#7A9E9A',/* muted teal accent */
+        'kikara-white': '#FFFFFF',
+        'kikara-chip-red': '#7A9E9A',
         Instagram: '#C13584',
         'Instagram-hover': '#991861',
         Facebook: '#4267B2',
         'Facebook-hover': '#183b80',
-        'kikara-gray': '#F3F3F3',
+        'kikara-gray': '#F5F5F5',          /* ライトグレー — section divider */
       },
       height: {
         0.1: '0.1rem',
@@ -50,7 +51,7 @@ module.exports = {
         wide: '.25em',
       },
       fontFamily: {
-        sans: ['"Noto Serif JP"', 'serif', 'sans-serif'],
+        sans: ['futura-pt', '"Noto Serif JP"', 'serif', 'sans-serif'],
       },
       animation: {
         slideInFromBottom: 'slideInFromBottom 1.2s ease-in forwards',

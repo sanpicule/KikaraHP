@@ -1,23 +1,32 @@
 [
   {
-    "menuTitle": "ミネラル水",
-    "url": "/mineral",
-    "reserveUrl": "",
-    "id": "mineral",
-    "imageName": "serviceMineral.png"
+    "menuTitle": "Concept",
+    "url": "#concept",
+    "id": "concept"
   },
   {
-    "menuTitle": "片付け・お手伝い",
-    "url": "/tidying",
-    "reserveUrl": "https://totonou-kikara.com/index.php?Form",
-    "id": "tidying",
-    "imageName": "serviceTidying.png"
+    "menuTitle": "Features",
+    "url": "#features",
+    "id": "features"
   },
   {
-    "menuTitle": "直傳靈氣",
-    "url": "/reiki",
-    "reserveUrl": "https://totonou-kikara.com/index.php?Form2",
-    "id": "reiki",
-    "imageName": "serviceReiki.png"
+    "menuTitle": "Voices",
+    "url": "#voices",
+    "id": "voices"
+  },
+  {
+    "menuTitle": "How to Join",
+    "url": "#how-to-buy",
+    "id": "how-to-buy"
+  },
+  {
+    "menuTitle": "FAQ",
+    "url": "#faq",
+    "id": "faq"
+  },
+  {
+    "menuTitle": "News",
+    "url": "#news",
+    "id": "news"
   }
 ]

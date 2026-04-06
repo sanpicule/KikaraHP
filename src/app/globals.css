@@ -2,46 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply text-3xl tracking-wide;
-}
-
-h2 {
-  @apply text-2xl tracking-wide;
-}
-
-h3 {
-  @apply text-xl tracking-wide;
-}
-
-h4 {
-  @apply text-md tracking-wide;
-}
-
-p {
-  @apply text-base tracking-wide;
-}
-
-@media (max-width: 1040px) {
-  h2 {
-    @apply text-2xl;
-  }
-
-  h3 {
-    @apply text-xl;
-  }
-
-  h4 {
-    @apply text-md;
-  }
-
-  p {
-    @apply text-base tracking-normal;
-  }
-}
-
 body {
-  @apply text-secondary-brown;
+  font-family: futura-pt, 'Noto Serif JP', serif, sans-serif;
+  @apply text-secondary-brown bg-kikara-white;
 }
 
 *,
