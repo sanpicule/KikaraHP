@@ -4,7 +4,7 @@
 
 body {
   font-family: futura-pt, 'Noto Serif JP', serif, sans-serif;
-  @apply text-secondary-brown bg-kikara-white;
+  @apply bg-kikara-white text-secondary-brown;
 }
 
 *,
