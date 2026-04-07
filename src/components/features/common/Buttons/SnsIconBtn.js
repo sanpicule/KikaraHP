@@ -3,7 +3,7 @@ import FacebookIcon from './FacebookIcon'
 import InstagramIcon from './InstagramIcon'
 import SnsConfigs from './SnsConfigs'
 
-const SnsIconBtn = ({ snsId, size = 64 }) => {
+const SnsIconBtn = ({ snsId, size = 32 }) => {
   return (
     <a href={SnsConfigs[snsId].url} target='_blank'>
       {snsId === 'instagram' && <InstagramIcon size={size} color={'fill-Instagram active:fill-Instagram-hover'} />}
