@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import menuItemsList from '@/data/menuItems.json'
 import kikaraLogo from '@/public/images/kikara-logo.png'
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'

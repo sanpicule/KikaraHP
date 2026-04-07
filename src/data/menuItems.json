@@ -1,32 +1,32 @@
 [
   {
     "menuTitle": "Concept",
-    "url": "#concept",
+    "url": "/#concept",
     "id": "concept"
   },
   {
     "menuTitle": "Features",
-    "url": "#features",
+    "url": "/#features",
     "id": "features"
   },
   {
     "menuTitle": "Voices",
-    "url": "#voices",
+    "url": "/#voices",
     "id": "voices"
   },
   {
     "menuTitle": "How to Join",
-    "url": "#how-to-buy",
+    "url": "/#how-to-buy",
     "id": "how-to-buy"
   },
   {
     "menuTitle": "FAQ",
-    "url": "#faq",
+    "url": "/#faq",
     "id": "faq"
   },
   {
     "menuTitle": "News",
-    "url": "#news",
+    "url": "/#news",
     "id": "news"
   }
 ]

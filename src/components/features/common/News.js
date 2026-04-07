@@ -53,7 +53,7 @@ const NewsSection = () => {
             className='my-1 p-4 md:p-10'
           >
             {posts.map((post) => (
-              <div key={post.id} className='border-b border-gray-200 duration-500 hover:bg-primary-pink-light'>
+              <div key={post.id} className='group border-b border-gray-200 duration-500 hover:bg-primary-pink-light'>
                 <Link href={`/news/${post.id}`}>
                   <div className='flex items-center justify-between px-4 py-4 md:px-8 md:py-8'>
                     <div className='flex origin-left flex-col gap-1 md:flex-row md:gap-4'>

@@ -15,6 +15,14 @@ const Header = () => {
   const pathname = usePathname()
   const scrollDirection = useScrollDirection()
   const [hamburgerColor, setHamburgerColor] = useState(pathname === '/' ? 'white' : 'secondary-brown')
+  const hamburgerBgClass = {
+    white: 'bg-white',
+    'secondary-brown': 'bg-secondary-brown',
+  }
+  const hamburgerTextClass = {
+    white: 'text-white',
+    'secondary-brown': 'text-secondary-brown',
+  }
 
   useEffect(() => {
     document.body.style.overflow = isClick ? 'hidden' : ''
@@ -57,17 +65,17 @@ const Header = () => {
         <div className={`group z-30 ml-auto mt-2`} onClick={() => setIsClick(!isClick)}>
           <div className='flex flex-col gap-[5px]'>
             <span
-              className={`block h-[2px] w-8 rounded-xl bg-${hamburgerColor} transition duration-300 ${isClick ? '!w-8 translate-y-[7px] rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition duration-300 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-y-[7px] rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
             <span
-              className={`block h-[2px] w-8 rounded-xl bg-${hamburgerColor} transition-all duration-300 group-hover:w-5 ${isClick ? '!w-8 translate-x-full bg-secondary-brown opacity-0' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-5 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-x-full bg-secondary-brown opacity-0' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
             <span
-              className={`block h-[2px] w-8 rounded-xl bg-${hamburgerColor} transition-all duration-300 group-hover:w-3 ${isClick ? '!w-8 -translate-y-[7px] -rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-3 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 -translate-y-[7px] -rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
           </div>
           <p
-            className={`mt-1 text-center text-[10px] tracking-widest text-${hamburgerColor} duration-300 ${isClick ? 'text-secondary-brown' : ''} ${pathname !== '/' && 'text-secondary-brown'}`}
+            className={`mt-1 text-center text-[10px] tracking-widest duration-300 ${hamburgerTextClass[hamburgerColor]} ${isClick ? 'text-secondary-brown' : ''} ${pathname !== '/' && 'text-secondary-brown'}`}
           >
             MENU
           </p>
@@ -78,20 +86,14 @@ const Header = () => {
         className={`absolute left-full top-0 h-screen w-screen bg-white transition duration-500 ${isClick && '-translate-x-full'}`}
       >
         <div className='mx-auto flex justify-center'>
-          <div className='hidden w-1/2 lg:block'>
-            <Image
-              src={serviceMineral}
-              alt='ミネラル醗酵ドリンク'
-              width={0}
-              height={0}
-              className='h-screen w-auto object-cover'
-            />
+          <div className='relative hidden h-screen w-1/2 lg:block'>
+            <Image src={serviceMineral} alt='ミネラル醗酵ドリンク' fill className='object-cover' />
           </div>
           <div className={`w-full px-4 pb-4 pt-24 lg:w-1/2`}>
-            <a href='#hero' onClick={() => setIsClick(false)} className='flex flex-col items-center justify-center'>
+            <Link href='/#hero' onClick={() => setIsClick(false)} className='flex flex-col items-center justify-center'>
               <p className='text-xs md:text-md'>ミネラル醗酵ドリンク</p>
               <Image src={kikaraLogo} alt='Kikara' height={56} className='mt-2 h-12 w-auto object-contain md:h-14' />
-            </a>
+            </Link>
             <div className='mt-4 md:mt-20'>
               <ul className='list-container w-full'>
                 {menuItemsList.map((menuItem, index) => (

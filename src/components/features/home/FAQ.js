@@ -7,10 +7,17 @@ import SectionHeader from '@/components/features/common/SectionHeader'
 import faqData from '@/data/faq.json'
 import useAnimation from '@/hooks/useAnimation'
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => {
+const FAQItem = ({ question, answer, isOpen, onClick, index }) => {
+  const answerId = `faq-answer-${index}`
   return (
     <div className='border-b border-gray-200'>
-      <button className='flex w-full items-center justify-between py-5 text-left' onClick={onClick}>
+      <button
+        type='button'
+        aria-expanded={isOpen}
+        aria-controls={answerId}
+        className='flex w-full items-center justify-between py-5 text-left'
+        onClick={onClick}
+      >
         <span className='md:text-lg pr-4 text-base font-medium text-secondary-brown'>Q. {question}</span>
         <span
           className={`flex-shrink-0 text-2xl text-secondary-brown-light transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}
@@ -18,7 +25,10 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
           +
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}>
+      <div
+        id={answerId}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 pb-5' : 'max-h-0'}`}
+      >
         <p className='text-left text-sm leading-relaxed text-gray-600 md:text-base'>A. {answer}</p>
       </div>
     </div>
@@ -53,6 +63,7 @@ const FAQ = () => {
             {faqData.map((item, index) => (
               <FAQItem
                 key={index}
+                index={index}
                 question={item.question}
                 answer={item.answer}
                 isOpen={openIndex === index}
