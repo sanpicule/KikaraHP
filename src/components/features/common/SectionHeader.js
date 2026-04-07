@@ -7,7 +7,7 @@ const SectionHeader = ({ en, ja, light = false }) => {
   const lineColor = light ? 'bg-white/40' : 'bg-secondary-brown-light'
   return (
     <div className='text-left'>
-      <h2 className={`text-4xl font-thin tracking-[.2em] md:text-5xl ${textColor}`}>{en}</h2>
+      <h2 className={`text-2xl font-thin tracking-[.2em] md:text-3xl ${textColor}`}>{en}</h2>
       <p className={`mt-2 text-sm tracking-[.2em] ${subColor}`}>{ja}</p>
       <div className={`mt-4 h-px w-8 ${lineColor}`} />
     </div>

@@ -34,7 +34,7 @@ const HowToBuy = () => {
   const animate = useAnimation()
 
   return (
-    <section id='how-to-buy' className='bg-primary-pink py-20'>
+    <section id='how-to-buy' className='bg-white py-20'>
       <div className='flex justify-center xl:justify-between xl:px-[140px]'>
         <SectionDecorator label='How to Join' />
         <div className='mx-auto w-full max-w-5xl px-4'>
@@ -59,7 +59,7 @@ const HowToBuy = () => {
                 whileInView={animate.scrollFadeInFromBottom.whileInView}
                 viewport={animate.scrollFadeInFromBottom.viewport}
                 custom={index}
-                className='bg-white p-6 text-left'
+                className='bg-primary-pink p-6 text-left'
               >
                 <span className='text-4xl font-thin text-secondary-brown-light'>{step.number}</span>
                 <div className='my-3 h-px w-8 bg-secondary-brown-light opacity-40' />
@@ -77,9 +77,10 @@ const HowToBuy = () => {
             className='mt-12 flex justify-center md:justify-start'
           >
             <Link href='/contact'>
-              <button className='border border-secondary-brown px-12 py-4 text-sm tracking-widest text-secondary-brown transition duration-300 hover:bg-secondary-brown hover:text-white'>
-                お問い合わせ・ご予約はこちら
-              </button>
+              <div className='group relative inline-block overflow-hidden border border-secondary-brown bg-primary-pink text-center leading-[50px] text-secondary-brown no-underline transition-colors duration-500 hover:text-white'>
+                <p className='relative z-10 px-12 text-sm tracking-widest'>お問い合わせ・ご予約はこちら</p>
+                <div className='absolute inset-0 origin-right scale-x-0 transform bg-secondary-brown transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100' />
+              </div>
             </Link>
           </motion.div>
         </div>

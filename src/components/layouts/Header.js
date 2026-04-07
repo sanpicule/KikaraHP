@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import menuItemsList from '@/data/menuItems.json'
 import useScrollDirection from '@/hooks/useScrollDirection'
 import serviceMineral from '@/public/images/serviceMineral.png'
+import kikaraLogo from '@/public/images/kikara-logo.png'
 import './style.css'
 
 const Header = () => {
@@ -49,7 +50,7 @@ const Header = () => {
           <div onClick={() => setIsClick(false)}>
             <Link href={'/'}>
               <p className='text-xs tracking-[.3em] text-gray-400'>ミネラル醗酵ドリンク</p>
-              <h1 className='text-3xl font-thin leading-none tracking-[.15em] text-gray-800'>Kikara</h1>
+              <Image src={kikaraLogo} alt='Kikara' height={32} className='mt-1 h-8 w-auto object-contain' />
             </Link>
           </div>
         )}
@@ -89,7 +90,7 @@ const Header = () => {
           <div className={`w-full px-4 pb-4 pt-24 lg:w-1/2`}>
             <a href='#hero' onClick={() => setIsClick(false)} className='flex flex-col items-center justify-center'>
               <p className='text-xs md:text-md'>ミネラル醗酵ドリンク</p>
-              <p className='text-4xl tracking-wide md:text-[4rem]'>Kikara</p>
+              <Image src={kikaraLogo} alt='Kikara' height={56} className='mt-2 h-12 w-auto object-contain md:h-14' />
             </a>
             <div className='mt-4 md:mt-20'>
               <ul className='list-container w-full'>

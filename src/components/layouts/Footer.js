@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import menuItemsList from '@/data/menuItems.json'
+import kikaraLogo from '@/public/images/kikara-logo.png'
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 import SnsLongBtn from '../features/common/Buttons/SnsLongBtn'
 
@@ -10,8 +12,7 @@ const Footer = () => {
       {/* Brand */}
       <div className='mx-auto w-full max-w-5xl border-b border-gray-300/40 px-4 pb-12'>
         <p className='text-xs tracking-[.3em] text-gray-400'>ミネラル醗酵ドリンク</p>
-        <p className='mt-2 text-[48px] font-thin tracking-[.15em] text-gray-800 md:text-[72px]'>KIKARA</p>
-        <p className='mt-2 text-xs tracking-widest text-gray-400'>熊本市東区で心と身体を整える</p>
+        <Image src={kikaraLogo} alt='Kikara' height={72} className='mt-2 h-12 w-auto object-contain md:h-16' />
       </div>
 
       {/* Links + contact */}

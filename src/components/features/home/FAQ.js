@@ -30,7 +30,7 @@ const FAQ = () => {
   const animate = useAnimation()
 
   return (
-    <section id='faq' className='bg-white py-20'>
+    <section id='faq' className='bg-primary-pink py-20'>
       <div className='flex justify-center xl:justify-between xl:px-[140px]'>
         <SectionDecorator label='FAQ' />
         <div className='mx-auto w-full max-w-5xl px-4'>

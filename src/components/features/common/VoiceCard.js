@@ -13,26 +13,23 @@ const VoiceCard = ({ voice, index }) => {
       whileInView={animate.scrollFadeInFromBottom.whileInView}
       custom={index}
       viewport={animate.scrollFadeInFromBottom.viewport}
-      className='rounded-md p-6 shadow-md'
+      className='flex flex-col rounded-2xl bg-white p-6 shadow-sm'
     >
-      <h4 className='text-start text-sm font-bold md:text-md'>{`『${voice.summary}』`}</h4>
-      <div
-        className={`
-        mt-4
-        flex
-        w-full
-        gap-8
-      `}
-      >
-        <div className='flex w-[30%] flex-col items-center gap-2'>
-          <Image src={userWoman} alt='' width={60} height={60} />
-          <div className='font-bold'>
-            <p className='text-xs'>{voice.info}</p>
-            <p className='text-xs'>{voice.name}</p>
-          </div>
-        </div>
-        <div className='relative h-full w-full'>
-          <p className='text-start text-sm md:mt-0 md:h-full'>{voice.voice}</p>
+      {/* Summary */}
+      <p className='text-sm font-medium text-gray-800'>{voice.summary}</p>
+
+      {/* Body */}
+      <p className='mt-3 flex-1 text-xs leading-6 text-gray-500'>{voice.voice}</p>
+
+      {/* Divider */}
+      <div className='mt-5 h-px w-full bg-gray-100' />
+
+      {/* Author */}
+      <div className='mt-4 flex items-center gap-3'>
+        <Image src={userWoman} alt='' width={36} height={36} className='h-9 w-9 rounded-full object-cover' />
+        <div>
+          <p className='text-xs font-medium text-gray-700'>{voice.name}</p>
+          <p className='text-xs text-gray-400'>{voice.info}</p>
         </div>
       </div>
     </motion.div>

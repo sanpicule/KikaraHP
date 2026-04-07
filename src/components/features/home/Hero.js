@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import mainHeroImage from '@/public/images/mainHeroImage.png'
+import kikaraLogo from '@/public/images/kikara-logo.png'
 
 const HeroSection = () => {
   return (
@@ -15,8 +16,13 @@ const HeroSection = () => {
         <p className='text-xs tracking-[.3em] text-white drop-shadow md:text-gray-400 md:drop-shadow-none'>
           ミネラル醗酵ドリンク
         </p>
-        <h1 className='mt-3 text-[38px] font-thin leading-none tracking-[.15em] text-white drop-shadow md:text-[54px] md:text-gray-800 md:drop-shadow-none lg:text-[72px]'>
-          Kikara
+        <h1 className='mt-3 leading-none drop-shadow md:drop-shadow-none'>
+          <Image
+            src={kikaraLogo}
+            alt='Kikara'
+            height={72}
+            className='h-14 w-auto object-contain brightness-0 invert drop-shadow md:h-20 md:brightness-100 md:invert-0 md:drop-shadow-none'
+          />
         </h1>
         <div className='mt-6 h-px w-8 bg-white md:bg-gray-300' />
       </div>

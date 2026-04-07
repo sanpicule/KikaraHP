@@ -8,16 +8,22 @@ import LoadingButton from './LoadingButton'
 const ConfirmContent = () => {
   const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
-  const entries = searchParams.entries()
-  const query = Object.fromEntries(entries)
   const router = useRouter()
 
+  const query = {
+    name: searchParams.get('name') ?? '',
+    name_kana: searchParams.get('name_kana') ?? '',
+    mail: searchParams.get('mail') ?? '',
+    mail_confirm: searchParams.get('mail_confirm') ?? '',
+    contents: searchParams.get('contents') ?? '',
+  }
+
   const fields = [
-    { label: '名前', value: query.name },
+    { label: 'お名前', value: query.name },
     { label: 'フリガナ', value: query.name_kana },
     { label: 'メールアドレス', value: query.mail },
     { label: 'メールアドレス（確認用）', value: query.mail_confirm },
-    { label: '内容', value: query.contents },
+    { label: 'お問い合わせ内容', value: query.contents },
   ]
 
   const handleSubmit = async () => {
@@ -49,14 +55,16 @@ const ConfirmContent = () => {
 
   return (
     <>
-      <ul className='mx-auto mt-12 flex flex-col items-center gap-12 p-12'>
-        {fields.map(({ label, value }, index) => (
-          <li key={index} className='mx-auto flex w-full flex-col items-center gap-4 md:w-[60%] md:flex-row md:gap-8'>
-            <p className='w-full font-bold md:w-1/3'>{label}</p>
-            <p className='ml-12 w-full md:ml-0 md:w-2/3'>{value}</p>
-          </li>
-        ))}
-      </ul>
+      <div className='mx-auto mt-12 max-w-xl'>
+        <ul className='flex flex-col gap-6'>
+          {fields.map(({ label, value }, index) => (
+            <li key={index} className='rounded-2xl bg-white/70 px-6 py-4 shadow-sm'>
+              <p className='text-xs tracking-widest text-gray-400'>{label}</p>
+              <p className='mt-1 whitespace-pre-wrap text-sm text-gray-800'>{value || '—'}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
       <LoadingButton loading={loading} handleClick={handleSubmit} handleBack={handleBack} />
     </>
   )
