@@ -62,20 +62,20 @@ const Header = () => {
             </Link>
           </div>
         )}
-        <div className={`group z-30 ml-auto mt-2`} onClick={() => setIsClick(!isClick)}>
+        <div className='group relative z-50 ml-auto mt-2 cursor-pointer' onClick={() => setIsClick(!isClick)}>
           <div className='flex flex-col gap-[5px]'>
             <span
-              className={`block h-[2px] w-8 rounded-xl transition duration-300 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-y-[7px] rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition duration-300 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-y-[7px] rotate-45 transform !bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
             <span
-              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-5 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-x-full bg-secondary-brown opacity-0' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-5 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 translate-x-full !bg-secondary-brown opacity-0' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
             <span
-              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-3 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 -translate-y-[7px] -rotate-45 transform bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
+              className={`block h-[2px] w-8 rounded-xl transition-all duration-300 group-hover:w-3 ${hamburgerBgClass[hamburgerColor]} ${isClick ? '!w-8 -translate-y-[7px] -rotate-45 transform !bg-secondary-brown' : ''} ${pathname !== '/' && 'bg-secondary-brown'}`}
             ></span>
           </div>
           <p
-            className={`mt-1 text-center text-[10px] tracking-widest duration-300 ${hamburgerTextClass[hamburgerColor]} ${isClick ? 'text-secondary-brown' : ''} ${pathname !== '/' && 'text-secondary-brown'}`}
+            className={`mt-1 text-center text-[10px] tracking-widest duration-300 ${hamburgerTextClass[hamburgerColor]} ${isClick ? '!text-secondary-brown' : ''} ${pathname !== '/' && 'text-secondary-brown'}`}
           >
             MENU
           </p>
