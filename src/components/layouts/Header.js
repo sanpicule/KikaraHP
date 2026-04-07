@@ -6,8 +6,8 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import menuItemsList from '@/data/menuItems.json'
 import useScrollDirection from '@/hooks/useScrollDirection'
-import serviceMineral from '@/public/images/serviceMineral.png'
 import kikaraLogo from '@/public/images/kikara-logo.png'
+import serviceMineral from '@/public/images/serviceMineral.png'
 import './style.css'
 
 const Header = () => {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import mainHeroImage from '@/public/images/mainHeroImage.png'
 import kikaraLogo from '@/public/images/kikara-logo.png'
+import mainHeroImage from '@/public/images/mainHeroImage.png'
 
 const HeroSection = () => {
   return (
@@ -21,7 +21,7 @@ const HeroSection = () => {
             src={kikaraLogo}
             alt='Kikara'
             height={72}
-            className='h-14 w-auto object-contain brightness-0 invert drop-shadow md:h-20 md:brightness-100 md:invert-0 md:drop-shadow-none'
+            className='h-14 w-auto object-contain brightness-0 drop-shadow invert md:h-20 md:brightness-100 md:drop-shadow-none md:invert-0'
           />
         </h1>
         <div className='mt-6 h-px w-8 bg-white md:bg-gray-300' />
