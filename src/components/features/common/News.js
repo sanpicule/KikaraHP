@@ -4,15 +4,16 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import SectionDecorator from '@/components/features/common/SectionDecorator'
+import SectionHeader from '@/components/features/common/SectionHeader'
 import useAnimation from '@/hooks/useAnimation'
-import useMediaQuery from '@/hooks/useMediaQuery'
 import { supabase } from '@/lib/supabase'
 import arrowRight from '@/public/images/arrowRight.png'
 
 const NewsSection = () => {
   const animate = useAnimation()
   const [posts, setPosts] = useState([])
-  const { isMobile } = useMediaQuery()
+
   useEffect(() => {
     fetchPosts()
   }, [])
@@ -32,32 +33,16 @@ const NewsSection = () => {
   }
 
   return (
-    <div className='flex justify-center bg-primary-pink xl:justify-between xl:p-[140px]'>
-      {!isMobile && (
-        <motion.div
-          variants={animate.scrollFadeInFromLeft}
-          initial={animate.scrollFadeInFromLeft.initial}
-          whileInView={animate.scrollFadeInFromLeft.whileInView}
-          viewport={animate.scrollFadeInFromLeft.viewport}
-          className='hidden xl:block'
-        >
-          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
-            <div className='h-16 w-[1px] bg-secondary-brown'></div>
-            <p className='text-sm tracking-wide'>News</p>
-          </div>
-        </motion.div>
-      )}
-      <div className='mx-auto min-w-[85%] max-w-[90%] py-12 text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+    <div className='flex justify-center bg-white xl:justify-between xl:px-[140px]'>
+      <SectionDecorator label='News' />
+      <div className='mx-auto w-full max-w-5xl px-4 py-12 md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}
           whileInView={animate.scrollFadeInFromBottom.whileInView}
           viewport={animate.scrollFadeInFromBottom.viewport}
-          className='flex flex-col items-center gap-2'
         >
-          <p className='section_sub'>News</p>
-          <h2>お知らせ</h2>
-          <div className='h-0.1 w-12 bg-secondary-brown'></div>
+          <SectionHeader en='News' ja='お知らせ' />
         </motion.div>
         {posts.length > 0 ? (
           <motion.div
@@ -68,10 +53,7 @@ const NewsSection = () => {
             className='my-1 p-4 md:p-10'
           >
             {posts.map((post) => (
-              <div
-                key={post.id}
-                className='transition-bg cursor-pointer gap-12 border-b border-kikara-white duration-500 hover:bg-kikara-white'
-              >
+              <div key={post.id} className='group border-b border-gray-200 duration-500 hover:bg-primary-pink-light'>
                 <Link href={`/news/${post.id}`}>
                   <div className='flex items-center justify-between px-4 py-4 md:px-8 md:py-8'>
                     <div className='flex origin-left flex-col gap-1 md:flex-row md:gap-4'>
@@ -94,24 +76,22 @@ const NewsSection = () => {
                         <h4 className='text-sm md:text-md'>{post.title}</h4>
                       </div>
                     </div>
-                    {!isMobile && (
-                      <Image
-                        src={arrowRight}
-                        alt={post.title}
-                        width={40}
-                        height={200}
-                        className='transition-all duration-300 group-hover:translate-x-4'
-                      />
-                    )}
+                    <Image
+                      src={arrowRight}
+                      alt={post.title}
+                      width={40}
+                      height={200}
+                      className='hidden transition-all duration-300 group-hover:translate-x-4 md:block'
+                    />
                   </div>
                 </Link>
               </div>
             ))}
             <Link href={'/news'}>
-              <div className='mt-12 text-center'>
-                <div className='group relative inline-block w-[200px] overflow-hidden border border-secondary-brown bg-white text-center leading-[50px] text-secondary-brown no-underline transition-colors duration-500 hover:text-white md:w-[300px] md:leading-[60px]'>
+              <div className='mt-12 flex justify-center md:justify-start'>
+                <div className='group relative inline-block w-[200px] overflow-hidden border border-gray-800 bg-white text-center leading-[50px] text-gray-800 no-underline transition-colors duration-500 hover:text-white md:w-[300px] md:leading-[60px]'>
                   <p className='relative z-10'>View More</p>
-                  <div className='absolute inset-0 origin-right scale-x-0 transform bg-secondary-brown transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100'></div>
+                  <div className='absolute inset-0 origin-right scale-x-0 transform bg-gray-800 transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100'></div>
                 </div>
               </div>
             </Link>
@@ -128,20 +108,7 @@ const NewsSection = () => {
           </motion.div>
         )}
       </div>
-      {!isMobile && (
-        <motion.div
-          variants={animate.scrollFadeInFromBottom}
-          initial={animate.scrollFadeInFromBottom.initial}
-          whileInView={animate.scrollFadeInFromBottom.whileInView}
-          viewport={animate.scrollFadeInFromBottom.viewport}
-          className='mt-auto hidden -translate-y-full xl:block'
-        >
-          <div className='flex items-center gap-2 [writing-mode:vertical-lr]'>
-            <div className='h-16 w-[1px] bg-secondary-brown'></div>
-            <p className='text-sm tracking-wide'>News</p>
-          </div>
-        </motion.div>
-      )}
+      <SectionDecorator label='News' />
     </div>
   )
 }

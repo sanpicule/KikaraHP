@@ -1,19 +1,25 @@
 'use client'
 
 import NewsSection from '@/components/features/common/News'
-import ConceptSection from '@/components/features/home/Concept'
+import FAQSection from '@/components/features/home/FAQ'
 import HeroSection from '@/components/features/home/Hero'
-import ProfileSection from '@/components/features/home/Profile'
-import ServiceIntroductionSection from '@/components/features/home/ServiceIntroduction'
+import HowToBuySection from '@/components/features/home/HowToBuy'
+import ConceptSection from '@/components/features/home/LPConcept'
+import FeaturesSection from '@/components/features/home/LPFeatures'
+import VoicesSection from '@/components/features/home/LPVoices'
 
 export default function Home() {
   return (
     <div className='text-center'>
       <HeroSection />
       <ConceptSection />
-      <ProfileSection />
-      <ServiceIntroductionSection />
-      <NewsSection />
+      <FeaturesSection />
+      <VoicesSection />
+      <HowToBuySection />
+      <FAQSection />
+      <div id='news'>
+        <NewsSection />
+      </div>
     </div>
   )
 }

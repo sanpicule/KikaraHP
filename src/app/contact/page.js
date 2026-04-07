@@ -24,160 +24,177 @@ const ContactPage = () => {
     setIsChecked(e.target.checked)
   }
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const onSubmit = (data) => {
+    setIsSubmitting(true)
     const queryString = new URLSearchParams(data).toString()
     router.push(`/contact/confirm?${queryString}`)
   }
+
+  const inputClass = (hasError) =>
+    `w-full rounded-full border bg-white/80 px-5 py-3 text-sm tracking-normal outline-none transition focus:ring-2 focus:ring-secondary-brown-light/30 ${
+      hasError ? 'border-red-400' : 'border-gray-200 focus:border-secondary-brown-light'
+    }`
+
+  const textareaClass = (hasError) =>
+    `w-full rounded-2xl border bg-white/80 px-5 py-3 text-sm tracking-normal outline-none transition resize-none focus:ring-2 focus:ring-secondary-brown-light/30 ${
+      hasError ? 'border-red-400' : 'border-gray-200 focus:border-secondary-brown-light'
+    }`
+
   return (
-    <motion.div
-      variants={animate.scrollFadeIn}
-      initial={animate.scrollFadeIn.initial}
-      viewport={animate.scrollFadeIn.viewport}
-      whileInView={{
-        opacity: 1,
-        transition: {
-          duration: 2,
-        },
-      }}
-      className='mx-auto max-w-[90%] py-36 md:tracking-wide'
-    >
-      <Stepper step1={true} />
-      <p className='mt-12 text-center text-sm text-kikara-chip-red'>*は入力必須です</p>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className='mx-auto mt-12 flex flex-col items-center gap-8 p-4 md:gap-12 md:p-12'
-      >
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>
-            お名前<span className='text-kikara-chip-red'>*</span>
-          </p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <input
-              {...register('name', {
-                required: '入力必須です',
-              })}
-              className={`w-full rounded-md border ${errors.name ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
-              type='text'
-              placeholder='例）田中 太郎'
-            />
-            {errors.name && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.name.message}</span>}
-          </div>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>
-            フリガナ<span className='text-kikara-chip-red'>*</span>
-          </p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <input
-              {...register('name_kana', {
-                required: '入力必須です',
-                pattern: {
-                  value: /^[ァ-ヶー]*$/,
-                  message: 'カタカナのみ入力してください',
-                },
-              })}
-              className={`w-full rounded-md border ${errors.name_kana ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
-              type='text'
-              placeholder='例）タナカ タロウ'
-            />
-            {errors.name_kana && (
-              <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.name_kana.message}</span>
-            )}
-          </div>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>
-            メールアドレス<span className='text-kikara-chip-red'>*</span>
-          </p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <input
-              {...register('mail', {
-                required: '入力必須です',
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: '有効なメールアドレスを入力してください',
-                },
-              })}
-              className={`w-full rounded-md border ${errors.mail ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
-              type='email'
-              placeholder='例）example.mail.com'
-            />
-            {errors.mail && <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.mail.message}</span>}
-          </div>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>
-            メールアドレス（確認用）<span className='text-kikara-chip-red'>*</span>
-          </p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <input
-              {...register('mail_confirm', {
-                required: '入力必須です',
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: '有効なメールアドレスを入力してください',
-                },
-                validate: (value) => value === mail || 'メールアドレスが一致しません',
-              })}
-              className={`w-full rounded-md border ${errors.mail_confirm ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
-              type='email'
-              placeholder='例）example.mail.com'
-            />
-            {errors.mail_confirm && (
-              <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.mail_confirm.message}</span>
-            )}
-          </div>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>
-            問い合わせ内容<span className='text-kikara-chip-red'>*</span>
-          </p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <textarea
-              {...register('contents', {
-                required: '入力必須です',
-              })}
-              className={`h-64 w-full resize-none rounded-md border ${errors.contents ? 'border-red-500' : 'border-gray-300'} px-4 py-2 tracking-normal`}
-              type='text'
-              placeholder='例）料理初心者でも参加できますか？'
-            />
-            {errors.contents && (
-              <span className='mt-2 text-xs tracking-normal text-red-600'>{errors.contents.message}</span>
-            )}
-          </div>
-        </div>
-        <div className='mx-auto flex w-full flex-col items-center md:flex-row md:gap-4 lg:w-[70%]'>
-          <p className='w-full md:w-1/3'>個人情報の取り扱い</p>
-          <div className='flex w-full flex-col md:w-2/3 '>
-            <textarea
-              className={`h-64 w-full rounded-md border border-secondary-brown ${errors.mail ? 'border-red-500' : 'border-gray-300'} px-6 py-4 tracking-normal`}
-              type='email'
-              value={privacyPolicyText}
-              readOnly
-            />
-          </div>
-        </div>
-        <div className='flex items-center space-x-4'>
-          <input
-            type='checkbox'
-            id='checkbox1'
-            className='form-checkbox h-4 w-4 text-blue-600'
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-          />
-          <label htmlFor='checkbox1' className='text-gray-700'>
-            プライバシーポリシーに同意する
-          </label>
-        </div>
-        <button
-          type='submit'
-          disabled={!isChecked}
-          className={`${isChecked ? 'cursor-pointer bg-secondary-brown-light transition-all duration-300 hover:opacity-60' : 'bg-gray-200 text-gray-400'} rounded-xl px-12 py-4`}
+    <div>
+      {/* Form section */}
+      <div className='bg-primary-pink-light'>
+        <motion.div
+          variants={animate.scrollFadeIn}
+          initial={animate.scrollFadeIn.initial}
+          viewport={animate.scrollFadeIn.viewport}
+          whileInView={{ opacity: 1, transition: { duration: 1.5 } }}
+          className='mx-auto max-w-2xl px-6 py-36 md:tracking-wide'
         >
-          入力内容を確認する
-        </button>
-      </form>
-    </motion.div>
+          <Stepper step1={true} />
+
+          <div className='mt-12 text-center'>
+            <p className='text-xs tracking-[.4em] text-gray-400'>CONTACT</p>
+            <h1 className='mt-2 text-2xl font-thin tracking-[.25em] text-gray-800'>お問い合わせ</h1>
+            <div className='mx-auto mt-3 h-px w-8 bg-secondary-brown-light' />
+          </div>
+
+          <p className='mt-8 text-center text-xs tracking-widest text-gray-500'>
+            以下のフォームよりお気軽にご連絡ください
+          </p>
+          <p className='mt-2 text-center text-xs text-secondary-brown-light'>* は入力必須項目です</p>
+
+          <form onSubmit={handleSubmit(onSubmit)} className='mt-10 flex flex-col gap-6'>
+            {/* お名前 */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>
+                お名前 <span className='text-secondary-brown-light'>*</span>
+              </label>
+              <input
+                {...register('name', { required: '入力必須です' })}
+                className={inputClass(errors.name)}
+                type='text'
+                placeholder='例）田中 太郎'
+              />
+              {errors.name && <span className='text-xs text-red-400'>{errors.name.message}</span>}
+            </div>
+
+            {/* フリガナ */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>
+                フリガナ <span className='text-secondary-brown-light'>*</span>
+              </label>
+              <input
+                {...register('name_kana', {
+                  required: '入力必須です',
+                  pattern: { value: /^[ァ-ヶー]*$/, message: 'カタカナのみ入力してください' },
+                })}
+                className={inputClass(errors.name_kana)}
+                type='text'
+                placeholder='例）タナカ タロウ'
+              />
+              {errors.name_kana && <span className='text-xs text-red-400'>{errors.name_kana.message}</span>}
+            </div>
+
+            {/* メールアドレス */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>
+                メールアドレス <span className='text-secondary-brown-light'>*</span>
+              </label>
+              <input
+                {...register('mail', {
+                  required: '入力必須です',
+                  pattern: { value: /\S+@\S+\.\S+/, message: '有効なメールアドレスを入力してください' },
+                })}
+                className={inputClass(errors.mail)}
+                type='email'
+                placeholder='例）example@mail.com'
+              />
+              {errors.mail && <span className='text-xs text-red-400'>{errors.mail.message}</span>}
+            </div>
+
+            {/* メールアドレス確認 */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>
+                メールアドレス（確認用） <span className='text-secondary-brown-light'>*</span>
+              </label>
+              <input
+                {...register('mail_confirm', {
+                  required: '入力必須です',
+                  pattern: { value: /\S+@\S+\.\S+/, message: '有効なメールアドレスを入力してください' },
+                  validate: (value) => value === mail || 'メールアドレスが一致しません',
+                })}
+                className={inputClass(errors.mail_confirm)}
+                type='email'
+                placeholder='例）example@mail.com'
+              />
+              {errors.mail_confirm && <span className='text-xs text-red-400'>{errors.mail_confirm.message}</span>}
+            </div>
+
+            {/* お問い合わせ内容 */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>
+                お問い合わせ内容 <span className='text-secondary-brown-light'>*</span>
+              </label>
+              <textarea
+                {...register('contents', { required: '入力必須です' })}
+                className={`${textareaClass(errors.contents)} h-40`}
+                placeholder='例）料理初心者でも参加できますか？'
+              />
+              {errors.contents && <span className='text-xs text-red-400'>{errors.contents.message}</span>}
+            </div>
+
+            {/* プライバシーポリシー */}
+            <div className='flex flex-col gap-1'>
+              <label className='text-xs tracking-widest text-gray-600'>個人情報の取り扱い</label>
+              <textarea
+                className='h-40 w-full rounded-2xl border border-gray-200 bg-white/50 px-5 py-3 text-xs tracking-normal text-gray-500 outline-none'
+                value={privacyPolicyText}
+                readOnly
+              />
+            </div>
+
+            {/* チェックボックス */}
+            <label className='flex cursor-pointer items-center justify-center gap-3'>
+              <input
+                type='checkbox'
+                className='h-4 w-4 accent-secondary-brown-light'
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+              />
+              <span className='text-xs tracking-widest text-gray-700'>プライバシーポリシーに同意する</span>
+            </label>
+
+            {/* 送信ボタン */}
+            <div className='flex justify-center pt-4'>
+              <button
+                type='submit'
+                disabled={!isChecked || isSubmitting}
+                className={`flex items-center gap-3 rounded-full px-16 py-4 text-sm tracking-widest transition-all duration-300 ${
+                  isChecked && !isSubmitting
+                    ? 'bg-secondary-brown-light text-white shadow-md hover:opacity-70'
+                    : 'cursor-not-allowed bg-gray-200 text-gray-400'
+                }`}
+              >
+                {isSubmitting && (
+                  <svg className='h-4 w-4 animate-spin' viewBox='0 0 24 24' fill='none'>
+                    <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
+                    <path
+                      className='opacity-75'
+                      fill='currentColor'
+                      d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                    />
+                  </svg>
+                )}
+                {isSubmitting ? '確認画面へ移動中...' : '入力内容を確認する'}
+              </button>
+            </div>
+          </form>
+        </motion.div>
+      </div>
+    </div>
   )
 }
 

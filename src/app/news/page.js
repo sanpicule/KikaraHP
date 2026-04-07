@@ -60,7 +60,7 @@ const NewsListPage = () => {
   return (
     <div className='relative mt-[85px] h-4/5 w-full'>
       {fetching && (
-        <div className='px-4 py-8 md:p-12'>
+        <div className='mx-auto w-full max-w-5xl px-4 py-8 md:py-12'>
           <h2>お知らせ一覧</h2>
           <div className='mb-8 mt-8 flex justify-center gap-2 md:gap-4'>
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (

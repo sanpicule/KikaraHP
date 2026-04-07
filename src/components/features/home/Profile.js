@@ -26,7 +26,7 @@ const ProfileSection = () => {
           </div>
         </motion.div>
       )}
-      <div className='mx-auto max-w-[90%] text-center md:w-[1040px] md:py-24 md:tracking-wide'>
+      <div className='mx-auto w-full max-w-5xl px-4 md:py-24 md:tracking-wide'>
         <motion.div
           variants={animate.scrollFadeInFromBottom}
           initial={animate.scrollFadeInFromBottom.initial}

@@ -1,77 +1,77 @@
+import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import menuItemsList from '@/data/menuItems.json'
+import kikaraLogo from '@/public/images/kikara-logo.png'
 import SnsIconBtn from '../features/common/Buttons/SnsIconBtn'
 import SnsLongBtn from '../features/common/Buttons/SnsLongBtn'
 
 const Footer = () => {
   return (
-    <div className='bg-kikara-gray py-12'>
-      <div className='mx-auto max-w-7xl items-start justify-between sm:flex sm:px-10'>
+    <footer className='bg-primary-pink py-16'>
+      {/* Brand */}
+      <div className='mx-auto w-full max-w-5xl border-b border-gray-300/40 px-4 pb-12'>
+        <p className='text-xs tracking-[.3em] text-gray-400'>ミネラル醗酵ドリンク</p>
+        <Image src={kikaraLogo} alt='Kikara' height={72} className='mt-2 h-12 w-auto object-contain md:h-16' />
+      </div>
+
+      {/* Links + contact */}
+      <div className='mx-auto mt-12 w-full max-w-5xl items-start justify-between px-4 sm:flex'>
         <div>
-          <div className='flex justify-center'>
-            <div className='inline-block'>
-              <p className='text-xs tracking-wider'>くらし・ととのう・さろん</p>
-              <h2 className='tracking-wide'>Kikara</h2>
-              <p className='text-sm tracking-wider'>熊本市東区で心と身体を整える</p>
-              <p className='mt-12 text-md font-bold tracking-wider'>連絡先</p>
-              <p className='text-sm tracking-wider'>070-5414-3874</p>
-              <p className='text-sm tracking-wider'>chiisonoblog@gmail.com</p>
-              <div className='mt-4 hidden items-center gap-2 md:flex'>
-                <SnsLongBtn snsId='facebook' iconSize={18} />
-                <SnsLongBtn snsId='instagram' iconSize={18} />
-              </div>
-            </div>
+          <p className='text-xs tracking-widest text-gray-500'>CONTACT</p>
+          <div className='mt-3 h-px w-8 bg-secondary-brown-light opacity-60' />
+          <p className='mt-4 text-sm text-gray-700'>070-5414-3874</p>
+          <p className='text-sm text-gray-700'>chiisonoblog@gmail.com</p>
+          <div className='mt-4 hidden items-center gap-2 md:flex'>
+            <SnsLongBtn snsId='facebook' iconSize={18} />
+            <SnsLongBtn snsId='instagram' iconSize={18} />
           </div>
-          <div className='mt-4 flex justify-center md:justify-start'>
-            <div className='flex gap-12 md:hidden'>
+          <div className='mt-4 flex justify-start md:hidden'>
+            <div className='flex gap-4'>
               <SnsIconBtn snsId='facebook' />
               <SnsIconBtn snsId='instagram' />
             </div>
           </div>
         </div>
-        <div className='flex flex-col items-center md:items-end'>
-          <ul className='hidden gap-10 text-xl tracking-wide xl:flex'>
-            {menuItemsList.map((menuItem, index) => (
-              <li key={index} className='transition duration-300 hover:opacity-35'>
-                <Link href={menuItem.url}>{menuItem.menuTitle}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className='mt-8 space-y-3 sm:mt-0 sm:text-left'>
+          {menuItemsList.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.url}
+                className='flex items-center gap-2 text-md tracking-widest text-gray-600 transition before:inline-block before:w-0 before:bg-secondary-brown before:align-middle before:transition-all before:duration-300 before:content-[""] hover:opacity-50 hover:before:h-[1px] hover:before:w-4'
+              >
+                {item.menuTitle}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className='pt-12 text-center'>
-        <div className='flex-col justify-center gap-12 text-sm sm:flex sm:flex-row'>
-          <div>
-            <a
-              href='https://totonou-kikara.com/index.php?Privacypolicy'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='transition duration-300 hover:opacity-35'
-            >
-              プライバシーポリシー
-            </a>
-          </div>
-          <div>
-            <a
-              href='https://totonou-kikara.com/index.php?Law'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='transition duration-300 hover:opacity-35'
-            >
-              特定商取引法
-            </a>
-          </div>
-          <div>
-            {/* TODO: 適切なURLを設定 */}
-            <a href='/sitemap' rel='noopener noreferrer' className='transition duration-300 hover:opacity-35'>
-              サイトマップ
-            </a>
-          </div>
+
+      {/* Bottom bar */}
+      <div className='mx-auto mt-12 w-full max-w-5xl border-t border-gray-300/40 px-4 pt-8'>
+        <div className='flex flex-col gap-4 text-xs text-gray-400 sm:flex-row sm:gap-8'>
+          <a
+            href='https://totonou-kikara.com/index.php?Privacypolicy'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='transition hover:opacity-50'
+          >
+            プライバシーポリシー
+          </a>
+          <a
+            href='https://totonou-kikara.com/index.php?Law'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='transition hover:opacity-50'
+          >
+            特定商取引法
+          </a>
+          <Link href='/contact' className='transition hover:opacity-50'>
+            お問い合わせ
+          </Link>
         </div>
-        <div className='mt-4 text-xs'>Copyright © 2023 kikara All Rights Reserved.</div>
+        <p className='mt-4 text-xs text-gray-400'>Copyright © 2023 kikara All Rights Reserved.</p>
       </div>
-    </div>
+    </footer>
   )
 }
 

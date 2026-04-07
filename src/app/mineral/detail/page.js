@@ -84,8 +84,8 @@ const MineralDetail = () => {
           <div className='h-0.1 w-12 bg-secondary-brown'></div>
         </motion.div>
         <div className='mx-auto mt-12 grid gap-6 md:w-[90%] md:grid-cols-2 xl:w-[1040px]'>
-          {voices.map((voice, i) => (
-            <VoiceCard key={i} voice={voice} />
+          {voices.map((voice, index) => (
+            <VoiceCard key={index} voice={voice} index={index} />
           ))}
         </div>
       </div>
