@@ -4,6 +4,9 @@ import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useEffect, useMemo, useState } from 'react'
 
+// UXベストプラクティスのいわゆる「3秒ルール」に基づく最低表示時間
+const MIN_DISPLAY_MS = 3000
+
 const PageAnimation = () => {
   const pathname = usePathname()
   const isTopPage = useMemo(() => pathname === '/', [pathname])
@@ -12,7 +15,7 @@ const PageAnimation = () => {
   useEffect(() => {
     let cancelled = false
 
-    const waitForReady = async () => {
+    const waitForResources = async () => {
       try {
         if (document.fonts?.ready) {
           await document.fonts.ready
@@ -26,11 +29,14 @@ const PageAnimation = () => {
           window.addEventListener('load', resolve, { once: true })
         })
       }
-
-      if (!cancelled) setIsReady(true)
     }
 
-    waitForReady()
+    const minimumDisplay = new Promise((resolve) => setTimeout(resolve, MIN_DISPLAY_MS))
+
+    Promise.all([waitForResources(), minimumDisplay]).then(() => {
+      if (!cancelled) setIsReady(true)
+    })
+
     return () => {
       cancelled = true
     }
