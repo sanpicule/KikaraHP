@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState, useMemo } from 'react'
 import '@/app/globals.css'
+import { LoadingProvider } from '@/hooks/useLoading'
 import Footer from './Footer'
 import Header from './Header'
 import PageAnimation from './PageAnimation'
@@ -36,14 +37,16 @@ const Body = ({ children }) => {
 
   return (
     <body className='relative font-sans'>
-      <AnimatePresence mode='wait'>
-        <div key={pathname} className='overflow-x-hidden'>
-          {isActiveAnimate && <PageAnimation />}
-          <Header />
-          <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
-          <Footer />
-        </div>
-      </AnimatePresence>
+      <LoadingProvider>
+        <AnimatePresence mode='wait'>
+          <div key={pathname} className='overflow-x-hidden'>
+            {isActiveAnimate && <PageAnimation />}
+            <Header />
+            <main className='min-h-[calc(100vh-465px)] bg-kikara-white'>{children}</main>
+            <Footer />
+          </div>
+        </AnimatePresence>
+      </LoadingProvider>
     </body>
   )
 }

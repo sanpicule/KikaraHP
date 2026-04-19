@@ -1,45 +1,38 @@
+'use client'
+
 import { motion } from 'framer-motion'
-import Lottie from 'lottie-react'
-import { usePathname } from 'next/navigation'
-import { useMemo } from 'react'
-import animationData from '@/public/animation.json'
+import { useLoading } from '@/hooks/useLoading'
 
 const PageAnimation = () => {
-  const pathname = usePathname()
-  const isTopPage = useMemo(() => pathname === '/', [pathname])
-  return (
-    <div>
-      {/* 全ページ共通アニメーション */}
-      <motion.div
-        animate={{
-          opacity: [1, 0.75, 0],
-          transitionEnd: { display: 'none' },
-        }}
-        transition={{ duration: 2.2 }}
-        className='fixed inset-0 left-0 top-0 z-50 h-lvh bg-secondary-brown [&>div]:-ml-[50vw] [&>div]:-mt-[30vh] [&>div]:h-[160vh] [&>div]:w-[200vw] xl:[&>div]:-mt-[10vh] xl:[&>div]:ml-0 xl:[&>div]:w-auto [&_svg]:object-cover'
-      >
-        <Lottie animationData={animationData} loop={false} rendererSettings={{ preserveAspectRatio: 'none' }} />
-      </motion.div>
+  const { isReady } = useLoading()
 
-      {/* トップページ専用アニメーション */}
-      {isTopPage && (
-        <motion.div
-          className='fixed left-0 top-0 z-40 h-lvh w-full bg-kikara-white'
-          animate={{ opacity: [1, 0.95, 0], transitionEnd: { display: 'none' } }}
-          transition={{ duration: 2.8, times: [0, 0.95, 1] }}
-        >
-          <motion.div
-            className='absolute left-1/2 top-[50svh] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 0.95, 0] }}
-            transition={{ duration: 2.8, times: [0, 0.95, 1] }}
+  return (
+    <motion.div
+      initial={{ opacity: 1 }}
+      animate={isReady ? { opacity: 0, transitionEnd: { display: 'none' } } : { opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
+      className='fixed inset-0 left-0 top-0 z-50 flex h-lvh items-center justify-center bg-secondary-brown'
+    >
+      <p className='flex items-baseline text-sm tracking-[0.3em] text-kikara-white'>
+        <span>Loading</span>
+        {[0, 1, 2].map((i) => (
+          <motion.span
+            key={i}
+            className='ml-0.5 inline-block'
+            animate={{ opacity: [0, 1, 1, 0] }}
+            transition={{
+              duration: 1.5,
+              times: [0, 0.3, 0.7, 1],
+              repeat: Infinity,
+              delay: i * 0.2,
+              ease: 'easeInOut',
+            }}
           >
-            <p className='text-xs md:text-md'>くらし・ととのう・さろん</p>
-            <p className='text-4xl tracking-wide md:text-[4rem]'>Kikara</p>
-          </motion.div>
-        </motion.div>
-      )}
-    </div>
+            .
+          </motion.span>
+        ))}
+      </p>
+    </motion.div>
   )
 }
 
