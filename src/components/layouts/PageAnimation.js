@@ -1,15 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { usePathname } from 'next/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // UXベストプラクティスのいわゆる「3秒ルール」に基づく最低表示時間
 const MIN_DISPLAY_MS = 3000
 
 const PageAnimation = () => {
-  const pathname = usePathname()
-  const isTopPage = useMemo(() => pathname === '/', [pathname])
   const [isReady, setIsReady] = useState(false)
 
   useEffect(() => {
@@ -49,20 +46,7 @@ const PageAnimation = () => {
       transition={{ duration: 0.6, ease: 'easeInOut' }}
       className='fixed inset-0 left-0 top-0 z-50 flex h-lvh items-center justify-center bg-secondary-brown'
     >
-      <div className='flex flex-col items-center justify-center gap-6 text-kikara-white'>
-        {isTopPage && (
-          <div className='flex flex-col items-center justify-center'>
-            <p className='text-xs md:text-md'>くらし・ととのう・さろん</p>
-            <p className='text-4xl tracking-wide md:text-[4rem]'>Kikara</p>
-          </div>
-        )}
-        <div className='flex items-center gap-2'>
-          <span className='inline-block h-2 w-2 animate-pulse rounded-full bg-kikara-white [animation-delay:-0.3s]' />
-          <span className='inline-block h-2 w-2 animate-pulse rounded-full bg-kikara-white [animation-delay:-0.15s]' />
-          <span className='inline-block h-2 w-2 animate-pulse rounded-full bg-kikara-white' />
-          <p className='ml-2 text-sm tracking-[0.3em]'>Loading...</p>
-        </div>
-      </div>
+      <p className='text-sm tracking-[0.3em] text-kikara-white'>Loading...</p>
     </motion.div>
   )
 }
