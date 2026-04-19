@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 import SectionDecorator from '@/components/features/common/SectionDecorator'
 import SectionHeader from '@/components/features/common/SectionHeader'
 import useAnimation from '@/hooks/useAnimation'
-import { supabase } from '@/lib/supabase'
+import { fetchArticles } from '@/lib/tinypost'
 import arrowRight from '@/public/images/arrowRight.png'
 
 const NewsSection = () => {
@@ -19,16 +19,11 @@ const NewsSection = () => {
   }, [])
 
   const fetchPosts = async () => {
-    const userId = process.env.NEXT_PUBLIC_SUPABASE_USERID
-    const { data, error } = await supabase
-      .from('news')
-      .select('*')
-      .eq('user_id', userId)
-      .eq('public', true)
-      .order('created_at', { ascending: false })
-      .limit(3)
-    if (!error) {
+    try {
+      const { data } = await fetchArticles({ limit: 3 })
       setPosts(data)
+    } catch (err) {
+      console.error(err)
     }
   }
 
@@ -58,22 +53,22 @@ const NewsSection = () => {
                   <div className='flex items-center justify-between px-4 py-4 md:px-8 md:py-8'>
                     <div className='flex origin-left flex-col gap-1 md:flex-row md:gap-4'>
                       <div className='mt-2 flex items-center gap-2 text-start md:flex-row md:items-center md:gap-4'>
-                        <p className='text-xs tracking-normal md:text-sm'>
+                        <p className='text-xs tracking-[.2em] text-gray-500 md:text-sm'>
                           {post.created_at.split('T')[0].replace(/-/g, '.')}
                         </p>
                         {post.label === 1 && (
-                          <span className='w-fit bg-blue-400 px-4 py-[3px] text-xs text-white md:text-sm'>
+                          <span className='w-fit bg-secondary-brown-light px-4 py-[3px] text-xs tracking-[.2em] text-white'>
                             お知らせ
                           </span>
                         )}
                         {post.label === 2 && (
-                          <span className='w-fit bg-orange-400 px-4 py-[3px] text-xs text-white md:text-sm'>
+                          <span className='w-fit bg-secondary-brown px-4 py-[3px] text-xs tracking-[.2em] text-white'>
                             料理教室
                           </span>
                         )}
                       </div>
                       <div className='mt-2 text-start'>
-                        <h4 className='text-sm md:text-md'>{post.title}</h4>
+                        <h4 className='text-sm font-normal tracking-wide md:text-md'>{post.title}</h4>
                       </div>
                     </div>
                     <Image
@@ -90,7 +85,7 @@ const NewsSection = () => {
             <Link href={'/news'}>
               <div className='mt-12 flex justify-center md:justify-start'>
                 <div className='group relative inline-block w-[200px] overflow-hidden border border-gray-800 bg-white text-center leading-[50px] text-gray-800 no-underline transition-colors duration-500 hover:text-white md:w-[300px] md:leading-[60px]'>
-                  <p className='relative z-10'>View More</p>
+                  <p className='relative z-10 text-sm font-thin tracking-[.2em]'>View More</p>
                   <div className='absolute inset-0 origin-right scale-x-0 transform bg-gray-800 transition-transform duration-500 group-hover:origin-left group-hover:scale-x-100'></div>
                 </div>
               </div>
