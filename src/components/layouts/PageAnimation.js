@@ -1,43 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
-
-// UXベストプラクティスのいわゆる「3秒ルール」に基づく最低表示時間
-const MIN_DISPLAY_MS = 3000
+import { useLoading } from '@/hooks/useLoading'
 
 const PageAnimation = () => {
-  const [isReady, setIsReady] = useState(false)
-
-  useEffect(() => {
-    let cancelled = false
-
-    const waitForResources = async () => {
-      try {
-        if (document.fonts?.ready) {
-          await document.fonts.ready
-        }
-      } catch {
-        // ignore font readiness errors
-      }
-
-      if (document.readyState !== 'complete') {
-        await new Promise((resolve) => {
-          window.addEventListener('load', resolve, { once: true })
-        })
-      }
-    }
-
-    const minimumDisplay = new Promise((resolve) => setTimeout(resolve, MIN_DISPLAY_MS))
-
-    Promise.all([waitForResources(), minimumDisplay]).then(() => {
-      if (!cancelled) setIsReady(true)
-    })
-
-    return () => {
-      cancelled = true
-    }
-  }, [])
+  const { isReady } = useLoading()
 
   return (
     <motion.div
