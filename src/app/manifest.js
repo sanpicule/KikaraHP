@@ -2,7 +2,8 @@ export default function manifest() {
   return {
     name: 'Kikara | ミネラル醗酵ドリンク',
     short_name: 'Kikara',
-    description: '熊本発・ミネラル水で育てる手作り醗酵ドリンク。健康と美容のための自然素材ドリンクを料理教室でご体験いただけます。',
+    description:
+      '熊本発・ミネラル水で育てる手作り醗酵ドリンク。健康と美容のための自然素材ドリンクを料理教室でご体験いただけます。',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',
